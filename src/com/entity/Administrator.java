@@ -1,10 +1,11 @@
 package com.entity;
 
+
 public class Administrator {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
+//插入单个用户
+public void insertUser(){
+	
+}
 
 }
