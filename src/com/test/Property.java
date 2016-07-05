@@ -13,18 +13,21 @@ public class Property {
 	static FileInputStream inStream = null;
 	static FileOutputStream outputFile = null;  
 	
-	
-	
-	public Property(){
+	static{
 		property= new Properties();
 		try {
 			inStream = new FileInputStream("library.properties");
 			outputFile =  new FileOutputStream("library.properties");
-			
+			System.out.println("property 已初始化");
 		} catch (FileNotFoundException e) {
 			System.out.println("找不到配置文件");
 			e.printStackTrace();
 		} 
+	}
+	
+	
+	private Property(){
+		
 	}
 	
 	 
@@ -37,9 +40,7 @@ public class Property {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			
 		}
-		 
 	 }
 	
 	 public static String getProperty(String key){
