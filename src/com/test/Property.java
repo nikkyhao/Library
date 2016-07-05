@@ -17,32 +17,32 @@ public class Property {
 		property= new Properties();
 		try {
 			inStream = new FileInputStream("library.properties");
-			outputFile =  new FileOutputStream("library.properties");
+//			outputFile =  new FileOutputStream("library.properties");
 			System.out.println("property 已初始化");
 		} catch (FileNotFoundException e) {
 			System.out.println("找不到配置文件");
 			e.printStackTrace();
-		} 
+		} catch (IOException e) {
+			
+		}
 	}
 	
 	
 	private Property(){
 		
 	}
-	
 	 
-	 
-	 public static void setProperty(String key,String value){
-		 try {
+	 private static void setProperty(String key,String value){
 			property.setProperty(key, value);
-			property.store(outputFile, "libtest");
-			System.out.println("property"+key+"="+value+" saved");
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+			System.out.println(key+"="+value+" saved");
+			try {
+				property.store(outputFile, "libtest");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	 }
-	
+	 
 	 public static String getProperty(String key){
 		 try {
 			property.load(inStream);
@@ -51,18 +51,19 @@ public class Property {
 			e.printStackTrace();
 		}
 		 if(property.get(key)!= null){
-			 
 			 return property.getProperty(key);
 		 }
 		 else{
 			return "ERROR, 不存在的属性";
 		 }
-		 
 	 }
 	 
 	 public static void main(String[] args) {  
-		 Property property = new Property();
-		 property.setProperty("number", "23244");
-		System.out.println(property.getProperty("number"));
+//		 Property.setProperty("number", "23244");
+//		 Property.setProperty("name2", "xuhao");
+		 System.out.println(Property.getProperty("number"));
+		 System.out.println(Property.getProperty("name"));
+		
+		
 	    }  
 }
