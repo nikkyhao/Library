@@ -10,5 +10,11 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.39-bin.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-excelant-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -1,27 +1,110 @@
 package com.entity;
+/**
+ * @author ÍôÍ¨
+ */
 
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.Calendar;
+
+import com.mysql.jdbc.Statement;
 
 import com.test.LibConnection;
 
 public class User {
-	public String cardID;
+	static Connection con = null;
+	protected static int cardID;
 	
-	
-	
-	Statement statement = LibConnection.getStatement();
-	
-	public User(){
-		
-	}
-	public User(String cardID){
+	public User(int cardID){
 		this.cardID = cardID;
 	}
 	
-	public ResultSet showMyBook(){//æ˜¾ç¤ºå½“å‰ç”¨æˆ·æ‰€æ¥æ‰€æœ‰ä¹¦ç±
+	public static ResultSet showMyBook_now() throws SQLException{		//²éÑ¯µ±Ç°½èÔÄ£¨ÊéÃû£¬Ë÷ÊéºÅ£¬Á½¸öÈÕÆÚ£©
+		String sql = "SELECT bookid,bookname,bo_date,deadline FROM borrow,category JOIN book ON category.`index`=book.cateindex WHERE (bo_bookid,bookname) IN (select bookid,bookname from category JOIN book ON category.`index`=book.cateindex WHERE bookid in(select bo_bookid from borrow WHERE bo_cardID=123)) and return_date is null AND bo_cardID="+cardID;
+		java.sql.Statement statement =con.createStatement();
+		ResultSet rs = statement.executeQuery(sql);
+		return rs;
+	}
+	private boolean Isoverdate(ResultSet a) throws SQLException{		//ÊÇ·ñ³¬ÆÚ
+		boolean m;
+		Timestamp c = a.getTimestamp("deadline");
+		Timestamp ts = new Timestamp(System.currentTimeMillis());
+		Calendar cal1 = Calendar.getInstance();
+		cal1.setTime(ts);			//µ±Ç°Ê±¼ä
+		Calendar cal2 = Calendar.getInstance();
+		cal2.setTime(c);			//½ØÖ¹ÈÕÆÚ
+		return cal1.after(cal2);			//	µ±Ç°Ê±¼ä³¬¹ı½ØÖ¹ÈÕÆÚ£¬Îª³¬ÆÚ
 		
-		return null;
+	}
+	
+	public static ResultSet showMyBook_history() throws SQLException{		//²éÑ¯ÀúÊ·½èÔÄ£¨ÊéÃû£¬Ë÷ÊéºÅ£¬Á½¸öÈÕÆÚ£©
+		String sql = "SELECT bookid,bookname,bo_date,return_date FROM borrow,category JOIN book ON category.`index`=book.cateindex WHERE (bo_bookid,bookname) IN (select bookid,bookname from category JOIN book ON category.`index`=book.cateindex WHERE bookid in(select bo_bookid from borrow WHERE bo_cardID=123)) and return_date is not null and bo_cardID = "+cardID;
+		java.sql.Statement statement =con.createStatement();
+		ResultSet rs = statement.executeQuery(sql);
+		return rs;
+	}
+	
+	public static ResultSet show_my_info() throws SQLException{		//²éÑ¯µ±Ç°ÓÃ»§µÄËùÓĞĞÅÏ¢
+		String sql = "select * from user where cardID ="+cardID;
+		java.sql.Statement statement =con.createStatement();
+		ResultSet rs = statement.executeQuery(sql);
+		return rs;
+	}
+	
+	
+	public static void Update_info(String propertyname,String value) throws SQLException{		//¸ü¸ÄÓÃ»§Êı¾İ
+		String sql = "update user set "+propertyname+" = "+value+" where cardID = "+cardID;
+		java.sql.Statement statement =con.createStatement();
+		statement.executeUpdate(sql);	
+	}
+	
+	public static ResultSet showMyBook_Reminder() throws SQLException{		//´ß»¹µ¥£¬ËùÓĞÀë»¹ÊéÈÕÆÚ»¹²îÈıÌìµÄ£¨ÊéÃû£¬Ë÷ÊéºÅ£¬Á½¸öÈÕÆÚ£©
+		String sql = "select a.bookname,a.`index`,r.bo_date,r.return_date from category a,book b,borrow r  where DATEDIFF(r.return_date,now())<3 and DATEDIFF(r.return_date,now())>0 and  a.`index` = b.cateindex and b.bookid = r.bo_bookid and bo_cardID= "+cardID;
+		java.sql.Statement statement =con.createStatement();
+		ResultSet rs = statement.executeQuery(sql);
+		return rs;
+	}
+	
+	public static void Alter_order(int Order_index) throws SQLException{		//Ìí¼ÓÒ»¸öÔ¤Ô¼ĞÅÏ¢
+		String sql = "insert into `order` values("+Order_index+","+cardID+",now(),(select date_add(now(), interval 1 day)))";
+		java.sql.Statement statement =con.createStatement();
+		statement.executeUpdate(sql);
+	}
+	
+	public static ResultSet showMyorder() throws SQLException{		//ÏÔÊ¾Ô¤Ô¼ĞÅÏ¢
+		String sql = "select a.bookname,a.`index`,b.bookingdate,b.deadline from category a,book c,`order` b,user u where a.`index`=c.cateindex and c.bookid=b.ord_bookid and b.ord_cardID=u.cardID and cardId = "+cardID;
+		java.sql.Statement statement =con.createStatement();
+		ResultSet rs = statement.executeQuery(sql);
+		return rs;
+	}
+	
+	
+
+	public static void main(String args[]) throws SQLException{
+		try {
+			Class.forName("com.mysql.jdbc.Driver");// ¼ÓÔØMysqlÊı¾İÇı¶¯
+			
+			con = DriverManager.getConnection(
+					"jdbc:mysql://127.0.0.1:3306/test", "root", "wanner1597");// ´´½¨Êı¾İÁ¬½Ó	
+			System.out.println("hello");
+		} catch (Exception e) {
+			System.out.println("Êı¾İ¿âÁ¬½ÓÊ§°Ü" + e.getMessage());
+		}
+		
+		/////²âÊÔÊä³ö
+		cardID = 223;
+		ResultSet rs = User.showMyorder();
+		String bookname = null;
+		try {
+			while (rs.next()) {
+				bookname = rs.getString("bookname");
+				//index = rs.getInt(1);		//»ñÈ¡µÚÒ»ÁĞ£¬¼´index
+				System.out.println(bookname+'\n');
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
