@@ -1,34 +1,32 @@
 package com.util;
 import java.sql.*;
 
+import com.test.LibConnection;
+
 public class LogInCheck {
-    static Statement  stat = null;
+    static Statement  stat = LibConnection.getStatement();
     
-    public static String isLogin(String identity,String userId,String password,Connection con) throws SQLException{
-	try {
-	   stat = con.createStatement();
-	} catch (SQLException e) {
-	    e.printStackTrace();
-	}
-	if(identity.equals("学生")||identity.equals("老师")){
+    public static String isLogin(String identity,String cardID,String password){
+	if(identity.equals("会员")){
 	    ResultSet result = null;
 	    try {
-		result = stat.executeQuery("select * from CUSTOMER where CUSTOMERID ='"+userId+"' and password ='"+password+"'");
-	    } catch (SQLException e) {
-		return e.getMessage();
-	    }
+		result = stat.executeQuery("select * from user where cardID ='"+cardID+"' and password ='"+password+"'");
+		System.out.println("cardID:"+cardID+"password"+password);
 	    if(result.next()==false)  return "用户名或密码错误"; 
 	    	else return "VALIDUSER";
+	    } catch (SQLException e) {
+	    	return e.getMessage();
+	    }
 	}
 	if(identity.equals("管理员")){
 	    ResultSet result = null;
 	    try {
-		result = stat.executeQuery("select password from COURIER where COURIERID =='"+userId+"' and password ='"+password+"'");
-	    } catch (SQLException e) {
-		return e.getMessage();
-	    }
+		result = stat.executeQuery("select password from COURIER where COURIERID =='"+cardID+"' and password ='"+password+"'");
 	    if(result.next()==false)  return "用户名或密码错误"; 
 	    	else return "VALIDUSER";
+	    } catch (SQLException e) {
+	    	return e.getMessage();
+	    }
 	}
 	return "WRONG_LOGIC";
     }
@@ -36,7 +34,7 @@ public class LogInCheck {
     
     
     public static void main(String[] args) throws SQLException {
-
+    	System.out.println(isLogin("会员","124", "123"));
     }
 
     

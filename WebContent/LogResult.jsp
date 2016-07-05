@@ -21,7 +21,7 @@ function clock()
 <center>
 <%! String result = null; %>
 <%
-    result = (String)session.getAttribute("mydata");
+    result = (String)session.getAttribute("loginresult");
 	out.println(result);
 %>
 <table> 
