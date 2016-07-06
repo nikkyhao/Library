@@ -1,6 +1,6 @@
 package com.entity;
 /**
- * @author Ô²Èó
+ * @author Ô²ï¿½ï¿½
  */
 
 import java.sql.ResultSet;
@@ -13,10 +13,10 @@ import java.util.Date;
 import com.test.LibConnection;
 
 public class LibSystem {
-	Statement statement = LibConnection.getStatement();
+	static Statement statement = LibConnection.getStatement();
 
 	/*
-	 * µÃµ½Í¼ÊéÊıÁ¿
+	 * ï¿½Ãµï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	public int getBookNum() {
 		int s = 0;
@@ -35,7 +35,7 @@ public class LibSystem {
 	}
 
 	/*
-	 * µÃµ½¸÷ÀàÍ¼ÊéËùÕ¼±ÈÂÊ
+	 * ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½
 	 */
 	public BookRatio getAllBookcateRate() {
 		return new BookRatio(statement);
@@ -43,10 +43,10 @@ public class LibSystem {
 
 	
 	/*
-	 * °´ÊéÃûËÑË÷Í¼Êé£¬£¬²¢¼ÆËãÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
 	 * 
 	 */
-public ResultSet queryByBookName(String strif) {
+public static ResultSet queryByBookName(String strif) {
 		
 		
 		String sql = "";
@@ -68,9 +68,9 @@ public ResultSet queryByBookName(String strif) {
 		return rs;
 	}
 	/*
-	 * ¸ù¾İ×÷ÕßÀ´²éÑ¯Í¼ÊéĞÅÏ¢£¬²¢¼ÆËãÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
 	 */
-public ResultSet queryByAuthor(String strif) {
+public static ResultSet queryByAuthor(String strif) {
 		
 		
 		String sql = "";
@@ -93,9 +93,9 @@ public ResultSet queryByAuthor(String strif) {
 	}
 
 /*
- * ¸ù¾İ³ö°æÉçÀ´²éÑ¯Í¼ÊéĞÅÏ¢£¬²¢¼ÆËã³öÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+ * ï¿½ï¿½İ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
  */
-public ResultSet queryByPress(String strif) {
+public static ResultSet queryByPress(String strif) {
 	
 	
 	String sql = "";
@@ -118,9 +118,9 @@ public ResultSet queryByPress(String strif) {
 }
 
 /*
- * ¸ù¾İÓïÑÔÀ´²éÑ¯Í¼ÊéĞÅÏ¢£¬²¢¼ÆËãÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
  */
-public ResultSet queryByLanguage(String strif) {
+public static ResultSet queryByLanguage(String strif) {
 	
 	
 	String sql = "";
@@ -142,9 +142,9 @@ public ResultSet queryByLanguage(String strif) {
 	return rs;
 }
 /*
- * ¸ù¾İÀà±ğºÅÀ´²éÑ¯Í¼ÊéĞÅÏ¢£¬²¢¼ÆËãÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
  */
-public ResultSet queryByIndex(String string) {
+public static ResultSet queryByIndex(String string) {
 	
 	
 	String sql = "";
@@ -166,9 +166,9 @@ public ResultSet queryByIndex(String string) {
 	return rs;
 }
 /*
- * ¸ù¾İbookidÀ´²éÑ¯Í¼ÊéĞÅÏ¢£¬²¢¼ÆËãÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+ * ï¿½ï¿½ï¿½bookidï¿½ï¿½ï¿½ï¿½Ñ¯Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
  */
-public ResultSet queryByBookId(String strif) {
+public static ResultSet queryByBookId(String strif) {
 	
 	
 	String sql = "";
@@ -188,12 +188,12 @@ public ResultSet queryByBookId(String strif) {
 	
 		
 	return rs;
-}//²âÊÔ·½·¨ÉÙcount£¨bookid£©
+}//ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½countï¿½ï¿½bookidï¿½ï¿½
 
 /*
- * ¸ù¾İÍ¼ÊéÀàĞÍÀ´²éÑ¯Í¼ÊéĞÅÏ¢£¬²¢¼ÆËãÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+ * ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
  */
-public ResultSet queryByBookType(String strif) {
+public static ResultSet queryByBookType(String strif) {
 	
 	
 	String sql = "";
@@ -215,9 +215,9 @@ public ResultSet queryByBookType(String strif) {
 	return rs;
 }
 /*
- * ¸ù¾İÓ¡Ë¢ÈÕÆÚÀ´²éÑ¯Í¼ÊéĞÅÏ¢£¬²¢¼ÆËãÏàÍ¬Àà±ğµÄÍ¼ÊéÓĞ¶àÉÙ±¾
+ * ï¿½ï¿½ï¿½Ó¡Ë¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù±ï¿½
  */
-public ResultSet queryByPressDate(String strif) {
+public static ResultSet queryByPressDate(String strif) {
 	
 	
 	String sql = "";

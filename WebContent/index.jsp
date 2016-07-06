@@ -540,17 +540,18 @@
 									<div class="space-6"></div>	
 
 						<div class="search radius6">
-	<form name="searchform" method="post" action="/e/search/index.php">
+	<form name="searchform" method="post" action="SearchBook">
 		<input name='ecmsfrom' type='hidden' value='9'>
 		<input type="hidden" name="show" value="title,newstext">
-		<select name="classid" id="choose">
+		<select name="searchtype" id="choose">
 			<option value="0">按名称</option>
 			<option value="1">按索书号</option>
-			<option value="4">按作者</option>
-			<option value="22">按类别</option>
-		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
->
-		<a href="searchbook.jsp"><div class="btn_srh" >搜索</div></a>
+			<option value="2">按作者</option>
+			<option value="3">按类别</option>
+		</select>		
+		<input class="inp_srh" name="searchContent"  placeholder="请输入您要搜索的书籍" >
+		<div class = "btn_srh" ><input  type = "submit" name = "search" value = "搜索" ></div>
+		
 	</form>
 </div>
 

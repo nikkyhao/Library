@@ -1,8 +1,15 @@
 ﻿<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+	
 <html lang="en">
 	<head>
+	<%@page import="java.sql.ResultSet" import="com.entity.*" import="java.sql.SQLException" import="java.sql.Statement" import="com.test.LibConnection"%>
+	<%! Ranking rank=new Ranking();
+		ResultSet remark=null;
+		ResultSet user=null;
+		ResultSet book=null;
+	%>	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>FAQ - Ace Admin</title>
@@ -554,186 +561,79 @@
 											<div class="space-8"></div>
 
 											<div id="faq-list-1" class="panel-group accordion-style1 accordion-style2">
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-1-1" data-parent="#faq-list-1" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-left pull-right" data-icon-hide="ace-icon fa fa-chevron-down" data-icon-show="ace-icon fa fa-chevron-left"></i>
+												
+												<% remark=rank.OrderRemark();
+													while(remark.next()){
+														
+												%>
+									
+											<div class="space-8"></div>
+											<div class="itemdiv dialogdiv">
+															<div class="user">
+																<img alt="John's Avatar" src="../assets/avatars/avatar.png" />
+															</div>
 
-															<i class="ace-icon fa fa-user bigger-130"></i>
-															今天我看了一本书……
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-1-1">
-														<div class="panel-body">
-															今天我看了一本书是今天天气好晴朗，处处好风光
-														</div>
-													</div>
-												</div>
-
-												<!--<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-1-2" data-parent="#faq-list-1" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-left pull-right" data-icon-hide="ace-icon fa fa-chevron-down" data-icon-show="ace-icon fa fa-chevron-left"></i>
-
-															<i class="ace-icon fa fa-sort-amount-desc"></i>
-															2
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-1-2">
-														<div class="panel-body">
-															<div id="faq-list-nested-1" class="panel-group accordion-style1 accordion-style2">
-																<div class="panel panel-default">
-																	<div class="panel-heading">
-																		<a href="#faq-list-1-sub-1" data-parent="#faq-list-nested-1" data-toggle="collapse" class="accordion-toggle collapsed">
-																			
-									  2解释
-																		</a>
-																	</div>
-
-																	
+															<div class="body">
+																<div class="score">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="blue"><%=remark.getString("score")%></span>
 																</div>
 
-																
+																<div class="bookname">
+																	<a href="#"><%=remark.getString("bookname")%></a>
+																</div>
+																<hr />
+																<div class="name">
+																	<a href="#"><%=remark.getString("name")%></a>
+																</div>
+																<div class="text"><%=remark.getString("remark")%></div>
 
-																
-																
-
-																	
-																	</div>
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only ace-icon fa fa-share"></i>
+																	</a>
 																</div>
 															</div>
 														</div>
-													</div>
-												</div>
-												-->
-												
-
-												
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-1-3" data-parent="#faq-list-1" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-left pull-right" data-icon-hide="ace-icon fa fa-chevron-down" data-icon-show="ace-icon fa fa-chevron-left"></i>
-
-															<i class="ace-icon fa fa-credit-card bigger-130"></i>
-															哈哈哈哈哈哈我好……
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-1-3">
-														<div class="panel-body">
-															哈哈哈哈哈哈我好高兴，如果我没有那些了，请帮我带过来
-														</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-1-4" data-parent="#faq-list-1" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-left pull-right" data-icon-hide="ace-icon fa fa-chevron-down" data-icon-show="ace-icon fa fa-chevron-left"></i>
-
-															<i class="ace-icon fa fa-files-o bigger-130"></i>
-															所以……我跟黑粉结婚了
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-1-4">
-														<div class="panel-body">
-														所以……我跟黑粉结婚了，你们快去看啊
-														</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-1-5" data-parent="#faq-list-1" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-left pull-right" data-icon-hide="ace-icon fa fa-chevron-down" data-icon-show="ace-icon fa fa-chevron-left"></i>
-
-															<i class="ace-icon fa fa-cog bigger-130"></i>
-															如何制造一面小艇这……
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-1-5">
-														<div class="panel-body">
-														如何制造一面小艇这本书真的很有用，感觉对我的人生起了很大的作用
-														</div>
-													</div>
-												</div>
+														<%}%>		
+				
 											</div>
 										</div>
+
 
 										<div id="faq-tab-2" class="tab-pane fade">
 											<h4 class="blue">
 												<i class="green ace-icon fa fa-user bigger-110"></i>
 												阅读之星
 											</h4>
-
 											<div class="space-8"></div>
-
 											<div id="faq-list-2" class="panel-group accordion-style1 accordion-style2">
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-2-1" data-parent="#faq-list-2" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-right smaller-80" data-icon-hide="ace-icon fa fa-chevron-down align-top" data-icon-show="ace-icon fa fa-chevron-right"></i>&nbsp;
-						徐晓星
-														</a>
-													</div>
+										<% user=rank.OrderUser();
+											while(user.next()){
+										%>	
+												<div class="itemdiv dialogdiv">
+															<div class="user">
+																<img alt="John's Avatar" src="../assets/avatars/avatar.png" />
+															</div>
 
-													<div class="panel-collapse collapse" id="faq-2-1">
-														<div class="panel-body">
-															阳光小学 三年一班
+															<div class="body">
+																<div class="score">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="blue">借阅次数：<%=user.getString("num")%></span>
+																</div>
+																<div class="ID">
+																	借阅证卡号：<%=user.getString("bo_cardID")%>
+																</div>
+
+																<div class="name">
+																	会员姓名：<%=user.getString("name")%>
+																</div>
+										
+															</div>
 														</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-2-2" data-parent="#faq-list-2" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-right smaller-80" data-icon-hide="ace-icon fa fa-chevron-down align-top" data-icon-show="ace-icon fa fa-chevron-right"></i>&nbsp;
-					 林子祥
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-2-2">
-														<div class="panel-body">
-															阳光小学 四年三班
-														</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-2-3" data-parent="#faq-list-2" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-right middle smaller-80" data-icon-hide="ace-icon fa fa-chevron-down align-top" data-icon-show="ace-icon fa fa-chevron-right"></i>&nbsp;
-					 袁智慧
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-2-3">
-														<div class="panel-body">
-															阳光小学 六年四班
-														</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-2-4" data-parent="#faq-list-2" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-chevron-right smaller-80" data-icon-hide="ace-icon fa fa-chevron-down align-top" data-icon-show="ace-icon fa fa-chevron-right"></i>&nbsp;
-					 欣欣
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-2-4">
-														<div class="panel-body">
-														阳光小学 一年一班
-														</div>
-													</div>
-												</div>
-											</div>
+											
+										<%}%>	
+										</div>	
 										</div>
 
 										<div id="faq-tab-3" class="tab-pane fade">
@@ -745,64 +645,39 @@
 											<div class="space-8"></div>
 
 											<div id="faq-list-3" class="panel-group accordion-style1 accordion-style2">
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-3-1" data-parent="#faq-list-3" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-plus smaller-80" data-icon-hide="ace-icon fa fa-minus" data-icon-show="ace-icon fa fa-plus"></i>&nbsp;
-						今天天气好晴朗
-														</a>
-													</div>
+												<% book=rank.OrderBook();
+											while(book.next()){
+										%>	
+												<div class="itemdiv dialogdiv">
+															<div class="user"></div>
 
-													<div class="panel-collapse collapse" id="faq-3-1">
-														<div class="panel-body">
-															作者：你们 出版社：四出版社
-													</div>
-												</div>
+																					<div class="body">
+																<div class="score">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="blue">借阅次数：<%=book.getString("num")%></span>
+																</div>
 
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-3-2" data-parent="#faq-list-3" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-plus smaller-80" data-icon-hide="ace-icon fa fa-minus" data-icon-show="ace-icon fa fa-plus"></i>&nbsp;
-					 原来你还在这里
-														</a>
-													</div>
+																<div class="bookname">
+																	<a href="#">图书名：<%=book.getString("bookname")%></a>
+																</div>
+																<div class="ID">
+																	<a href="#">索书号：<%=book.getString("index")%></a>
+																</div>
+																<hr />
+																<div class="Author">
+																	作者：<%=book.getString("author")%>
+																</div>
+																<div class="text">出版社：<%=book.getString("press")%></div>
 
-													<div class="panel-collapse collapse" id="faq-3-2">
-														<div class="panel-body">
-																				作者：猩猩 出版社：四出版社									</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-3-3" data-parent="#faq-list-3" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-plus smaller-80" data-icon-hide="ace-icon fa fa-minus" data-icon-show="ace-icon fa fa-plus"></i>&nbsp;
-					 知不知道
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-3-3">
-														<div class="panel-body">
-															作者：小白 出版社：四出版社
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only ace-icon fa fa-share"></i>
+																	</a>
+																</div>
+															</div>
 														</div>
-													</div>
-												</div>
-
-												<div class="panel panel-default">
-													<div class="panel-heading">
-														<a href="#faq-3-4" data-parent="#faq-list-3" data-toggle="collapse" class="accordion-toggle collapsed">
-															<i class="ace-icon fa fa-plus smaller-80" data-icon-hide="ace-icon fa fa-minus" data-icon-show="ace-icon fa fa-plus"></i>&nbsp;
-					  哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-														</a>
-													</div>
-
-													<div class="panel-collapse collapse" id="faq-3-4">
-														<div class="panel-body">
-															作者：蓝山 出版社：四出版社
-														</div>
-													</div>
-												</div>
-											</div>
+											
+										<%}%>
 										</div>
 
 										<div id="faq-tab-4" class="tab-pane fade">

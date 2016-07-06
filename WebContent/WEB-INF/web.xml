@@ -10,8 +10,8 @@
 	
 	</welcome-file-list>
 	<servlet>
-		<servlet-name>Search</servlet-name>
-		<servlet-class>com.servlet.testServlet</servlet-class>
+		<servlet-name>SearchBook</servlet-name>
+		<servlet-class>com.servlet.SearchBookServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>LogIn</servlet-name>
@@ -20,8 +20,8 @@
 
 
 	<servlet-mapping>
-		<servlet-name>Search</servlet-name>
-		<url-pattern>/Search</url-pattern>
+		<servlet-name>SearchBook</servlet-name>
+		<url-pattern>/SearchBook</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>LogIn</servlet-name>
