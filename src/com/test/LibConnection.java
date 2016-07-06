@@ -11,7 +11,7 @@ import javax.naming.InitialContext;
 public class LibConnection {
 	public static final String url = "jdbc:mysql://127.0.0.1:3306/library";
 	public static final String user = "root";
-	public static final String password = "660816";
+	public static final String password = "";
 	public static final String driver = "com.mysql.jdbc.Driver";
 	private static Statement statement = Init();
 
