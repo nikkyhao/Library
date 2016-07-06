@@ -108,7 +108,7 @@
 											</div>
 
 											<div>
-											  <a href="index.html">
+											  <a href="index.jsp">
 													返回
 											  <i class="ace-icon fa fa-arrow-right"></i>
 												</a>

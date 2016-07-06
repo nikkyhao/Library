@@ -64,10 +64,10 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-						图书馆管理系统
+							图书馆管理系统
 						</small>
 					</a>
 				</div>
@@ -321,7 +321,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -331,7 +331,7 @@
 
 					<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -381,94 +381,271 @@
 				</div><!-- /.sidebar-shortcuts -->
 
 				<ul class="nav nav-list">
-					<li class="active">
-						<a href="index.html">
-							<i class="menu-icon fa fa-tachometer"></i>主页</a>
+					<li 
 
-						<b class="arrow"></b>
+class="active">
+						<a 
+
+href="index.jsp">
+							
+
+<i class="menu-icon fa fa-tachometer"></i>主页</a>
+
+						<b 
+
+class="arrow"></b>
 					</li>
 
 					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>借阅管理<b class="arrow fa fa-angle-down"></b>
+						<a 
+
+href="#" class="dropdown-toggle">
+							
+
+<i class="menu-icon fa fa-list"></i>借阅记录<b 
+
+class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>
+						<b 
 
-						<ul class="submenu">
-							<li class="">
-								<a href="borrowrecord.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									借阅记录
-								</a>
+class="arrow"></b>
 
-								<b class="arrow"></b>
-							</li>
+						<ul 
 
-							<li class="">
-								<a href="brokerules.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									违章记录
-								</a>
+class="submenu">
+							
 
-								<b class="arrow"></b>
-							</li>
+<li class="">
+							
+
+	<a href="tables.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		当前借阅
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
+
+							
+
+<li class="">
+							
+
+	<a href="tablesH.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		历史借阅
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
                             <li class="">
-								<a href="borrow.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									借阅书籍
-								</a>
+							
 
-								<b class="arrow"></b>
-							</li>
-                            <li class="">
-								<a href="borrowrecord.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									归还书籍
-								</a>
+	<a href="tablesY.jsp">
+							
 
-								<b class="arrow"></b>
-							</li> 
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		预约信息
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
 						</ul>
 					</li>
 
 					<li class="">
-						<a href="bookmanage.html">
-							<i class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
+						<a 
+
+href="#" class="dropdown-toggle">
+							
+
+<i class="menu-icon fa fa-file-o"></i>违章记录<b 
+
+class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>			
-					</li>
+						<b 
 
-					<li class="">
-						<a href="member.html">
-							<i class="menu-icon fa fa-list-alt"></i>会员管理</a>
+class="arrow"></b>
 
-						<b class="arrow"></b>
-					</li>
-									
-					<li class="">
-						<a href="information.html">
-							<i class="menu-icon fa fa-calendar"></i>
+						<ul 
 
-							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
-						</a>
+class="submenu">
+							
 
-						<b class="arrow"></b>
-					</li>				
-					<li class="">
-						<a href="system.html">
-							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
+<li class="">
+							
 
-						<b class="arrow"></b>
-					</li>	
+	<a href="hurryup.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		催还单
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
+
+							
+
+<li class="">
+							
+
+	<a href="fine.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		违章罚款
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
+
 						</ul>
 					</li>
-				</ul><!-- /.nav-list -->
 
+					<li class="">
+						<a 
+
+href="hot.jsp">
+							
+
+<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
+
+						<b 
+
+class="arrow"></b>
+					</li>
+                  <li class="">
+						<a 
+
+href="comment.jsp">
+							
+
+<i class="menu-icon fa fa-pencil-square-o"></i>
+
+							
+
+<span class="menu-text">我的评论<span class="badge 
+
+badge-transparent tooltip-error" title="2 Important 
+
+Events">
+							
+
+		<i class="ace-icon fa fa-exclamation-
+
+triangle red bigger-130"></i>
+							
+
+	</span>
+							
+
+</span>
+						</a>
+
+						<b 
+
+class="arrow"></b>
+					</li>		
+
+			
+
+					<li class="">
+						<a 
+
+href="information.jsp">
+							
+
+<i class="menu-icon fa fa-calendar"></i>
+
+							
+
+<span class="menu-text">我的信息<span class="badge 
+
+badge-transparent tooltip-error" title="2 Important 
+
+Events">
+							
+
+		<i class="ace-icon fa fa-exclamation-
+
+triangle red bigger-130"></i>
+							
+
+	</span>
+							
+
+</span>
+						</a>
+
+						<b 
+
+class="arrow"></b>
+					</li>		
+
+		
+						
+						</ul>
+					</li>
+				</ul><!-- /.nav-list 
+
+-->
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 				</div>
@@ -488,12 +665,13 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="index.html">图书馆管理系统</a>
+								<a href="#">图书馆管理系统</a>
 							</li>
 
 							<li>
-								<a href="#">违章记录</a>
+								<a href="#">我的评论</a>
 							</li>
+							<li class="active"></li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -575,7 +753,8 @@
 						</div><!-- /.ace-settings-container -->
 
 						<div class="page-header">
-							<h1>图书信息</h1>
+							<h1>
+							我的评论</h1>
 						</div><!-- /.page-header -->
 
 						<div class="row">
@@ -588,7 +767,7 @@
 								<div>
 									<div id="user-profile-1" class="user-profile row">
 										<div class="col-xs-12 col-sm-3 center">
-										  <div>
+											<div>
 												<span class="profile-picture">
 													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="../assets/avatars/profile-pic.jpg" />
 												</span>
@@ -632,19 +811,25 @@
 														</ul>
 													</div>
 												</div>
-                                                <hr />
-                                                
-												<a href="borrowbooksinfo.html">
-												<button class="btn btn-info" type="button" value="借书"> 借书<i class="ace-icon fa fa-check bigger-110"></i> </button>
-												</a>
 											</div>
-											
 
 											<div class="space-6"></div>
 
 											<div class="profile-contact-info">
 											  <div class="profile-contact-links align-left"></div>
-		
+												<div class="profile-social-links align-center">
+													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Facebook">
+														<i class="middle ace-icon fa fa-facebook-square fa-2x blue"></i>
+													</a>
+
+													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Twitter">
+														<i class="middle ace-icon fa fa-twitter-square fa-2x light-blue"></i>
+													</a>
+
+													<a href="#" class="tooltip-error" title="" data-original-title="Visit my Pinterest">
+														<i class="middle ace-icon fa fa-pinterest-square fa-2x red"></i>
+													</a>
+												</div>
 											</div>
 
 											<div class="hr hr12 dotted"></div>
@@ -655,7 +840,18 @@
 										</div>
 
 										<div class="col-xs-12 col-sm-9">
-											<div class="center"></div>
+											<div class="center">
+												<span class="btn btn-app btn-sm btn-light no-hover">
+													<span class="line-height-1 bigger-170 blue"> 11 </span>
+
+													<br />
+												总评论数</span>
+
+											  <span class="btn btn-app btn-sm btn-yellow no-hover">
+													<span class="line-height-1 bigger-170"> 32 </span>
+
+													<br />
+												平均分</span></div>
 
 											<div class="space-12"></div>
 
@@ -664,58 +860,7 @@
 
 
 												<div class="profile-info-row">
-			
-											<div class="profile-user-info profile-user-info-striped">
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 书名 </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="username">操作系统</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 索书号 </div>
-
-													<div class="profile-info-value">
-														<i class="fa fa-map-marker light-orange bigger-110"></i>
-														<span class="editable" id="country">1272894</span><span class="editable" id="city"></span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 作者 </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="age">来来来</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 出版社</div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="signup">哦哦哦</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name">可借数量</div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="login">2本</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 版本 </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="about">最新版</span>
-													</div>
-												</div>
-											</div>
-                                         									
+												
 
 											<div class="space-20"></div>
 
@@ -723,7 +868,7 @@
 												<div class="widget-header widget-header-small">
 													<h4 class="widget-title blue smaller">
 														<i class="ace-icon fa fa-rss orange"></i>
-														评论
+														我的评论
 													</h4>
 
 													<div class="widget-toolbar action-buttons">
@@ -741,31 +886,34 @@
 													<div class="widget-main padding-8">
 														<div id="profile-feed-1" class="profile-feed">
 															<div class="profile-activity clearfix">
-															  <div class="tools action-buttons">
-																  <a href="#" class="blue">
-																	  <i class="ace-icon fa fa-pencil bigger-125"></i>
-																  </a>
-
-																  <a href="#" class="red">
-																	  <i class="ace-icon fa fa-times bigger-125"></i>
-																  </a>
+																<div>
+																	<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																	<a class="user" href="#">追风筝的人 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                        <i class="ace-icon fa fa-clock-o bigger-110"></i>得分：10分
+																	<div class="time">
+																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
 															  </div>
-														  </div>
+
+																<div class="tools action-buttons">
+																	<a href="#" class="blue">
+																		<i class="ace-icon fa fa-pencil bigger-125"></i>
+																	</a>
+
+																	<a href="#" class="red">
+																		<i class="ace-icon fa fa-times bigger-125"></i>
+																	</a>
+																</div>
+															</div>
 
 															<div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
+																	<img class="pull-left" alt="Susan Smith's avatar" src="../assets/avatars/avatar1.png" />
+																	<a class="user" href="#"> Java从入门到精通</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                        <i class="ace-icon fa fa-clock-o bigger-110"></i>得分：10分
 																	<div class="time">
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
-                                                                    <div class="time"><label >教师打分:</label>
-                                                                      <form name="form1" method="post" action="">
-                                                                        <label for="score"></label>
-                                                                        <input type="text" name="score" id="score">
-                                                                        <input type="submit" name="submit" id="submit" value="提交">
-                                                                      </form>
-                                                                    </div>
-															  </div>
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		已放弃
+																	</div>
+																</div>
 
 																<div class="tools action-buttons">
 																	<a href="#" class="blue">
@@ -778,20 +926,19 @@
 																</div>
 															</div>
 
-<div class="profile-activity clearfix">
+															<div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
+																	<i class="pull-left thumbicon fa fa-check btn-success no-hover"></i>
+																	<a class="user" href="#"> Alex Doe </a>
+																	joined
+																	<a href="#">Country Music</a>
+
+																	group.
 																	<div class="time">
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
-                                                                    <div class="time"><label >教师打分:</label>
-                                                                      <form name="form1" method="post" action="">
-                                                                        <label for="score"></label>
-                                                                        <input type="text" name="score" id="score">
-                                                                        <input type="submit" name="submit" id="submit" value="提交">
-                                                                      </form>
-                                                                    </div>
-															  </div>
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		5 hours ago
+																	</div>
+																</div>
 
 																<div class="tools action-buttons">
 																	<a href="#" class="blue">
@@ -803,20 +950,19 @@
 																	</a>
 																</div>
 															</div>
-                                                            <div class="profile-activity clearfix">
+
+															<div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
+																	<i class="pull-left thumbicon fa fa-picture-o btn-info no-hover"></i>
+																	<a class="user" href="#"> Alex Doe </a>
+																	uploaded a new photo.
+																	<a href="#">Take a look</a>
+
 																	<div class="time">
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
-                                                                    <div class="time"><label >教师打分:</label>
-                                                                      <form name="form1" method="post" action="">
-                                                                        <label for="score"></label>
-                                                                        <input type="text" name="score" id="score">
-                                                                        <input type="submit" name="submit" id="submit" value="提交">
-                                                                      </form>
-                                                                    </div>
-															  </div>
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		5 hours ago
+																	</div>
+																</div>
 
 																<div class="tools action-buttons">
 																	<a href="#" class="blue">
@@ -828,20 +974,18 @@
 																	</a>
 																</div>
 															</div>
-                                                            <div class="profile-activity clearfix">
+
+															<div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
+																	<img class="pull-left" alt="David Palms's avatar" src="../assets/avatars/avatar4.png" />
+																	<a class="user" href="#"> David Palms </a>
+
+																	left a comment on Alex's wall.
 																	<div class="time">
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
-                                                                    <div class="time"><label >教师打分:</label>
-                                                                      <form name="form1" method="post" action="">
-                                                                        <label for="score"></label>
-                                                                        <input type="text" name="score" id="score">
-                                                                        <input type="submit" name="submit" id="submit" value="提交">
-                                                                      </form>
-                                                                    </div>
-															  </div>
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		8 hours ago
+																	</div>
+																</div>
 
 																<div class="tools action-buttons">
 																	<a href="#" class="blue">
@@ -853,19 +997,19 @@
 																	</a>
 																</div>
 															</div>
-                                                            <div class="profile-activity clearfix">
+
+															<div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
+																	<i class="pull-left thumbicon fa fa-pencil-square-o btn-pink no-hover"></i>
+																	<a class="user" href="#"> Alex Doe </a>
+																	published a new blog post.
+																	<a href="#">Read now</a>
+
 																	<div class="time">
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
-                                                                    <div class="time"><label >教师打分:</label>
-                                                                      <form name="form1" method="post" action="">
-                                                                        <label for="score"></label>
-                                                                        <input type="submit" name="submit" id="submit" value="提交">
-                                                                      </form>
-                                                                    </div>
-															  </div>
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		11 hours ago
+																	</div>
+																</div>
 
 																<div class="tools action-buttons">
 																	<a href="#" class="blue">
@@ -877,46 +1021,18 @@
 																	</a>
 																</div>
 															</div>
-                                                            <div class="profile-activity clearfix">
-																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
-																	<input type="text" name="score2" id="score2">
-<div class="time">
-								  <i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
-                                                                    <div class="time"><label >教师打分:</label>
-                                                                      <form name="form1" method="post" action="">
-                                                                        <label for="score"></label>
-                                                                        <input type="text" name="score" id="score">
-                                                                        <input type="submit" name="submit" id="submit" value="提交">
-                                                                      </form>
-                                                                    </div>
-															  </div>
 
-																<div class="tools action-buttons">
-																	<a href="#" class="blue">
-																		<i class="ace-icon fa fa-pencil bigger-125"></i>
-																	</a>
-
-																	<a href="#" class="red">
-																		<i class="ace-icon fa fa-times bigger-125"></i>
-																	</a>
-																</div>
-															</div>
-                                                            <div class="profile-activity clearfix">
+															<div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
+																	<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																	<a class="user" href="#"> Alex Doe </a>
+
+																	upgraded his skills.
 																	<div class="time">
-																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
-                                                                    <div class="time"><label >教师打分:</label>
-                                                                      <form name="form1" method="post" action="">
-                                                                        <label for="score"></label>
-                                                                        <input type="text" name="score" id="score">
-                                                                        <input type="submit" name="submit" id="submit" value="提交">
-                                                                      </form>
-                                                                    </div>
-															  </div>
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		12 hours ago
+																	</div>
+																</div>
 
 																<div class="tools action-buttons">
 																	<a href="#" class="blue">
@@ -928,7 +1044,19 @@
 																	</a>
 																</div>
 															</div>
-											
+
+															<div class="profile-activity clearfix">
+																<div>
+																	<i class="pull-left thumbicon fa fa-key btn-info no-hover"></i>
+																	<a class="user" href="#"> Alex Doe </a>
+
+																	logged in.
+																	<div class="time">
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		12 hours ago
+																	</div>
+																</div>
+
 																<div class="tools action-buttons">
 																	<a href="#" class="blue">
 																		<i class="ace-icon fa fa-pencil bigger-125"></i>
@@ -939,25 +1067,58 @@
 																	</a>
 																</div>
 															</div>
-											  </div>
+
+															<div class="profile-activity clearfix">
+																<div>
+																	<i class="pull-left thumbicon fa fa-power-off btn-inverse no-hover"></i>
+																	<a class="user" href="#"> Alex Doe </a>
+
+																	logged out.
+																	<div class="time">
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		16 hours ago
+																	</div>
+																</div>
+
+																<div class="tools action-buttons">
+																	<a href="#" class="blue">
+																		<i class="ace-icon fa fa-pencil bigger-125"></i>
+																	</a>
+
+																	<a href="#" class="red">
+																		<i class="ace-icon fa fa-times bigger-125"></i>
+																	</a>
+																</div>
+															</div>
+
+															<div class="profile-activity clearfix">
+																<div>
+																	<i class="pull-left thumbicon fa fa-key btn-info no-hover"></i>
+																	<a class="user" href="#"> Alex Doe </a>
+
+																	logged in.
+																	<div class="time">
+																		<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																		16 hours ago
+																	</div>
+																</div>
+
+																<div class="tools action-buttons">
+																	<a href="#" class="blue">
+																		<i class="ace-icon fa fa-pencil bigger-125"></i>
+																	</a>
+
+																	<a href="#" class="red">
+																		<i class="ace-icon fa fa-times bigger-125"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
 
 											<div class="hr hr2 hr-double"></div>
-                                            		<form>
-														<div class="form-actions">
-															<div class="input-group">
-																<input placeholder="评论..." type="text" class="form-control" name="message" />
-																<span class="input-group-btn">
-																	<button class="btn btn-sm btn-info no-radius" type="button">
-																		<i class="ace-icon fa fa-share"></i>
-																		提交
-																	</button>
-																</span>
-															</div>
-														</div>
-													</form>
 
 											<div class="space-6"></div>
 
@@ -2595,8 +2756,8 @@
 					},
 					success: function(response, newValue) {
 						if(parseInt(newValue) == 1)
-							$(this).html(newValue + " hour ago");
-						else $(this).html(newValue + " hours ago");
+							$(this).jsp(newValue + " hour ago");
+						else $(this).jsp(newValue + " hours ago");
 					}
 				});
 			

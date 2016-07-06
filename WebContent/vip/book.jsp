@@ -64,7 +64,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 						图书馆管理系统
@@ -321,7 +321,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -331,7 +331,7 @@
 
 					<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -386,7 +386,7 @@
 class="active">
 						<a 
 
-href="index.html">
+href="index.jsp">
 							
 
 <i class="menu-icon fa fa-tachometer"></i>主页</a>
@@ -419,7 +419,7 @@ class="submenu">
 <li class="">
 							
 
-	<a href="tables.html">
+	<a href="tables.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -444,7 +444,7 @@ right"></i>
 <li class="">
 							
 
-	<a href="table.html">
+	<a href="table.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -466,7 +466,7 @@ right"></i>
                             <li class="">
 							
 
-	<a href="tables.html">
+	<a href="tables.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -511,7 +511,7 @@ class="submenu">
 <li class="">
 							
 
-	<a href="hurryup.html">
+	<a href="hurryup.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -536,7 +536,7 @@ right"></i>
 <li class="">
 							
 
-	<a href="fine.html">
+	<a href="fine.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -562,7 +562,7 @@ right"></i>
 					<li class="">
 						<a 
 
-href="hot.html">
+href="hot.jsp">
 							
 
 <i class="menu-icon fa fa-list-alt"></i>风云榜</a>
@@ -574,7 +574,7 @@ class="arrow"></b>
                   <li class="">
 						<a 
 
-href="comment.html">
+href="comment.jsp">
 							
 
 <i class="menu-icon fa fa-pencil-square-o"></i>
@@ -609,7 +609,7 @@ class="arrow"></b>
 					<li class="">
 						<a 
 
-href="information.html">
+href="information.jsp">
 							
 
 <i class="menu-icon fa fa-calendar"></i>
@@ -2767,8 +2767,8 @@ class="arrow"></b>
 					},
 					success: function(response, newValue) {
 						if(parseInt(newValue) == 1)
-							$(this).html(newValue + " hour ago");
-						else $(this).html(newValue + " hours ago");
+							$(this).jsp(newValue + " hour ago");
+						else $(this).jsp(newValue + " hours ago");
 					}
 				});
 			

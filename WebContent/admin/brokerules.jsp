@@ -11,6 +11,7 @@
 		<!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+<link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
 
 		<!-- page specific plugin styles -->
 		<link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
@@ -62,7 +63,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -319,7 +320,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -329,7 +330,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -380,7 +381,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -395,7 +396,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅记录
 								</a>
@@ -404,15 +405,15 @@
 							</li>
 
 							<li class="">
-								<a href="brokerules.html">
+								<a href="brokerules.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									违章记录
 								</a>
 
 								<b class="arrow"></b>
 							</li>
-                          <li class="">
-								<a href="borrow.html">
+                         <li class="">
+								<a href="borrow.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅书籍
 								</a>
@@ -420,18 +421,18 @@
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									归还书籍
 								</a>
 
 								<b class="arrow"></b>
-							</li>   
+							</li>    
 						</ul>
 					</li>
 
 					<li class="">
-						<a href="bookmanage.html">
+						<a href="bookmanage.jsp">
 							<i class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 						</a>
 
@@ -439,14 +440,14 @@
 					</li>
 
 					<li class="">
-						<a href="member.html">
+						<a href="member.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>会员管理</a>
 
 						<b class="arrow"></b>
 					</li>
 									
 					<li class="">
-						<a href="information.html">
+						<a href="information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -458,11 +459,11 @@
 						<b class="arrow"></b>
 					</li>				
 					<li class="">
-						<a href="system.html">
+						<a href="system.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
 
 						<b class="arrow"></b>
-					</li>	
+					</li>
 						</ul>
 					</li>
 				</ul><!-- /.nav-list -->
@@ -486,11 +487,11 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="index.html">图书馆管理系统</a>
+								<a href="index.jsp">图书馆管理系统</a>
 							</li>
 
 							<li>
-								<a href="#">图书管理</a>
+								<a href="#">违章记录</a>
 							</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -574,15 +575,20 @@
 
 						<div class="page-header">
 							<h1>
-								图书管理
+								违章记录
 							</h1>
+							<h1>
+						   <div class="row">
+									<div class="space-6"></div>					
+                                       </h1>
+							
 						</div><!-- /.page-header -->
 
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 								<div class="alert alert-info">
-									 <button class="btn btn-info" type="button" value="批量添加">批量添加<i class="ace-icon fa fa-check bigger-110"></i> </button>
+									 <button class="btn btn-info" type="button" value="批量添加">批量添加违章记录<i class="ace-icon fa fa-check bigger-110"></i> </button>
 								</div>
 
 								<table id="grid-table"></table>
@@ -647,29 +653,29 @@
 		<script type="text/javascript">
 			var grid_data = 
 			[ 
-				{id:"1",name:"Desktop Computer",note:"note",stock:"Yes",ship:"FedEx", sdate:"2007-12-03"},
-				{id:"2",name:"Laptop",note:"Long text ",stock:"Yes",ship:"InTime",sdate:"2007-12-03"},
-				{id:"3",name:"LCD Monitor",note:"note3",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
-				{id:"4",name:"Speakers",note:"note",stock:"No",ship:"ARAMEX",sdate:"2007-12-03"},
-				{id:"5",name:"Laser Printer",note:"note2",stock:"Yes",ship:"FedEx",sdate:"2007-12-03"},
-				{id:"6",name:"Play Station",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
-				{id:"7",name:"Mobile Telephone",note:"note",stock:"Yes",ship:"ARAMEX",sdate:"2007-12-03"},
-				{id:"8",name:"Server",note:"note2",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
-				{id:"9",name:"Matrix Printer",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
-				{id:"10",name:"Desktop Computer",note:"note",stock:"Yes",ship:"FedEx", sdate:"2007-12-03"},
-				{id:"11",name:"Laptop",note:"Long text ",stock:"Yes",ship:"InTime",sdate:"2007-12-03"},
-				{id:"12",name:"LCD Monitor",note:"note3",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
-				{id:"13",name:"Speakers",note:"note",stock:"No",ship:"ARAMEX",sdate:"2007-12-03"},
-				{id:"14",name:"Laser Printer",note:"note2",stock:"Yes",ship:"FedEx",sdate:"2007-12-03"},
-				{id:"15",name:"Play Station",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
-				{id:"16",name:"Mobile Telephone",note:"note",stock:"Yes",ship:"ARAMEX",sdate:"2007-12-03"},
-				{id:"17",name:"Server",note:"note2",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
-				{id:"18",name:"Matrix Printer",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
-				{id:"19",name:"Matrix Printer",note:"note3",stock:"No", ship:"FedEx",sdate:"2007-12-03"},
-				{id:"20",name:"Desktop Computer",note:"note",stock:"Yes",ship:"FedEx", sdate:"2007-12-03"},
-				{id:"21",name:"Laptop",note:"Long text ",stock:"Yes",ship:"InTime",sdate:"2007-12-03"},
-				{id:"22",name:"LCD Monitor",note:"note3",stock:"Yes",ship:"TNT",sdate:"2007-12-03"},
-				{id:"23",name:"Speakers",note:"note",stock:"No",ship:"ARAMEX",sdate:"2007-12-03"}
+				{id:"1",name:"丢失",note:"10元",stock:"Eric",ship:"未处理", sdate:"001"},
+				{id:"2",name:"损坏",note:"10元 ",stock:"Eric",ship:"未处理",sdate:"002"},
+				{id:"3",name:"丢失",note:"10元",stock:"Eric",ship:"未处理",sdate:"003"},
+				{id:"4",name:"损坏",note:"10元",stock:"Eric",ship:"未处理",sdate:"004"},
+				{id:"5",name:"超期",note:"10元",stock:"Eric",ship:"未处理",sdate:"005"},
+				{id:"6",name:"丢失",note:"10元",stock:"Eric", ship:"未处理",sdate:"006"},
+				{id:"7",name:"超期",note:"10元",stock:"Eric",ship:"未处理",sdate:"007"},
+				{id:"8",name:"丢失",note:"10元",stock:"Eric",ship:"未处理",sdate:"008"},
+				{id:"9",name:"损坏",note:"10元",stock:"Eric", ship:"未处理",sdate:"009"},
+				{id:"10",name:"超期",note:"10元",stock:"Eric",ship:"未处理", sdate:"010"},
+				{id:"11",name:"超期",note:"10元 ",stock:"Eric",ship:"未处理",sdate:"011"},
+				{id:"12",name:"损坏",note:"10元",stock:"Eric",ship:"未处理",sdate:"012"},
+				{id:"13",name:"超期",note:"10元",stock:"Eric",ship:"未处理",sdate:"013"},
+				{id:"14",name:"损坏",note:"10元",stock:"Eric",ship:"未处理",sdate:"014"},
+				{id:"15",name:"超期",note:"10元",stock:"Eric", ship:"未处理",sdate:"015"},
+				{id:"16",name:"损坏",note:"10元",stock:"Eric",ship:"未处理",sdate:"016"},
+				{id:"17",name:"超期",note:"10元",stock:"Eric",ship:"未处理",sdate:"017"},
+				{id:"18",name:"丢失",note:"10元",stock:"Eric", ship:"未处理",sdate:"018"},
+				{id:"19",name:"超期",note:"10元",stock:"Eric", ship:"未处理",sdate:"019"},
+				{id:"20",name:"损坏",note:"10元",stock:"Eric",ship:"未处理", sdate:"020"},
+				{id:"21",name:"超期",note:"10元 ",stock:"Eric",ship:"未处理",sdate:"021"},
+				{id:"22",name:"损坏",note:"10元",stock:"Eric",ship:"未处理",sdate:"022"},
+				{id:"23",name:"超期",note:"10元",stock:"Eric",ship:"未处理",sdate:"023"}
 			];
 			
 			
@@ -731,7 +737,7 @@
 					data: grid_data,
 					datatype: "local",
 					height: 250,
-					colNames:[' ', '索书号','入库日期','图书名', '作者', '出版社','价格'],
+					colNames:[' ', '序号','用户编号','原因', '处理人', '状态','罚款金额'],
 					colModel:[
 						{name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
 							formatter:'actions', 
@@ -773,8 +779,8 @@
 						}, 0);
 					},
 			
-					editurl: "/dummy.html",//nothing is saved
-					caption: "图书信息"
+					editurl: "/dummy.jsp",//nothing is saved
+					caption: "违章记录"
 			
 					//,autowidth: true,
 			

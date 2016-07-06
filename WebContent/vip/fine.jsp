@@ -7,24 +7,7 @@
 
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
 
-<style type="text/css">
-/* search */
-.search{border:2px solid #f58400;height:35px;margin:40px auto 0 auto;width:525px;}
-.search select{display:none;}
-.search .select_box{font-size:12px;color:#999999;width:100px;line-height:35px;float:left;position:relative;}
-.search .select_showbox{height:35px;background:url(images/search_ico.png) no-repeat 80px center;text-indent:1.5em;}
-.search .select_showbox.active{background:url(images/search_ico_hover.png) no-repeat 80px center;}
-.search .select_option{border:2px solid #f58400;border-top:none;display:none;left:-2px;top:35px;position:absolute;z-index:99;background:#fff;}
-.search .select_option li{text-indent:1.5em;width:90px;cursor:pointer;}
-.search .select_option li.selected{background-color:#F3F3F3;color:#999;}
-.search .select_option li.hover{background:#BEBEBE;color:#fff;}
-
-.search input.inp_srh,.search input.btn_srh{border:none;background:none;height:35px;line-height:35px;float:left}
-.search input.inp_srh{outline:none;width:365px;}
-.search input.btn_srh{background:#f58400;color:#FFF;font-family:"微软雅黑";font-size:15px;width:60px;}
-</style>
 		<!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
@@ -79,7 +62,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -336,7 +319,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -344,9 +327,9 @@
 							</ul>
 						</li>
 
-							<li class="light-blue">
+						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -359,12 +342,13 @@
 			<script type="text/javascript">
 				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
 			</script>
-<div id="sidebar" class="sidebar                  responsive">
+
+			<div id="sidebar" class="sidebar                  responsive">
 				<script type="text/javascript">
 					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
 				</script>
 
-			  <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 						<button class="btn btn-success">
 							<i class="ace-icon fa fa-signal"></i>
@@ -393,10 +377,9 @@
 						<span class="btn btn-danger"></span>
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
-
-				<ul class="nav nav-list">
+	<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -404,65 +387,90 @@
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>借阅管理<b class="arrow fa fa-angle-down"></b>
+							<i class="menu-icon fa fa-list"></i>借阅记录<b class="arrow fa fa-angle-down"></b>
 						</a>
 
 						<b class="arrow"></b>
 
 						<ul class="submenu">
 							<li class="">
-								<a href="borrowrecord.html">
+								<a href="tables.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									借阅记录
+									当前借阅
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 
 							<li class="">
-								<a href="brokerules.html">
+								<a href="tablesH.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									违章记录
+									历史借阅
 								</a>
 
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="borrow.html">
+								<a href="tablesY.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									借阅书籍
+									预约信息
 								</a>
 
 								<b class="arrow"></b>
 							</li>
-                            <li class="">
-								<a href="borrowrecord.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									归还书籍
-								</a>
-
-								<b class="arrow"></b>
-							</li> 
 						</ul>
 					</li>
 
 					<li class="">
-						<a href="bookmanage.html">
-							<i class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o"></i>违章记录<b class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>			
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="hurryup.jsp">
+									<i class="menu-icon fa fa-caret-right"></i>
+									催还单
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="fine.jsp">
+									<i class="menu-icon fa fa-caret-right"></i>
+									违章罚款
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+						</ul>
 					</li>
 
 					<li class="">
-						<a href="member.html">
-							<i class="menu-icon fa fa-list-alt"></i>会员管理</a>
+						<a href="hot.jsp">
+							<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
 
 						<b class="arrow"></b>
 					</li>
-									
+                  <li class="">
+						<a href="comment.jsp">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+
+							<span class="menu-text">我的评论<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+								</span>
+							</span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>					
+
 					<li class="">
-						<a href="information.html">
+						<a href="information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -473,19 +481,13 @@
 
 						<b class="arrow"></b>
 					</li>				
-					<li class="">
-						<a href="system.html">
-							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
-
-						<b class="arrow"></b>
-					</li>	
+						
 						</ul>
 					</li>
 				</ul><!-- /.nav-list -->
-
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-			  </div>
+				</div>
 
 				<script type="text/javascript">
 					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
@@ -506,7 +508,7 @@
 							</li>
 
 							<li>
-								<a href="#">借阅信息</a>
+								<a href="#">违章罚款</a>
 							</li>
 							
 						</ul><!-- /.breadcrumb -->
@@ -592,45 +594,10 @@
 
 						<div class="page-header">
 							<h1>
-								借阅信息<small> </small>
+								违章罚款<small> </small>
 							</h1>
-							<h1>
-						  <div class="row">
-									<div class="space-6"></div>	
-
-						<div class="search radius6">
-	<form name="searchform" method="post" action="/e/search/index.php">
-		<input name='ecmsfrom' type='hidden' value='9'>
-		<input type="hidden" name="show" value="title,newstext">
-		<select name="readerid？" id="choose">
-			<option value="0">按序号</option>
-			<option value="1">按索书号</option>
-			<option value="4">按作者</option>
-			<option value="22">按会员</option>
-		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索借阅记录条件" >
->
-		<a href="brokerules.html"><div class="btn_srh" >搜索</div></a>
-	</form>
-</div>
-
-<script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.select.js"></script>
-                                       </h1>
-							
-							
 						</div><!-- /.page-header -->
-                          
-						  
-						
-							
-						
-						 
-						 
-						 
-						 
-						 
-						 
-						 
+
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
@@ -641,15 +608,15 @@
 												<tr>
 												  <th>序号</th>
 													<th>书名</th>
-													<th>借阅时间</th>
-													<th class="hidden-480">借阅人</th>
+													<th>索书号</th>
+													<th class="hidden-480">借阅日期</th>
 
 													<th>
 														<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-														状态
+														应还日期
 													</th>
-													<th class="hidden-480">操作</th>
-													<th>不知道还有什么属性</th>
+													<th class="hidden-480">状态</th>
+													<th>罚款金额</th>
 
 													
 												</tr>
@@ -665,21 +632,15 @@
 													<td>
 														<a href="#">今天天气好晴朗</a>
 													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">kyle</td>
-													<td>未还</td>
+													<td>111</td>
+													<td class="hidden-480">3/15</td>
+													<td>5/15</td>
 
 													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-warning">归还</span>
-													</a>	
-														
-													<a href="#">	
-														<span class="label label-sm label-warning">续借</span>
-													</a>	
+														<span class="label label-sm label-warning">超期</span>
 													</td>
                                                     <td>
-														<a href="#">啦啦啦</a>
+														<a href="#">12元</a>
 													</td>
 													
 												<tr>
@@ -689,22 +650,17 @@
 													</td>
 
 													<td>
-														<a href="#">所以……和黑粉结婚了</a>
+														<a href="#">所以……跟黑粉结婚了</a>
 													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Eric</td>
-													<td>未还</td>
+													<td>112</td>
+													<td class="hidden-480">5/30</td>
+													<td>7/30</td>
 
 													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-success">归还</span>
-													</a>
-													<a href="#">
-														<span class="label label-sm label-success">续借</span>
-													</a>	
+														<span class="label label-sm label-success">损坏</span>
 													</td>
 													<td>
-														<a href="#">啦啦啦</a>
+														<a href="#">30元</a>
 													</td>
 
 													
@@ -717,22 +673,17 @@
 													</td>
 
 													<td>
-														<a href="#">哈哈哈哈哈哈</a>
+														<a href="#">哈哈哈哈哈</a>
 													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Stan</td>
-													<td>未还</td>
+													<td>113</td>
+													<td class="hidden-480">5/30</td>
+													<td>7/30</td>
 
 													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-warning">归还</span>
-														</a>
-														<a href="#">
-														<span class="label label-sm label-warning">续借</span>
-														</a>
+														<span class="label label-sm label-warning">丢失</span>
 													</td>
 													<td>
-														<a href="#">啦啦啦</a>
+														<a href="#">50元</a>
 													</td>
 
 													
@@ -745,23 +696,18 @@
 													</td>
 
 													<td>
-														<a href="#">小丽丽的幸福生活</a>
+														<a href="#">小丽丽的欢乐人生</a>
 													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Kenny</td>
-													<td>未还</td>
+													<td>114</td>
+													<td class="hidden-480">4/13</td>
+													<td>6/13</td>
 
 													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-inverse arrowed-in">归还</span>
-														</a>
-														<a href="#">
-														<span class="label label-sm label-inverse arrowed-in">续借</span>
-														</a>
+														<span class="label label-sm label-inverse arrowed-in">超期</span>
 													</td>
 
 													<td>
-														<a href="#">郭敬明</a>
+														<a href="#">10元</a>
 													</td>
 														
 
@@ -778,20 +724,15 @@
 													<td>
 														<a href="#">小丽丽的普通话教程</a>
 													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Butters</td>
-													<td>未还</td>
+													<td>115</td>
+													<td class="hidden-480">4/10</td>
+													<td>6/10</td>
 
 													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-success">归还</span>
-														</a>
-														<a href="#">
-														<span class="label label-sm label-success">续借</span>
-														</a>
+														<span class="label label-sm label-success">超期</span>
 													</td>
                                                     <td>
-														<a href="#">啦啦啦</a>
+														<a href="#">10元</a>
 													</td>
 													
 												</tr>

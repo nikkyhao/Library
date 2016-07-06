@@ -7,7 +7,7 @@
 
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<link href="assets/css/base.css" type="text/css" rel="stylesheet" />
+<link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
 
 <style type="text/css">
 /* search */
@@ -26,35 +26,35 @@
 .search input.btn_srh{background:#f58400;color:#FFF;font-family:"微软雅黑";font-size:15px;width:60px;}
 </style>
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="assets/js/ace-extra.min.js"></script>
+		<script src="../assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
+		<script src="../assets/js/html5shiv.min.js"></script>
+		<script src="../assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -76,7 +76,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -247,7 +247,7 @@
 									<ul class="dropdown-menu dropdown-navbar">
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<img src="../assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Alex:</span>
@@ -264,7 +264,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+												<img src="../assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Susan:</span>
@@ -281,7 +281,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+												<img src="../assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Bob:</span>
@@ -298,7 +298,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+												<img src="../assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Kate:</span>
@@ -315,7 +315,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+												<img src="../assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Fred:</span>
@@ -333,7 +333,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -343,8 +343,8 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
-								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
+							<a href="login.jsp">
+								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
 					</ul>
@@ -394,7 +394,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -409,7 +409,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅记录
 								</a>
@@ -418,7 +418,7 @@
 							</li>
 
 							<li class="">
-								<a href="brokerules.html">
+								<a href="brokerules.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									违章记录
 								</a>
@@ -426,7 +426,7 @@
 								<b class="arrow"></b>
 							</li>
                           <li class="">
-								<a href="borrow.html">
+								<a href="borrow.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅书籍
 								</a>
@@ -434,7 +434,7 @@
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									归还书籍
 								</a>
@@ -445,7 +445,7 @@
 					</li>
 
 					<li class="">
-						<a href="bookmanage.html">
+						<a href="bookmanage.jsp">
 							<i class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 						</a>
 
@@ -453,14 +453,14 @@
 					</li>
 
 					<li class="">
-						<a href="member.html">
+						<a href="member.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>会员管理</a>
 
 						<b class="arrow"></b>
 					</li>
 									
 					<li class="">
-						<a href="information.html">
+						<a href="information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -472,7 +472,7 @@
 						<b class="arrow"></b>
 					</li>				
 					<li class="">
-						<a href="system.html">
+						<a href="system.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
 
 						<b class="arrow"></b>
@@ -609,12 +609,12 @@
 			<option value="22">按类别</option>
 		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
 >
-		<a href="searchbook.html"><div class="btn_srh" >搜索</div></a>
+		<a href="searchbook.jsp"><div class="btn_srh" >搜索</div></a>
 	</form>
 </div>
 
-<script type="text/javascript" src="assets/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.select.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.select.js"></script>
 
 									<div class="vspace-12-sm"></div>
 
@@ -827,7 +827,7 @@
 													<div class="dialogs">
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Alexa's Avatar" src="assets/avatars/avatar1.png" />
+																<img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
 															</div>
 
 															<div class="body">
@@ -851,7 +851,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="John's Avatar" src="assets/avatars/avatar.png" />
+																<img alt="John's Avatar" src="../assets/avatars/avatar.png" />
 															</div>
 
 															<div class="body">
@@ -875,7 +875,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Bob's Avatar" src="assets/avatars/user.jpg" />
+																<img alt="Bob's Avatar" src="../assets/avatars/user.jpg" />
 															</div>
 
 															<div class="body">
@@ -900,7 +900,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Jim's Avatar" src="assets/avatars/avatar4.png" />
+																<img alt="Jim's Avatar" src="../assets/avatars/avatar4.png" />
 															</div>
 
 															<div class="body">
@@ -924,7 +924,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Alexa's Avatar" src="assets/avatars/avatar1.png" />
+																<img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
 															</div>
 
 															<div class="body">
@@ -985,47 +985,47 @@
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="assets/js/jquery.2.1.1.min.js"></script>
+		<script src="../assets/js/jquery.2.1.1.min.js"></script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-<script src="assets/js/jquery.1.11.1.min.js"></script>
+<script src="../assets/js/jquery.1.11.1.min.js"></script>
 <![endif]-->
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='../assets/js/jquery.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="../assets/js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
 		<!--[if lte IE 8]>
-		  <script src="assets/js/excanvas.min.js"></script>
+		  <script src="../assets/js/excanvas.min.js"></script>
 		<![endif]-->
-		<script src="assets/js/jquery-ui.custom.min.js"></script>
-		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="assets/js/jquery.easypiechart.min.js"></script>
-		<script src="assets/js/jquery.sparkline.min.js"></script>
-		<script src="assets/js/jquery.flot.min.js"></script>
-		<script src="assets/js/jquery.flot.pie.min.js"></script>
-		<script src="assets/js/jquery.flot.resize.min.js"></script>
+		<script src="../assets/js/jquery-ui.custom.min.js"></script>
+		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="../assets/js/jquery.easypiechart.min.js"></script>
+		<script src="../assets/js/jquery.sparkline.min.js"></script>
+		<script src="../assets/js/jquery.flot.min.js"></script>
+		<script src="../assets/js/jquery.flot.pie.min.js"></script>
+		<script src="../assets/js/jquery.flot.resize.min.js"></script>
 
 		<!-- ace scripts -->
-		<script src="assets/js/ace-elements.min.js"></script>
-		<script src="assets/js/ace.min.js"></script>
+		<script src="../assets/js/ace-elements.min.js"></script>
+		<script src="../assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">

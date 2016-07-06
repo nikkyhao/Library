@@ -59,10 +59,10 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-						图书馆管理系统
+							图书馆管理系统
 						</small>
 					</a>
 				</div>
@@ -316,7 +316,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -326,7 +326,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -381,7 +381,7 @@
 class="active">
 						<a 
 
-href="index.html">
+href="index.jsp">
 							
 
 <i class="menu-icon fa fa-tachometer"></i>主页</a>
@@ -414,7 +414,7 @@ class="submenu">
 <li class="">
 							
 
-	<a href="tables.html">
+	<a href="tables.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -439,7 +439,7 @@ right"></i>
 <li class="">
 							
 
-	<a href="tablesH.html">
+	<a href="tablesH.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -461,7 +461,7 @@ right"></i>
                             <li class="">
 							
 
-	<a href="tablesY.html">
+	<a href="tablesY.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -506,7 +506,7 @@ class="submenu">
 <li class="">
 							
 
-	<a href="hurryup.html">
+	<a href="hurryup.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -531,7 +531,7 @@ right"></i>
 <li class="">
 							
 
-	<a href="fine.html">
+	<a href="fine.jsp">
 							
 
 		<i class="menu-icon fa fa-caret-
@@ -557,7 +557,7 @@ right"></i>
 					<li class="">
 						<a 
 
-href="hot.html">
+href="hot.jsp">
 							
 
 <i class="menu-icon fa fa-list-alt"></i>风云榜</a>
@@ -569,7 +569,7 @@ class="arrow"></b>
                   <li class="">
 						<a 
 
-href="comment.html">
+href="comment.jsp">
 							
 
 <i class="menu-icon fa fa-pencil-square-o"></i>
@@ -604,7 +604,7 @@ class="arrow"></b>
 					<li class="">
 						<a 
 
-href="information.html">
+href="information.jsp">
 							
 
 <i class="menu-icon fa fa-calendar"></i>
@@ -747,7 +747,7 @@ class="arrow"></b>
 
 						<div class="page-header">
 							<h1>
-								预约书籍记录<small> </small>
+								历史借阅书籍<small> </small>
 							</h1>
 						</div><!-- /.page-header -->
 
@@ -762,7 +762,7 @@ class="arrow"></b>
 												  <th>序号</th>
 													<th>书名</th>
 													<th>索书号</th>
-													<th class="hidden-480">预约日期</th>
+													<th class="hidden-480">借阅日期</th>
 
 													<th>
 														<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>

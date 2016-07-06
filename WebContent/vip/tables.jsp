@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
 
-		<meta name="description" content="" />
+		<meta name="description" content="Static &amp; Dynamic Tables" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
@@ -13,9 +13,6 @@
 		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="../assets/css/bootstrap-duallistbox.min.css" />
-		<link rel="stylesheet" href="../assets/css/bootstrap-multiselect.min.css" />
-		<link rel="stylesheet" href="../assets/css/select2.min.css" />
 
 		<!-- text fonts -->
 		<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
@@ -62,7 +59,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -319,7 +316,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -329,7 +326,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -377,114 +374,275 @@
 						<span class="btn btn-danger"></span>
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
-	<ul class="nav nav-list">
-					<li class="active">
-						<a href="index.html">
-							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
-						<b class="arrow"></b>
+		<ul class="nav nav-list">
+					<li 
+
+class="active">
+						<a 
+
+href="index.jsp">
+							
+
+<i class="menu-icon fa fa-tachometer"></i>主页</a>
+
+						<b 
+
+class="arrow"></b>
 					</li>
 
 					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>借阅记录<b class="arrow fa fa-angle-down"></b>
+						<a 
+
+href="#" class="dropdown-toggle">
+							
+
+<i class="menu-icon fa fa-list"></i>借阅记录<b 
+
+class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>
+						<b 
 
-						<ul class="submenu">
-							<li class="">
-								<a href="tables.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									当前借阅
-								</a>
+class="arrow"></b>
 
-								<b class="arrow"></b>
-							</li>
+						<ul 
 
-							<li class="">
-								<a href="tablesH.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									历史借阅
-								</a>
+class="submenu">
+							
 
-								<b class="arrow"></b>
-							</li>
+<li class="">
+							
+
+	<a href="tables.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		当前借阅
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
+
+							
+
+<li class="">
+							
+
+	<a href="tablesH.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		历史借阅
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
                             <li class="">
-								<a href="tablesY.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									预约信息
-								</a>
+							
 
-								<b class="arrow"></b>
-							</li>
+	<a href="tablesY.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		预约信息
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
 						</ul>
 					</li>
 
 					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>违章记录<b class="arrow fa fa-angle-down"></b>
+						<a 
+
+href="#" class="dropdown-toggle">
+							
+
+<i class="menu-icon fa fa-file-o"></i>违章记录<b 
+
+class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>
+						<b 
 
-						<ul class="submenu">
-							<li class="">
-								<a href="hurryup.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									催还单
-								</a>
+class="arrow"></b>
 
-								<b class="arrow"></b>
-							</li>
+						<ul 
 
-							<li class="">
-								<a href="fine.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									违章罚款
-								</a>
+class="submenu">
+							
 
-								<b class="arrow"></b>
-							</li>
+<li class="">
+							
+
+	<a href="hurryup.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		催还单
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
+
+							
+
+<li class="">
+							
+
+	<a href="fine.jsp">
+							
+
+		<i class="menu-icon fa fa-caret-
+
+right"></i>
+							
+
+		违章罚款
+							
+
+	</a>
+
+							
+
+	<b class="arrow"></b>
+							
+
+</li>
 
 						</ul>
 					</li>
 
 					<li class="">
-						<a href="hot.html">
-							<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
+						<a 
 
-						<b class="arrow"></b>
+href="hot.jsp">
+							
+
+<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
+
+						<b 
+
+class="arrow"></b>
 					</li>
                   <li class="">
-						<a href="comment.html">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
+						<a 
 
-							<span class="menu-text">我的评论<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
+href="comment.jsp">
+							
+
+<i class="menu-icon fa fa-pencil-square-o"></i>
+
+							
+
+<span class="menu-text">我的评论<span class="badge 
+
+badge-transparent tooltip-error" title="2 Important 
+
+Events">
+							
+
+		<i class="ace-icon fa fa-exclamation-
+
+triangle red bigger-130"></i>
+							
+
+	</span>
+							
+
+</span>
 						</a>
 
-						<b class="arrow"></b>
-					</li>					
+						<b 
+
+class="arrow"></b>
+					</li>		
+
+			
 
 					<li class="">
-						<a href="information.html">
-							<i class="menu-icon fa fa-calendar"></i>
+						<a 
 
-							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
+href="information.jsp">
+							
+
+<i class="menu-icon fa fa-calendar"></i>
+
+							
+
+<span class="menu-text">我的信息<span class="badge 
+
+badge-transparent tooltip-error" title="2 Important 
+
+Events">
+							
+
+		<i class="ace-icon fa fa-exclamation-
+
+triangle red bigger-130"></i>
+							
+
+	</span>
+							
+
+</span>
 						</a>
 
-						<b class="arrow"></b>
-					</li>				
+						<b 
+
+class="arrow"></b>
+					</li>		
+
+		
 						
 						</ul>
 					</li>
-				</ul><!-- /.nav-list -->
+				</ul><!-- /.nav-list 
+
+-->
+            
+
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 				</div>
@@ -503,14 +661,10 @@
 
 						<ul class="breadcrumb">
 							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">图书馆管理系统</a>
-							</li>
+								<i class="ace-icon fa fa-home home-icon"></i>主页</li>
 
 							<li>
-								<a href="#">违章罚款</a>
-							</li>
-							
+						    <a href="#">借阅记录</a></li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -523,7 +677,6 @@
 						</div><!-- /.nav-search -->
 					</div>
 
-					
 					<div class="page-content">
 						<div class="ace-settings-container" id="ace-settings-container">
 							<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
@@ -594,7 +747,7 @@
 
 						<div class="page-header">
 							<h1>
-								违章罚款<small> </small>
+								当前借阅书籍<small> </small>
 							</h1>
 						</div><!-- /.page-header -->
 
@@ -615,10 +768,6 @@
 														<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
 														应还日期
 													</th>
-													<th class="hidden-480">状态</th>
-													<th>罚款金额</th>
-
-													
 												</tr>
 											</thead>
 
@@ -630,19 +779,13 @@
 													</td>
 
 													<td>
-														<a href="#">今天天气好晴朗</a>
+														<a href="#">ace.com</a>
 													</td>
-													<td>111</td>
-													<td class="hidden-480">3/15</td>
-													<td>5/15</td>
+													<td>$45</td>
+													<td class="hidden-480">Feb 12</td>
+													<td>Feb 12</td>
+												</tr>
 
-													<td class="hidden-480">
-														<span class="label label-sm label-warning">超期</span>
-													</td>
-                                                    <td>
-														<a href="#">12元</a>
-													</td>
-													
 												<tr>
 													<td class="center">
 														<label class="pos-rel">2<span class="lbl"></span>
@@ -650,20 +793,11 @@
 													</td>
 
 													<td>
-														<a href="#">所以……跟黑粉结婚了</a>
+														<a href="#">base.com</a>
 													</td>
-													<td>112</td>
-													<td class="hidden-480">5/30</td>
-													<td>7/30</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-success">损坏</span>
-													</td>
-													<td>
-														<a href="#">30元</a>
-													</td>
-
-													
+													<td>$35</td>
+													<td class="hidden-480">Feb 12</td>
+													<td>Feb 18</td>
 												</tr>
 
 												<tr>
@@ -673,20 +807,11 @@
 													</td>
 
 													<td>
-														<a href="#">哈哈哈哈哈</a>
+														<a href="#">max.com</a>
 													</td>
-													<td>113</td>
-													<td class="hidden-480">5/30</td>
-													<td>7/30</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-warning">丢失</span>
-													</td>
-													<td>
-														<a href="#">50元</a>
-													</td>
-
-													
+													<td>$60</td>
+													<td class="hidden-480">Feb 12</td>
+													<td>Mar 11</td>
 												</tr>
 
 												<tr>
@@ -696,21 +821,11 @@
 													</td>
 
 													<td>
-														<a href="#">小丽丽的欢乐人生</a>
+														<a href="#">best.com</a>
 													</td>
-													<td>114</td>
-													<td class="hidden-480">4/13</td>
-													<td>6/13</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-inverse arrowed-in">超期</span>
-													</td>
-
-													<td>
-														<a href="#">10元</a>
-													</td>
-														
-
+													<td>$75</td>
+													<td class="hidden-480">Feb 12</td>
+													<td>Apr 03</td>
 												</tr>
 
 												<tr>
@@ -722,37 +837,137 @@
 													</td>
 
 													<td>
-														<a href="#">小丽丽的普通话教程</a>
+														<a href="#">pro.com</a>
 													</td>
-													<td>115</td>
-													<td class="hidden-480">4/10</td>
-													<td>6/10</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-success">超期</span>
-													</td>
-                                                    <td>
-														<a href="#">10元</a>
-													</td>
-													
+													<td>$55</td>
+													<td class="hidden-480">Feb 12</td>
+													<td>Jan 21</td>
 												</tr>
 											</tbody>
 										</table>
 									</div><!-- /.span -->
 								</div><!-- /.row -->
+								<div class="row"></div>
 
-								
+								<div id="modal-table" class="modal fade" tabindex="-1">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header no-padding">
+												<div class="table-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+														<span class="white">&times;</span>
+													</button>
+													Results for "Latest Registered Domains
+												</div>
+											</div>
 
-								
+											<div class="modal-body no-padding">
+												<table class="table table-striped table-bordered table-hover no-margin-bottom no-border-top">
+													<thead>
+														<tr>
+															<th>Domain</th>
+															<th>Price</th>
+															<th>Clicks</th>
+
+															<th>
+																<i class="ace-icon fa fa-clock-o bigger-110"></i>
+																Update
+															</th>
+														</tr>
+													</thead>
+
+													<tbody>
+														<tr>
+															<td>
+																<a href="#">ace.com</a>
+															</td>
+															<td>$45</td>
+															<td>3,330</td>
+															<td>Feb 12</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">base.com</a>
+															</td>
+															<td>$35</td>
+															<td>2,595</td>
+															<td>Feb 18</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">max.com</a>
+															</td>
+															<td>$60</td>
+															<td>4,400</td>
+															<td>Mar 11</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">best.com</a>
+															</td>
+															<td>$75</td>
+															<td>6,500</td>
+															<td>Apr 03</td>
+														</tr>
+
+														<tr>
+															<td>
+																<a href="#">pro.com</a>
+															</td>
+															<td>$55</td>
+															<td>4,250</td>
+															<td>Jan 21</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<div class="modal-footer no-margin-top">
+												<button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
+													<i class="ace-icon fa fa-times"></i>
+													Close
+												</button>
+
+												<ul class="pagination pull-right no-margin">
+													<li class="prev disabled">
+														<a href="#">
+															<i class="ace-icon fa fa-angle-double-left"></i>
+														</a>
+													</li>
+
+													<li class="active">
+														<a href="#">1</a>
+													</li>
+
+													<li>
+														<a href="#">2</a>
+													</li>
+
+													<li>
+														<a href="#">3</a>
+													</li>
+
+													<li class="next">
+														<a href="#">
+															<i class="ace-icon fa fa-angle-double-right"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div><!-- /.modal-content -->
+									</div><!-- /.modal-dialog -->
+								</div><!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
+				</div>
 			</div><!-- /.main-content -->
 
 			<div class="footer">
-				<div class="footer-inner">
-					
-				</div>
+				<div class="footer-inner"></div>
 			</div>
 
 			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
@@ -789,11 +1004,10 @@
 		<script src="../assets/js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
-		<script src="../assets/js/jquery.bootstrap-duallistbox.min.js"></script>
-		<script src="../assets/js/jquery.raty.min.js"></script>
-		<script src="../assets/js/bootstrap-multiselect.min.js"></script>
-		<script src="../assets/js/select2.min.js"></script>
-		<script src="../assets/js/typeahead.jquery.min.js"></script>
+		<script src="../assets/js/jquery.dataTables.min.js"></script>
+		<script src="../assets/js/jquery.dataTables.bootstrap.min.js"></script>
+		<script src="../assets/js/dataTables.tableTools.min.js"></script>
+		<script src="../assets/js/dataTables.colVis.min.js"></script>
 
 		<!-- ace scripts -->
 		<script src="../assets/js/ace-elements.min.js"></script>
@@ -801,111 +1015,223 @@
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
-			jQuery(function($){
-			    var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>'});
-				var container1 = demo1.bootstrapDualListbox('getContainer');
-				container1.find('.btn').addClass('btn-white btn-info btn-bold');
+			jQuery(function($) {
+				//initiate dataTables plugin
+				var oTable1 = 
+				$('#dynamic-table')
+				//.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
+				.dataTable( {
+					bAutoWidth: false,
+					"aoColumns": [
+					  { "bSortable": false },
+					  null, null,null, null, null,
+					  { "bSortable": false }
+					],
+					"aaSorting": [],
 			
-				/**var setRatingColors = function() {
-					$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
-					$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
-				}*/
-				$('.rating').raty({
-					'cancel' : true,
-					'half': true,
-					'starType' : 'i'
-					/**,
+					//,
+					//"sScrollY": "200px",
+					//"bPaginate": false,
+			
+					//"sScrollX": "100%",
+					//"sScrollXInner": "120%",
+					//"bScrollCollapse": true,
+					//Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
+					//you may want to wrap the table inside a "div.dataTables_borderWrap" element
+			
+					//"iDisplayLength": 50
+			    } );
+				//oTable1.fnAdjustColumnSizing();
+			
+			
+				//TableTools settings
+				TableTools.classes.container = "btn-group btn-overlap";
+				TableTools.classes.print = {
+					"body": "DTTT_Print",
+					"info": "tableTools-alert gritter-item-wrapper gritter-info gritter-center white",
+					"message": "tableTools-print-navbar"
+				}
+			
+				//initiate TableTools extension
+				var tableTools_obj = new $.fn.dataTable.TableTools( oTable1, {
+					"sSwfPath": "../assets/swf/copy_csv_xls_pdf.swf",
 					
-					'click': function() {
-						setRatingColors.call(this);
+					"sRowSelector": "td:not(:last-child)",
+					"sRowSelect": "multi",
+					"fnRowSelected": function(row) {
+						//check checkbox when row is selected
+						try { $(row).find('input[type=checkbox]').get(0).checked = true }
+						catch(e) {}
 					},
-					'mouseover': function() {
-						setRatingColors.call(this);
+					"fnRowDeselected": function(row) {
+						//uncheck checkbox
+						try { $(row).find('input[type=checkbox]').get(0).checked = false }
+						catch(e) {}
 					},
-					'mouseout': function() {
-						setRatingColors.call(this);
-					}*/
-				})//.find('i:not(.star-raty)').addClass('grey');
-				
-				
-				
-				//////////////////
-				//select2
-				$('.select2').css('width','200px').select2({allowClear:true})
-				$('#select2-multiple-style .btn').on('click', function(e){
-					var target = $(this).find('input[type=radio]');
-					var which = parseInt(target.val());
-					if(which == 2) $('.select2').addClass('tag-input-style');
-					 else $('.select2').removeClass('tag-input-style');
-				});
-				
-				//////////////////
-				$('.multiselect').multiselect({
-				 enableFiltering: true,
-				 buttonClass: 'btn btn-white btn-primary',
-				 templates: {
-					button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
-					ul: '<ul class="multiselect-container dropdown-menu"></ul>',
-					filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
-					filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
-					li: '<li><a href="javascript:void(0);"><label></label></a></li>',
-					divider: '<li class="multiselect-item divider"></li>',
-					liGroup: '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
-				 }
-				});
-				
-				
-				///////////////////
-					
-				//typeahead.js
-				//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
-				var substringMatcher = function(strs) {
-					return function findMatches(q, cb) {
-						var matches, substringRegex;
-					 
-						// an array that will be populated with substring matches
-						matches = [];
-					 
-						// regex used to determine if a string contains the substring `q`
-						substrRegex = new RegExp(q, 'i');
-					 
-						// iterate through the pool of strings and for any string that
-						// contains the substring `q`, add it to the `matches` array
-						$.each(strs, function(i, str) {
-							if (substrRegex.test(str)) {
-								// the typeahead jQuery plugin expects suggestions to a
-								// JavaScript object, refer to typeahead docs for more info
-								matches.push({ value: str });
+			
+					"sSelectedClass": "success",
+			        "aButtons": [
+						{
+							"sExtends": "copy",
+							"sToolTip": "Copy to clipboard",
+							"sButtonClass": "btn btn-white btn-primary btn-bold",
+							"sButtonText": "<i class='fa fa-copy bigger-110 pink'></i>",
+							"fnComplete": function() {
+								this.fnInfo( '<h3 class="no-margin-top smaller">Table copied</h3>\
+									<p>Copied '+(oTable1.fnSettings().fnRecordsTotal())+' row(s) to the clipboard.</p>',
+									1500
+								);
 							}
-						});
-			
-						cb(matches);
+						},
+						
+						{
+							"sExtends": "csv",
+							"sToolTip": "Export to CSV",
+							"sButtonClass": "btn btn-white btn-primary  btn-bold",
+							"sButtonText": "<i class='fa fa-file-excel-o bigger-110 green'></i>"
+						},
+						
+						{
+							"sExtends": "pdf",
+							"sToolTip": "Export to PDF",
+							"sButtonClass": "btn btn-white btn-primary  btn-bold",
+							"sButtonText": "<i class='fa fa-file-pdf-o bigger-110 red'></i>"
+						},
+						
+						{
+							"sExtends": "print",
+							"sToolTip": "Print view",
+							"sButtonClass": "btn btn-white btn-primary  btn-bold",
+							"sButtonText": "<i class='fa fa-print bigger-110 grey'></i>",
+							
+							"sMessage": "<div class='navbar navbar-default'><div class='navbar-header pull-left'><a class='navbar-brand' href='#'><small>Optional Navbar &amp; Text</small></a></div></div>",
+							
+							"sInfo": "<h3 class='no-margin-top'>Print view</h3>\
+									  <p>Please use your browser's print function to\
+									  print this table.\
+									  <br />Press <b>escape</b> when finished.</p>",
+						}
+			        ]
+			    } );
+				//we put a container before our table and append TableTools element to it
+			    $(tableTools_obj.fnContainer()).appendTo($('.tableTools-container'));
+				
+				//also add tooltips to table tools buttons
+				//addding tooltips directly to "A" buttons results in buttons disappearing (weired! don't know why!)
+				//so we add tooltips to the "DIV" child after it becomes inserted
+				//flash objects inside table tools buttons are inserted with some delay (100ms) (for some reason)
+				setTimeout(function() {
+					$(tableTools_obj.fnContainer()).find('a.DTTT_button').each(function() {
+						var div = $(this).find('> div');
+						if(div.length > 0) div.tooltip({container: 'body'});
+						else $(this).tooltip({container: 'body'});
+					});
+				}, 200);
+				
+				
+				
+				//ColVis extension
+				var colvis = new $.fn.dataTable.ColVis( oTable1, {
+					"buttonText": "<i class='fa fa-search'></i>",
+					"aiExclude": [0, 6],
+					"bShowAll": true,
+					//"bRestore": true,
+					"sAlign": "right",
+					"fnLabel": function(i, title, th) {
+						return $(th).text();//remove icons, etc
 					}
-				 }
+					
+				}); 
+				
+				//style it
+				$(colvis.button()).addClass('btn-group').find('button').addClass('btn btn-white btn-info btn-bold')
+				
+				//and append it to our table tools btn-group, also add tooltip
+				$(colvis.button())
+				.prependTo('.tableTools-container .btn-group')
+				.attr('title', 'Show/hide columns').tooltip({container: 'body'});
+				
+				//and make the list, buttons and checkboxed Ace-like
+				$(colvis.dom.collection)
+				.addClass('dropdown-menu dropdown-light dropdown-caret dropdown-caret-right')
+				.find('li').wrapInner('<a href="javascript:void(0)" />') //'A' tag is required for better styling
+				.find('input[type=checkbox]').addClass('ace').next().addClass('lbl padding-8');
 			
-				 $('input.typeahead').typeahead({
-					hint: true,
-					highlight: true,
-					minLength: 1
-				 }, {
-					name: 'states',
-					displayKey: 'value',
-					source: substringMatcher(ace.vars['US_STATES'])
-				 });
+			
+				
+				/////////////////////////////////
+				//table checkboxes
+				$('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
+				
+				//select/deselect all rows according to table header checkbox
+				$('#dynamic-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function(){
+					var th_checked = this.checked;//checkbox inside "TH" table header
 					
-					
-				///////////////
+					$(this).closest('table').find('tbody > tr').each(function(){
+						var row = this;
+						if(th_checked) tableTools_obj.fnSelect(row);
+						else tableTools_obj.fnDeselect(row);
+					});
+				});
+				
+				//select/deselect a row when the checkbox is checked/unchecked
+				$('#dynamic-table').on('click', 'td input[type=checkbox]' , function(){
+					var row = $(this).closest('tr').get(0);
+					if(!this.checked) tableTools_obj.fnSelect(row);
+					else tableTools_obj.fnDeselect($(this).closest('tr').get(0));
+				});
+				
+			
 				
 				
-				//in ajax mode, remove remaining elements before leaving page
-				$(document).one('ajaxloadstart.page', function(e) {
-					$('[class*=select2]').remove();
-					$('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
-					$('.rating').raty('destroy');
-					$('.multiselect').multiselect('destroy');
+					$(document).on('click', '#dynamic-table .dropdown-toggle', function(e) {
+					e.stopImmediatePropagation();
+					e.stopPropagation();
+					e.preventDefault();
+				});
+				
+				
+				//And for the first simple table, which doesn't have TableTools or dataTables
+				//select/deselect all rows according to table header checkbox
+				var active_class = 'active';
+				$('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function(){
+					var th_checked = this.checked;//checkbox inside "TH" table header
+					
+					$(this).closest('table').find('tbody > tr').each(function(){
+						var row = this;
+						if(th_checked) $(row).addClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', true);
+						else $(row).removeClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', false);
+					});
+				});
+				
+				//select/deselect a row when the checkbox is checked/unchecked
+				$('#simple-table').on('click', 'td input[type=checkbox]' , function(){
+					var $row = $(this).closest('tr');
+					if(this.checked) $row.addClass(active_class);
+					else $row.removeClass(active_class);
 				});
 			
-			});
+				
+			
+				/********************************/
+				//add tooltip for small view action buttons in dropdown menu
+				$('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				
+				//tooltip placement on right or left
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('table')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					//var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+			
+			})
 		</script>
 	</body>
 </html>
