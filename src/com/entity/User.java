@@ -8,7 +8,6 @@ import java.util.Calendar;
 
 import com.mysql.jdbc.Statement;
 
-import com.test.LibConnection;
 
 public class User {
 	static Connection con = null;
