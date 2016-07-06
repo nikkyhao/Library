@@ -9,16 +9,16 @@ public class teacher extends User {
 
 	public teacher(int cardID) {
 		super(cardID);
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êý´æ¸ù
+		// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ÉµÄ¹ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½ï¿½
 	}
 	
-	public static void Alter_score(int comment_index,int comment_stu,String a) throws SQLException{		//¸øÆÀÂÛ´ò·Ö
+	public static void Alter_score(int comment_index,int comment_stu,String a) throws SQLException{		//ï¿½ï¿½ï¿½ï¿½ï¿½Û´ï¿½ï¿½
 		String sql = "update comment set comment_teacher = "+cardID+",score = "+a+" where com_index = "+comment_index+" and comment_stu = "+comment_stu;
 		java.sql.Statement statement =con.createStatement();
 		statement.executeUpdate(sql);
 	}
 	
-	public static ResultSet showscore() throws SQLException{							//²é¿´×Ô¼ºµÄ´ò·Ö
+	public static ResultSet showscore() throws SQLException{							//ï¿½é¿´ï¿½Ô¼ï¿½ï¿½Ä´ï¿½ï¿½
 		String sql = "select score from comment where comment_teacher = "+cardID;
 		java.sql.Statement statement =con.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
@@ -30,23 +30,23 @@ public class teacher extends User {
 	
 	public static void main(String args[]) throws SQLException{
 		try {
-			Class.forName("com.mysql.jdbc.Driver");// ¼ÓÔØMysqlÊý¾ÝÇý¶¯
+			Class.forName("com.mysql.jdbc.Driver");// ï¿½ï¿½ï¿½ï¿½Mysqlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			
 			con = DriverManager.getConnection(
-					"jdbc:mysql://127.0.0.1:3306/test", "root", "wanner1597");// ´´½¨Êý¾ÝÁ¬½Ó	
+					"jdbc:mysql://127.0.0.1:3306/test", "root", "wanner1597");// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	
 			System.out.println("hello");
 		} catch (Exception e) {
-			System.out.println("Êý¾Ý¿âÁ¬½ÓÊ§°Ü" + e.getMessage());
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½" + e.getMessage());
 		}
 		
-		/////²âÊÔÊä³ö
+		/////ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		cardID = 321;
 		String score = null;
 		ResultSet rs = teacher.showscore();
 		try {
 			while (rs.next()) {
 				score = rs.getString("score");
-				//index = rs.getInt(1);		//»ñÈ¡µÚÒ»ÁÐ£¬¼´index
+				//index = rs.getInt(1);		//ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½Ð£ï¿½ï¿½ï¿½index
 				System.out.println(score+'\n');
 			}
 		} catch (SQLException e) {

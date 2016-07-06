@@ -15,7 +15,7 @@ function clock()
 </script>
 <head>
 
-<meta http-equiv= "Refresh" content= "3;   url=index.html "><!-- 在这里设置跳转页面 -->
+<meta http-equiv= "Refresh" content= "3;   url=index.jsp "><!-- 在这里设置跳转页面 -->
 </head>
 <br><br><br><br><br><br><br><br>
 <center>

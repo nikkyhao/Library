@@ -550,7 +550,7 @@
 			<option value="22">按类别</option>
 		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
 >
-		<a href="searchbook.html"><div class="btn_srh" >搜索</div></a>
+		<a href="searchbook.jsp"><div class="btn_srh" >搜索</div></a>
 	</form>
 </div>
 

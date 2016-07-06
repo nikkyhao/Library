@@ -59,7 +59,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -326,7 +326,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -377,7 +377,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -385,7 +385,7 @@
 
 
 					<li class="">
-						<a href="hot.html">
+						<a href="hot.jsp">
 							<i class="menu-icon fa fa-file-o"></i>热搜榜<b class="arrow"></b>
 						</a>
 
@@ -809,7 +809,7 @@
 																	</label>
 
 																	
-																	<a href="book.html"><span class="sender" title="Alex John Red Smith">今天天气好晴朗 </span></a>
+																	<a href="book.jsp"><span class="sender" title="Alex John Red Smith">今天天气好晴朗 </span></a>
 																	<span class="time">本馆藏书：4 可借数目：0</span>
 
 																	<span class="summary">
@@ -827,7 +827,7 @@
 
 																	
 
-																	<a href="book.html"><span class="sender" title="John Doe">
+																	<a href="book.jsp"><span class="sender" title="John Doe">
 																		哈哈哈哈哈哈哈
 																		<span class="light-grey">(4)</span>
 																	</span></a>
@@ -852,7 +852,7 @@
 																	</label>
 
 																	
-																	<a href="book.html"><span class="sender" title="Philip Markov">又是一本书</span></a>
+																	<a href="book.jsp"><span class="sender" title="Philip Markov">又是一本书</span></a>
 																	<span class="time">本馆藏书：4 可借数目：0</span>
 
 																	<span class="attachment">

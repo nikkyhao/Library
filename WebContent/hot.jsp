@@ -59,7 +59,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							Ace Admin
@@ -326,7 +326,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -377,7 +377,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -388,7 +388,7 @@
 					
 
 					<li class="">
-						<a href="hot.html">
+						<a href="hot.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
 
 						<b class="arrow"></b>

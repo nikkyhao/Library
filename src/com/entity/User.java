@@ -1,6 +1,6 @@
 package com.entity;
 /**
- * @author ÍôÍ¨
+ * @author ï¿½ï¿½Í¨
  */
 
 import java.sql.*;
@@ -18,32 +18,32 @@ public class User {
 		this.cardID = cardID;
 	}
 	
-	public static ResultSet showMyBook_now() throws SQLException{		//²éÑ¯µ±Ç°½èÔÄ£¨ÊéÃû£¬Ë÷ÊéºÅ£¬Á½¸öÈÕÆÚ£©
+	public static ResultSet showMyBook_now() throws SQLException{		//ï¿½ï¿½Ñ¯ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½
 		String sql = "SELECT bookid,bookname,bo_date,deadline FROM borrow,category JOIN book ON category.`index`=book.cateindex WHERE (bo_bookid,bookname) IN (select bookid,bookname from category JOIN book ON category.`index`=book.cateindex WHERE bookid in(select bo_bookid from borrow WHERE bo_cardID=123)) and return_date is null AND bo_cardID="+cardID;
 		java.sql.Statement statement =con.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
 		return rs;
 	}
-	private boolean Isoverdate(ResultSet a) throws SQLException{		//ÊÇ·ñ³¬ÆÚ
+	private boolean Isoverdate(ResultSet a) throws SQLException{		//ï¿½Ç·ï¿½ï¿½ï¿½
 		boolean m;
 		Timestamp c = a.getTimestamp("deadline");
 		Timestamp ts = new Timestamp(System.currentTimeMillis());
 		Calendar cal1 = Calendar.getInstance();
-		cal1.setTime(ts);			//µ±Ç°Ê±¼ä
+		cal1.setTime(ts);			//ï¿½ï¿½Ç°Ê±ï¿½ï¿½
 		Calendar cal2 = Calendar.getInstance();
-		cal2.setTime(c);			//½ØÖ¹ÈÕÆÚ
-		return cal1.after(cal2);			//	µ±Ç°Ê±¼ä³¬¹ý½ØÖ¹ÈÕÆÚ£¬Îª³¬ÆÚ
+		cal2.setTime(c);			//ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½
+		return cal1.after(cal2);			//	ï¿½ï¿½Ç°Ê±ï¿½ä³¬ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½Ú£ï¿½Îªï¿½ï¿½ï¿½ï¿½
 		
 	}
 	
-	public static ResultSet showMyBook_history() throws SQLException{		//²éÑ¯ÀúÊ·½èÔÄ£¨ÊéÃû£¬Ë÷ÊéºÅ£¬Á½¸öÈÕÆÚ£©
+	public static ResultSet showMyBook_history() throws SQLException{		//ï¿½ï¿½Ñ¯ï¿½ï¿½Ê·ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½
 		String sql = "SELECT bookid,bookname,bo_date,return_date FROM borrow,category JOIN book ON category.`index`=book.cateindex WHERE (bo_bookid,bookname) IN (select bookid,bookname from category JOIN book ON category.`index`=book.cateindex WHERE bookid in(select bo_bookid from borrow WHERE bo_cardID=123)) and return_date is not null and bo_cardID = "+cardID;
 		java.sql.Statement statement =con.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
 		return rs;
 	}
 	
-	public static ResultSet show_my_info() throws SQLException{		//²éÑ¯µ±Ç°ÓÃ»§µÄËùÓÐÐÅÏ¢
+	public static ResultSet show_my_info() throws SQLException{		//ï¿½ï¿½Ñ¯ï¿½ï¿½Ç°ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		String sql = "select * from user where cardID ="+cardID;
 		java.sql.Statement statement =con.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
@@ -51,26 +51,26 @@ public class User {
 	}
 	
 	
-	public static void Update_info(String propertyname,String value) throws SQLException{		//¸ü¸ÄÓÃ»§Êý¾Ý
+	public static void Update_info(String propertyname,String value) throws SQLException{		//ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
 		String sql = "update user set "+propertyname+" = "+value+" where cardID = "+cardID;
 		java.sql.Statement statement =con.createStatement();
 		statement.executeUpdate(sql);	
 	}
 	
-	public static ResultSet showMyBook_Reminder() throws SQLException{		//´ß»¹µ¥£¬ËùÓÐÀë»¹ÊéÈÕÆÚ»¹²îÈýÌìµÄ£¨ÊéÃû£¬Ë÷ÊéºÅ£¬Á½¸öÈÕÆÚ£©
+	public static ResultSet showMyBook_Reminder() throws SQLException{		//ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë»¹ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½
 		String sql = "select a.bookname,a.`index`,r.bo_date,r.return_date from category a,book b,borrow r  where DATEDIFF(r.return_date,now())<3 and DATEDIFF(r.return_date,now())>0 and  a.`index` = b.cateindex and b.bookid = r.bo_bookid and bo_cardID= "+cardID;
 		java.sql.Statement statement =con.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
 		return rs;
 	}
 	
-	public static void Alter_order(int Order_index) throws SQLException{		//Ìí¼ÓÒ»¸öÔ¤Ô¼ÐÅÏ¢
+	public static void Alter_order(int Order_index) throws SQLException{		//ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ô¤Ô¼ï¿½ï¿½Ï¢
 		String sql = "insert into `order` values("+Order_index+","+cardID+",now(),(select date_add(now(), interval 1 day)))";
 		java.sql.Statement statement =con.createStatement();
 		statement.executeUpdate(sql);
 	}
 	
-	public static ResultSet showMyorder() throws SQLException{		//ÏÔÊ¾Ô¤Ô¼ÐÅÏ¢
+	public static ResultSet showMyorder() throws SQLException{		//ï¿½ï¿½Ê¾Ô¤Ô¼ï¿½ï¿½Ï¢
 		String sql = "select a.bookname,a.`index`,b.bookingdate,b.deadline from category a,book c,`order` b,user u where a.`index`=c.cateindex and c.bookid=b.ord_bookid and b.ord_cardID=u.cardID and cardId = "+cardID;
 		java.sql.Statement statement =con.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
@@ -81,23 +81,23 @@ public class User {
 
 	public static void main(String args[]) throws SQLException{
 		try {
-			Class.forName("com.mysql.jdbc.Driver");// ¼ÓÔØMysqlÊý¾ÝÇý¶¯
+			Class.forName("com.mysql.jdbc.Driver");// ï¿½ï¿½ï¿½ï¿½Mysqlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			
 			con = DriverManager.getConnection(
-					"jdbc:mysql://127.0.0.1:3306/test", "root", "wanner1597");// ´´½¨Êý¾ÝÁ¬½Ó	
+					"jdbc:mysql://127.0.0.1:3306/test", "root", "wanner1597");// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	
 			System.out.println("hello");
 		} catch (Exception e) {
-			System.out.println("Êý¾Ý¿âÁ¬½ÓÊ§°Ü" + e.getMessage());
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½" + e.getMessage());
 		}
 		
-		/////²âÊÔÊä³ö
+		/////ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		cardID = 223;
 		ResultSet rs = User.showMyorder();
 		String bookname = null;
 		try {
 			while (rs.next()) {
 				bookname = rs.getString("bookname");
-				//index = rs.getInt(1);		//»ñÈ¡µÚÒ»ÁÐ£¬¼´index
+				//index = rs.getInt(1);		//ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½Ð£ï¿½ï¿½ï¿½index
 				System.out.println(bookname+'\n');
 			}
 		} catch (SQLException e) {

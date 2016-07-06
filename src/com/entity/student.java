@@ -8,16 +8,16 @@ public class student extends User {
 	static int cardID;
 	public student(int cardID) {
 		super(cardID);
-		// TODO ×Ô¶¯Éú³ÉµÄ¹¹Ôìº¯Êý´æ¸ù
+		// TODO ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ÉµÄ¹ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½ï¿½
 	}
 
-	public static void comment(int comment_index,String b) throws SQLException{			//Ìí¼ÓÆÀÂÛ,²ÎÊýÎªÊéµÄË÷ÊéºÅºÍÆÀÂÛ
+	public static void comment(int comment_index,String b) throws SQLException{			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Åºï¿½ï¿½ï¿½ï¿½ï¿½
 		String sql = "insert into comment values("+comment_index+","+cardID+",null,"+b+",now(),null)";
 		java.sql.Statement statement =con.createStatement();
 		statement.executeUpdate(sql);	
 	}
 	
-	public static ResultSet ShowMyComment() throws SQLException{ 								//²é¿´×Ô¼ºµÄËùÓÐÆÀÂÛ
+	public static ResultSet ShowMyComment() throws SQLException{ 								//ï¿½é¿´ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		String sql = "Select * from comment where comment_stu ="+cardID;
 		java.sql.Statement statement =con.createStatement();
 		ResultSet rs = statement.executeQuery(sql);
@@ -27,23 +27,23 @@ public class student extends User {
 	
 	public static void main(String args[]) throws SQLException{
 		try {
-			Class.forName("com.mysql.jdbc.Driver");// ¼ÓÔØMysqlÊý¾ÝÇý¶¯
+			Class.forName("com.mysql.jdbc.Driver");// ï¿½ï¿½ï¿½ï¿½Mysqlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			
 			con = DriverManager.getConnection(
-					"jdbc:mysql://127.0.0.1:3306/test", "root", "wanner1597");// ´´½¨Êý¾ÝÁ¬½Ó	
+					"jdbc:mysql://127.0.0.1:3306/test", "root", "wanner1597");// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	
 			System.out.println("hello");
 		} catch (Exception e) {
-			System.out.println("Êý¾Ý¿âÁ¬½ÓÊ§°Ü" + e.getMessage());
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½" + e.getMessage());
 		}
 		
-		/////²âÊÔÊä³ö
+		/////ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		cardID = 223;
 		ResultSet rs = student.ShowMyComment();
 		String remark = null;
 		try {
 			while (rs.next()) {
 				remark = rs.getString("remark");
-				//index = rs.getInt(1);		//»ñÈ¡µÚÒ»ÁÐ£¬¼´index
+				//index = rs.getInt(1);		//ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½Ð£ï¿½ï¿½ï¿½index
 				System.out.println(remark+'\n');
 			}
 		} catch (SQLException e) {
