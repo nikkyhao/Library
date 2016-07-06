@@ -3,6 +3,15 @@
     pageEncoding="UTF-8"%>
 <html lang="en">
 	<head>
+	<%@ page  import="java.sql.*"  import="com.entity.*" %>
+<%! 
+	ResultSet result = null;
+%>
+
+<% 
+	result =(ResultSet)request.getAttribute("SearchResult");
+%>
+	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
@@ -510,7 +519,7 @@
 											<div class="profile-user-info profile-user-info-striped">
 												<div class="profile-info-row">
 													<div class="profile-info-name"> 书名 </div>
-
+													
 													<div class="profile-info-value">
 														<span class="editable" id="username">操作系统</span>													</div>
 												</div>

@@ -1,8 +1,18 @@
 <!DOCTYPE html>
+<%@page import="java.security.interfaces.RSAKey"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html lang="en">
 	<head>
+		<%@ page  import="java.sql.*"  import="com.entity.*" %>
+<%! 
+	ResultSet result = null;
+%>
+
+<% 
+	result =(ResultSet)request.getAttribute("SearchResult");
+%>
+	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
@@ -809,10 +819,14 @@
 																		<input type="checkbox" class="ace" />
 																		
 																	</label>
-
 																	
-																	<a href="book.jsp"><span class="sender" title="Alex John Red Smith">今天天气好晴朗 </span></a>
-																	<span class="time">本馆藏书：4 可借数目：0</span>
+																	<a href="book.jsp"><span class="sender" title="Alex John Red Smith">
+																	<%= result.getString("bookname")  
+																	%>
+																	</span></a>
+																	
+																	<span class="time">本馆藏书：<%=result.getString("COUNT(bookid)") %> 
+																	可借数目：<%=LibSystem.seachBorrowNum(Integer.parseInt(result.getString("index"))) %></span>
 
 																	<span class="summary">
 																		<span class="text">

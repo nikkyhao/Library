@@ -46,6 +46,22 @@ public class LibSystem {
 	 * ����������ͼ�飬����������ͬ����ͼ���ж��ٱ�
 	 * 
 	 */
+	public static int seachBorrowNum(int index) {
+		// 一共借出了几本index类的书
+		int num = 0;
+		String sql = "select count(bookid) as num from category,book where `index`=cateindex and `index`=" + index;
+		ResultSet rs = null;
+		try {
+			rs = statement.executeQuery(sql);
+			while (rs.next()) {
+				num = rs.getInt("num");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return num;
+	}
 public static ResultSet queryByBookName(String strif) {
 		
 		
@@ -121,8 +137,6 @@ public static ResultSet queryByPress(String strif) {
  * �����������ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
  */
 public static ResultSet queryByLanguage(String strif) {
-	
-	
 	String sql = "";
 	if (strif != "all" && strif != null && strif != "") {
 		sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND language LIKE +'%" + strif + "%' GROUP BY `INDEX`";
@@ -137,8 +151,6 @@ public static ResultSet queryByLanguage(String strif) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	
-		
 	return rs;
 }
 /*
@@ -146,13 +158,9 @@ public static ResultSet queryByLanguage(String strif) {
  */
 public static ResultSet queryByIndex(String string) {
 	
-	
 	String sql = "";
 	
 		sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND `INDEX` LIKE +'%" + string + "%' GROUP BY `INDEX`";
-	
-		
-	
 	
 	ResultSet rs = null;
 	try {

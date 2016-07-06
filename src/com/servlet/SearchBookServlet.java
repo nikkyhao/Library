@@ -32,15 +32,48 @@ ResultSet rs = null;//用于存放搜索结果
 		switch (searchType) {
 		case 0://bookname
 			rs = LibSystem.queryByBookName(content);
+			try {
+		    while (rs.next()) {
+					System.out.println(rs.getString("bookname"));
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			
 			break;
 		case 1://index
-			
+			rs = LibSystem.queryByIndex(content);
+			try {
+		    while (rs.next()) {
+					System.out.println(rs.getString("bookname"));
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			break;
         case 2://author
-			
+        	rs = LibSystem.queryByAuthor(content);
+			try {
+		    while (rs.next()) {
+					System.out.println(rs.getString("bookname"));
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			break;
 		case 3://type
+			rs = LibSystem.queryByBookType(content);
+			try {
+		    while (rs.next()) {
+					System.out.println(rs.getString("bookname"));
+					}
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			
 			break;
 
@@ -48,9 +81,8 @@ ResultSet rs = null;//用于存放搜索结果
 			
 			break;
 		}
-		
-		
-//		request.getRequestDispatcher("LogResult.jsp").forward(request, response);
+		request.setAttribute("SearchResult", rs);
+		request.getRequestDispatcher("searchbook.jsp").forward(request, response);
 	
 	}
 
