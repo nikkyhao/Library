@@ -63,7 +63,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -320,7 +320,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -330,7 +330,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -381,7 +381,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -396,7 +396,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅记录
 								</a>
@@ -405,7 +405,7 @@
 							</li>
 
 							<li class="">
-								<a href="brokerules.html">
+								<a href="brokerules.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									违章记录
 								</a>
@@ -413,7 +413,7 @@
 								<b class="arrow"></b>
 							</li>
                          <li class="">
-								<a href="borrow.html">
+								<a href="borrow.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅书籍
 								</a>
@@ -421,7 +421,7 @@
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									归还书籍
 								</a>
@@ -432,7 +432,7 @@
 					</li>
 
 					<li class="">
-						<a href="bookmanage.html">
+						<a href="bookmanage.jsp">
 							<i class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 						</a>
 
@@ -440,14 +440,14 @@
 					</li>
 
 					<li class="">
-						<a href="member.html">
+						<a href="member.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>会员管理</a>
 
 						<b class="arrow"></b>
 					</li>
 									
 					<li class="">
-						<a href="information.html">
+						<a href="information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -459,7 +459,7 @@
 						<b class="arrow"></b>
 					</li>				
 					<li class="">
-						<a href="system.html">
+						<a href="system.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
 
 						<b class="arrow"></b>
@@ -487,7 +487,7 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="index.html">图书馆管理系统</a>
+								<a href="index.jsp">图书馆管理系统</a>
 							</li>
 
 							<li>
@@ -779,7 +779,7 @@
 						}, 0);
 					},
 			
-					editurl: "/dummy.html",//nothing is saved
+					editurl: "/dummy.jsp",//nothing is saved
 					caption: "违章记录"
 			
 					//,autowidth: true,

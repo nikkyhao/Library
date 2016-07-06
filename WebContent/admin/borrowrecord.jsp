@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
 
-		<meta name="description" content="overview &amp; stats" />
+		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
 
@@ -30,6 +30,9 @@
 		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="../assets/css/bootstrap-duallistbox.min.css" />
+		<link rel="stylesheet" href="../assets/css/bootstrap-multiselect.min.css" />
+		<link rel="stylesheet" href="../assets/css/select2.min.css" />
 
 		<!-- text fonts -->
 		<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
@@ -76,7 +79,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
+					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -333,7 +336,7 @@
 								</li>
 
 								<li class="dropdown-footer">
-									<a href="inbox.html">
+									<a href="inbox.jsp">
 										See all messages
 										<i class="ace-icon fa fa-arrow-right"></i>
 									</a>
@@ -341,9 +344,9 @@
 							</ul>
 						</li>
 
-						<li class="light-blue">
+							<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -356,8 +359,7 @@
 			<script type="text/javascript">
 				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
 			</script>
-
-			<div id="sidebar" class="sidebar                  responsive">
+<div id="sidebar" class="sidebar                  responsive">
 				<script type="text/javascript">
 					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
 				</script>
@@ -394,7 +396,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -409,7 +411,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅记录
 								</a>
@@ -418,15 +420,15 @@
 							</li>
 
 							<li class="">
-								<a href="brokerules.html">
+								<a href="brokerules.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									违章记录
 								</a>
 
 								<b class="arrow"></b>
 							</li>
-                          <li class="">
-								<a href="borrow.html">
+                            <li class="">
+								<a href="borrow.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅书籍
 								</a>
@@ -434,18 +436,18 @@
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="borrowrecord.html">
+								<a href="borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									归还书籍
 								</a>
 
 								<b class="arrow"></b>
-							</li>   
+							</li> 
 						</ul>
 					</li>
 
 					<li class="">
-						<a href="bookmanage.html">
+						<a href="bookmanage.jsp">
 							<i class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 						</a>
 
@@ -453,14 +455,14 @@
 					</li>
 
 					<li class="">
-						<a href="member.html">
+						<a href="member.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>会员管理</a>
 
 						<b class="arrow"></b>
 					</li>
 									
 					<li class="">
-						<a href="information.html">
+						<a href="information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -472,7 +474,7 @@
 						<b class="arrow"></b>
 					</li>				
 					<li class="">
-						<a href="system.html">
+						<a href="system.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
 
 						<b class="arrow"></b>
@@ -499,8 +501,14 @@
 
 						<ul class="breadcrumb">
 							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>图书馆管理系统</li>
-							<li class="active">主页</li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="#">图书馆管理系统</a>
+							</li>
+
+							<li>
+								<a href="#">借阅信息</a>
+							</li>
+							
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -513,6 +521,7 @@
 						</div><!-- /.nav-search -->
 					</div>
 
+					
 					<div class="page-content">
 						<div class="ace-settings-container" id="ace-settings-container">
 							<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
@@ -582,399 +591,227 @@
 						</div><!-- /.ace-settings-container -->
 
 						<div class="page-header">
-							<h1>图书馆管理系统<small>
-									<i class="ace-icon fa fa-angle-double-right"></i>首页</small>
+							<h1>
+								借阅信息<small> </small>
 							</h1>
-						</div><!-- /.page-header -->
-
-					  <div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div class="alert alert-block alert-success">
-									<p>书籍是人类进步的阶梯</p>
-									<p>欢迎小朋友们来到图书馆管理系统！</p>
-								</div>
-
-							  <div class="row">
+							<h1>
+						  <div class="row">
 									<div class="space-6"></div>	
 
 						<div class="search radius6">
 	<form name="searchform" method="post" action="/e/search/index.php">
 		<input name='ecmsfrom' type='hidden' value='9'>
 		<input type="hidden" name="show" value="title,newstext">
-		<select name="classid" id="choose">
-			<option value="0">按名称</option>
+		<select name="readerid？" id="choose">
+			<option value="0">按序号</option>
 			<option value="1">按索书号</option>
 			<option value="4">按作者</option>
-			<option value="22">按类别</option>
-		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
+			<option value="22">按会员</option>
+		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索借阅记录条件" >
 >
-		<a href="searchbook.html"><div class="btn_srh" >搜索</div></a>
+		<a href="brokerules.jsp"><div class="btn_srh" >搜索</div></a>
 	</form>
 </div>
 
 <script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.select.js"></script>
-
-									<div class="vspace-12-sm"></div>
-
-									<div class="col-sm-5">
-										<div class="widget-box">
-											<div class="widget-header widget-header-flat widget-header-small">
-												<h5 class="widget-title">
-													<i class="ace-icon fa fa-signal"></i>
-							馆藏图书
-												</h5>
-
-												<div class="widget-toolbar no-border">
-													<div class="inline dropdown-hover">
-														<button class="btn btn-minier btn-primary">
-															
-															<i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
-														</button>
-
-														<ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
-															<li class="active">
-																<a href="#" class="blue">
-																	<i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
-																	This Week
-																</a>
-															</li>
-
-															<li>
-																<a href="#">
-																	<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-																	Last Week
-																</a>
-															</li>
-
-															<li>
-																<a href="#">
-																	<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-																	This Month
-																</a>
-															</li>
-
-															<li>
-																<a href="#">
-																	<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
-																	Last Month
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-
-											<div class="widget-body">
-												<div class="widget-main">
-													<div id="piechart-placeholder"></div>
-
-													<div class="hr hr8 hr-double"></div>
-
-													<div class="clearfix">
-														<div class="grid3">
-															<span class="grey">
-																<i class="ace-icon fa fa-facebook-square fa-2x blue"></i>
-																&nbsp; likes
-															</span>
-															<h4 class="bigger pull-right">1,255</h4>
-														</div>
-
-														<div class="grid3">
-															<span class="grey">
-																<i class="ace-icon fa fa-twitter-square fa-2x purple"></i>
-																&nbsp; tweets
-															</span>
-															<h4 class="bigger pull-right">941</h4>
-														</div>
-
-														<div class="grid3">
-															<span class="grey">
-																<i class="ace-icon fa fa-pinterest-square fa-2x red"></i>
-																&nbsp; pins
-															</span>
-															<h4 class="bigger pull-right">1,050</h4>
-														</div>
-													</div>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
-																		<div class="col-sm-5">
-										<div class="widget-box transparent">
-											<div class="widget-header widget-header-flat">
-												<h4 class="widget-title lighter">
-													<i class="ace-icon fa fa-star orange"></i>
-								热搜榜
-												</h4>
-
-												<div class="widget-toolbar">
-													<a href="#" data-action="collapse">
-														<i class="ace-icon fa fa-chevron-up"></i>
-													</a>
-												</div>
-											</div>
-
-											<div class="widget-body">
-												<div class="widget-main no-padding">
-													<table class="table table-bordered table-striped">
-														<thead class="thin-border-bottom">
-															<tr>
-																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>书名
-																</th>
-
-																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>价格
-																</th>
-
-																<th class="hidden-480">
-																	<i class="ace-icon fa fa-caret-right blue"></i>状态
-																</th>
-															</tr>
-														</thead>
-
-														<tbody>
-															<tr>
-																<td>internet.com</td>
-
-																<td>
-																	<small>
-																		<s class="red">$29.99</s>
-																	</small>
-																	<b class="green">$19.99</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-info arrowed-right arrowed-in">on sale</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>online.com</td>
-
-																<td>
-																	<b class="blue">$16.45</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-success arrowed-in arrowed-in-right">approved</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>newnet.com</td>
-
-																<td>
-																	<b class="blue">$15.00</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-danger arrowed">pending</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>web.com</td>
-
-																<td>
-																	<small>
-																		<s class="red">$24.99</s>
-																	</small>
-																	<b class="green">$19.95</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label arrowed">
-																		<s>out of stock</s>
-																	</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>domain.com</td>
-
-																<td>
-																	<b class="blue">$12.00</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-warning arrowed arrowed-right">SOLD</span>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->						
-						  </div><!-- /.row -->
-
-
+                                       </h1>
+							
+							
+						</div><!-- /.page-header -->
+                          
+						  
+						
+							
+						
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
 								<div class="row">
+									<div class="col-xs-12">
+										<table id="simple-table" class="table table-striped table-bordered table-hover">
+											<thead>
+												<tr>
+												  <th>序号</th>
+													<th>书名</th>
+													<th>借阅时间</th>
+													<th class="hidden-480">借阅人</th>
 
+													<th>
+														<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+														状态
+													</th>
+													<th class="hidden-480">操作</th>
+													<th>不知道还有什么属性</th>
 
-									<div class="col-sm-6">
-										<div class="widget-box">
-											<div class="widget-header">
-												<h4 class="widget-title lighter smaller">
-													<i class="ace-icon fa fa-comment blue"></i>热门评论</h4>
-											</div>
+													
+												</tr>
+											</thead>
 
-											<div class="widget-body">
-												<div class="widget-main no-padding">
-													<div class="dialogs">
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
-															</div>
+											<tbody>
+												<tr>
+													<td class="center">
+														<label class="pos-rel">1<span class="lbl"></span>
+														</label>
+													</td>
 
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="green">4 sec</span>
-																</div>
+													<td>
+														<a href="#">今天天气好晴朗</a>
+													</td>
+													<td>2015/5/18</td>
+													<td class="hidden-480">kyle</td>
+													<td>未还</td>
 
-																<div class="name">
-																	<a href="#">Alexa</a>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+													<td class="hidden-480">
+													<a href="#">
+														<span class="label label-sm label-warning">归还</span>
+													</a>	
+														
+													<a href="#">	
+														<span class="label label-sm label-warning">续借</span>
+													</a>	
+													</td>
+                                                    <td>
+														<a href="#">啦啦啦</a>
+													</td>
+													
+												<tr>
+													<td class="center">
+														<label class="pos-rel">2<span class="lbl"></span>
+														</label>
+													</td>
 
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
+													<td>
+														<a href="#">所以……和黑粉结婚了</a>
+													</td>
+													<td>2015/5/18</td>
+													<td class="hidden-480">Eric</td>
+													<td>未还</td>
 
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="John's Avatar" src="../assets/avatars/avatar.png" />
-															</div>
+													<td class="hidden-480">
+													<a href="#">
+														<span class="label label-sm label-success">归还</span>
+													</a>
+													<a href="#">
+														<span class="label label-sm label-success">续借</span>
+													</a>	
+													</td>
+													<td>
+														<a href="#">啦啦啦</a>
+													</td>
 
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="blue">38 sec</span>
-																</div>
+													
+												</tr>
 
-																<div class="name">
-																	<a href="#">John</a>
-																</div>
-																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+												<tr>
+													<td class="center">
+														<label class="pos-rel">3<span class="lbl"></span>
+														</label>
+													</td>
 
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
+													<td>
+														<a href="#">哈哈哈哈哈哈</a>
+													</td>
+													<td>2015/5/18</td>
+													<td class="hidden-480">Stan</td>
+													<td>未还</td>
 
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Bob's Avatar" src="../assets/avatars/user.jpg" />
-															</div>
+													<td class="hidden-480">
+													<a href="#">
+														<span class="label label-sm label-warning">归还</span>
+														</a>
+														<a href="#">
+														<span class="label label-sm label-warning">续借</span>
+														</a>
+													</td>
+													<td>
+														<a href="#">啦啦啦</a>
+													</td>
 
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="orange">2 min</span>
-																</div>
+													
+												</tr>
 
-																<div class="name">
-																	<a href="#">Bob</a>
-																	<span class="label label-info arrowed arrowed-in-right">admin</span>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+												<tr>
+													<td class="center">
+														<label class="pos-rel">4<span class="lbl"></span>
+														</label>
+													</td>
 
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
+													<td>
+														<a href="#">小丽丽的幸福生活</a>
+													</td>
+													<td>2015/5/18</td>
+													<td class="hidden-480">Kenny</td>
+													<td>未还</td>
 
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Jim's Avatar" src="../assets/avatars/avatar4.png" />
-															</div>
+													<td class="hidden-480">
+													<a href="#">
+														<span class="label label-sm label-inverse arrowed-in">归还</span>
+														</a>
+														<a href="#">
+														<span class="label label-sm label-inverse arrowed-in">续借</span>
+														</a>
+													</td>
 
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="grey">3 min</span>
-																</div>
+													<td>
+														<a href="#">郭敬明</a>
+													</td>
+														
 
-																<div class="name">
-																	<a href="#">Jim</a>
-																</div>
-																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+												</tr>
 
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
+												<tr>
+													<td class="center">
+														<label class="pos-rel">
+															5
+															<span class="lbl"></span>
+														</label>
+													</td>
 
-														<div class="itemdiv dialogdiv">
-															<div class="user">
-																<img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
-															</div>
+													<td>
+														<a href="#">小丽丽的普通话教程</a>
+													</td>
+													<td>2015/5/18</td>
+													<td class="hidden-480">Butters</td>
+													<td>未还</td>
 
-															<div class="body">
-																<div class="time">
-																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="green">4 min</span>
-																</div>
-
-																<div class="name">
-																	<a href="#">Alexa</a>
-																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-
-																<div class="tools">
-																	<a href="#" class="btn btn-minier btn-info">
-																		<i class="icon-only ace-icon fa fa-share"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-
-													<form>
-														<div class="form-actions">
-															<div class="input-group">
-																<input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
-																<span class="input-group-btn">
-																	<button class="btn btn-sm btn-info no-radius" type="button">
-																		<i class="ace-icon fa fa-share"></i>
-																		Send
-																	</button>
-																</span>
-															</div>
-														</div>
-													</form>
-												</div><!-- /.widget-main -->
-											</div><!-- /.widget-body -->
-										</div><!-- /.widget-box -->
-									</div><!-- /.col -->
+													<td class="hidden-480">
+													<a href="#">
+														<span class="label label-sm label-success">归还</span>
+														</a>
+														<a href="#">
+														<span class="label label-sm label-success">续借</span>
+														</a>
+													</td>
+                                                    <td>
+														<a href="#">啦啦啦</a>
+													</td>
+													
+												</tr>
+											</tbody>
+										</table>
+									</div><!-- /.span -->
 								</div><!-- /.row -->
 
-								<!-- PAGE CONTENT ENDS -->
+								
+
+								
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
-				</div>
 			</div><!-- /.main-content -->
 
 			<div class="footer">
-				<div class="footer-inner"></div>
+				<div class="footer-inner">
+					
+				</div>
 			</div>
 
 			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
@@ -1011,17 +848,11 @@
 		<script src="../assets/js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
-
-		<!--[if lte IE 8]>
-		  <script src="../assets/js/excanvas.min.js"></script>
-		<![endif]-->
-		<script src="../assets/js/jquery-ui.custom.min.js"></script>
-		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../assets/js/jquery.easypiechart.min.js"></script>
-		<script src="../assets/js/jquery.sparkline.min.js"></script>
-		<script src="../assets/js/jquery.flot.min.js"></script>
-		<script src="../assets/js/jquery.flot.pie.min.js"></script>
-		<script src="../assets/js/jquery.flot.resize.min.js"></script>
+		<script src="../assets/js/jquery.bootstrap-duallistbox.min.js"></script>
+		<script src="../assets/js/jquery.raty.min.js"></script>
+		<script src="../assets/js/bootstrap-multiselect.min.js"></script>
+		<script src="../assets/js/select2.min.js"></script>
+		<script src="../assets/js/typeahead.jquery.min.js"></script>
 
 		<!-- ace scripts -->
 		<script src="../assets/js/ace-elements.min.js"></script>
@@ -1029,221 +860,111 @@
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
-			jQuery(function($) {
-				$('.easy-pie-chart.percentage').each(function(){
-					var $box = $(this).closest('.infobox');
-					var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
-					var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
-					var size = parseInt($(this).data('size')) || 50;
-					$(this).easyPieChart({
-						barColor: barColor,
-						trackColor: trackColor,
-						scaleColor: false,
-						lineCap: 'butt',
-						lineWidth: parseInt(size/10),
-						animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
-						size: size
-					});
-				})
+			jQuery(function($){
+			    var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>'});
+				var container1 = demo1.bootstrapDualListbox('getContainer');
+				container1.find('.btn').addClass('btn-white btn-info btn-bold');
 			
-				$('.sparkline').each(function(){
-					var $box = $(this).closest('.infobox');
-					var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
-					$(this).sparkline('html',
-									 {
-										tagValuesAttribute:'data-values',
-										type: 'bar',
-										barColor: barColor ,
-										chartRangeMin:$(this).data('min') || 0
-									 });
-				});
-			
-			
-			  //flot chart resize plugin, somehow manipulates default browser resize event to optimize it!
-			  //but sometimes it brings up errors with normal resize event handlers
-			  $.resize.throttleWindow = false;
-			
-			  var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
-			  var data = [
-				{ label: "social networks",  data: 38.7, color: "#68BC31"},
-				{ label: "search engines",  data: 24.5, color: "#2091CF"},
-				{ label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
-				{ label: "direct traffic",  data: 18.6, color: "#DA5430"},
-				{ label: "other",  data: 10, color: "#FEE074"}
-			  ]
-			  function drawPieChart(placeholder, data, position) {
-			 	  $.plot(placeholder, data, {
-					series: {
-						pie: {
-							show: true,
-							tilt:0.8,
-							highlight: {
-								opacity: 0.25
-							},
-							stroke: {
-								color: '#fff',
-								width: 2
-							},
-							startAngle: 2
-						}
+				/**var setRatingColors = function() {
+					$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
+					$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
+				}*/
+				$('.rating').raty({
+					'cancel' : true,
+					'half': true,
+					'starType' : 'i'
+					/**,
+					
+					'click': function() {
+						setRatingColors.call(this);
 					},
-					legend: {
-						show: true,
-						position: position || "ne", 
-						labelBoxBorderColor: null,
-						margin:[-30,15]
-					}
-					,
-					grid: {
-						hoverable: true,
-						clickable: true
-					}
-				 })
-			 }
-			 drawPieChart(placeholder, data);
-			
-			 /**
-			 we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
-			 so that's not needed actually.
-			 */
-			 placeholder.data('chart', data);
-			 placeholder.data('draw', drawPieChart);
-			
-			
-			  //pie chart tooltip example
-			  var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
-			  var previousPoint = null;
-			
-			  placeholder.on('plothover', function (event, pos, item) {
-				if(item) {
-					if (previousPoint != item.seriesIndex) {
-						previousPoint = item.seriesIndex;
-						var tip = item.series['label'] + " : " + item.series['percent']+'%';
-						$tooltip.show().children(0).text(tip);
-					}
-					$tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
-				} else {
-					$tooltip.hide();
-					previousPoint = null;
-				}
+					'mouseover': function() {
+						setRatingColors.call(this);
+					},
+					'mouseout': function() {
+						setRatingColors.call(this);
+					}*/
+				})//.find('i:not(.star-raty)').addClass('grey');
 				
-			 });
+				
+				
+				//////////////////
+				//select2
+				$('.select2').css('width','200px').select2({allowClear:true})
+				$('#select2-multiple-style .btn').on('click', function(e){
+					var target = $(this).find('input[type=radio]');
+					var which = parseInt(target.val());
+					if(which == 2) $('.select2').addClass('tag-input-style');
+					 else $('.select2').removeClass('tag-input-style');
+				});
+				
+				//////////////////
+				$('.multiselect').multiselect({
+				 enableFiltering: true,
+				 buttonClass: 'btn btn-white btn-primary',
+				 templates: {
+					button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
+					ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+					filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+					filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+					li: '<li><a href="javascript:void(0);"><label></label></a></li>',
+					divider: '<li class="multiselect-item divider"></li>',
+					liGroup: '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
+				 }
+				});
+				
+				
+				///////////////////
+					
+				//typeahead.js
+				//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
+				var substringMatcher = function(strs) {
+					return function findMatches(q, cb) {
+						var matches, substringRegex;
+					 
+						// an array that will be populated with substring matches
+						matches = [];
+					 
+						// regex used to determine if a string contains the substring `q`
+						substrRegex = new RegExp(q, 'i');
+					 
+						// iterate through the pool of strings and for any string that
+						// contains the substring `q`, add it to the `matches` array
+						$.each(strs, function(i, str) {
+							if (substrRegex.test(str)) {
+								// the typeahead jQuery plugin expects suggestions to a
+								// JavaScript object, refer to typeahead docs for more info
+								matches.push({ value: str });
+							}
+						});
 			
-				/////////////////////////////////////
+						cb(matches);
+					}
+				 }
+			
+				 $('input.typeahead').typeahead({
+					hint: true,
+					highlight: true,
+					minLength: 1
+				 }, {
+					name: 'states',
+					displayKey: 'value',
+					source: substringMatcher(ace.vars['US_STATES'])
+				 });
+					
+					
+				///////////////
+				
+				
+				//in ajax mode, remove remaining elements before leaving page
 				$(document).one('ajaxloadstart.page', function(e) {
-					$tooltip.remove();
+					$('[class*=select2]').remove();
+					$('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
+					$('.rating').raty('destroy');
+					$('.multiselect').multiselect('destroy');
 				});
 			
-			
-			
-			
-				var d1 = [];
-				for (var i = 0; i < Math.PI * 2; i += 0.5) {
-					d1.push([i, Math.sin(i)]);
-				}
-			
-				var d2 = [];
-				for (var i = 0; i < Math.PI * 2; i += 0.5) {
-					d2.push([i, Math.cos(i)]);
-				}
-			
-				var d3 = [];
-				for (var i = 0; i < Math.PI * 2; i += 0.2) {
-					d3.push([i, Math.tan(i)]);
-				}
-				
-			
-				var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
-				$.plot("#sales-charts", [
-					{ label: "Domains", data: d1 },
-					{ label: "Hosting", data: d2 },
-					{ label: "Services", data: d3 }
-				], {
-					hoverable: true,
-					shadowSize: 0,
-					series: {
-						lines: { show: true },
-						points: { show: true }
-					},
-					xaxis: {
-						tickLength: 0
-					},
-					yaxis: {
-						ticks: 10,
-						min: -2,
-						max: 2,
-						tickDecimals: 3
-					},
-					grid: {
-						backgroundColor: { colors: [ "#fff", "#fff" ] },
-						borderWidth: 1,
-						borderColor:'#555'
-					}
-				});
-			
-			
-				$('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
-				function tooltip_placement(context, source) {
-					var $source = $(source);
-					var $parent = $source.closest('.tab-content')
-					var off1 = $parent.offset();
-					var w1 = $parent.width();
-			
-					var off2 = $source.offset();
-					//var w2 = $source.width();
-			
-					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
-					return 'left';
-				}
-			
-			
-				$('.dialogs,.comments').ace_scroll({
-					size: 300
-			    });
-				
-				
-				//Android's default browser somehow is confused when tapping on label which will lead to dragging the task
-				//so disable dragging when clicking on label
-				var agent = navigator.userAgent.toLowerCase();
-				if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
-				  $('#tasks').on('touchstart', function(e){
-					var li = $(e.target).closest('#tasks li');
-					if(li.length == 0)return;
-					var label = li.find('label.inline').get(0);
-					if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
-				});
-			
-				$('#tasks').sortable({
-					opacity:0.8,
-					revert:true,
-					forceHelperSize:true,
-					placeholder: 'draggable-placeholder',
-					forcePlaceholderSize:true,
-					tolerance:'pointer',
-					stop: function( event, ui ) {
-						//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
-						$(ui.item).css('z-index', 'auto');
-					}
-					}
-				);
-				$('#tasks').disableSelection();
-				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
-					if(this.checked) $(this).closest('li').addClass('selected');
-					else $(this).closest('li').removeClass('selected');
-				});
-			
-			
-				//show the dropdowns on top or bottom depending on window height and menu position
-				$('#task-tab .dropdown-hover').on('mouseenter', function(e) {
-					var offset = $(this).offset();
-			
-					var $w = $(window)
-					if (offset.top > $w.scrollTop() + $w.innerHeight() - 100) 
-						$(this).addClass('dropup');
-					else $(this).removeClass('dropup');
-				});
-			
-			})
+			});
 		</script>
 	</body>
 </html>

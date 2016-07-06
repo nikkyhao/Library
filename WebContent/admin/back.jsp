@@ -346,7 +346,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.html">
+							<a href="login.jsp">
 								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -437,7 +437,7 @@
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="back.html">
+								<a href="borrowrecord.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									归还书籍
 								</a>
@@ -479,7 +479,7 @@
 							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
 
 						<b class="arrow"></b>
-					</li>	
+					</li>		
 						</ul>
 					</li>
 				</ul><!-- /.nav-list -->
@@ -506,7 +506,7 @@
 								<a href="index.html">图书馆管理系统</a>
 							</li>
 
-							<li>借阅书籍</li>
+							<li>归还书籍</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -588,7 +588,7 @@
 						</div><!-- /.ace-settings-container -->
 
 						<div class="page-header">
-							<h1>借阅书籍</h1>
+							<h1>归还书籍</h1>
 						</div><!-- /.page-header -->
 
 						<div class="row">
@@ -600,10 +600,8 @@
 		
         <input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
 
-		<input class="btn_srh" type="submit" name="submit0" value="搜索">
-		&nbsp;&nbsp;
-		
-		<input class="btn_srh" type="submit" name="submit1" value="扫描">
+		<input class="btn_srh" type="submit" name="submit" value="搜索">
+		<input class="btn_srh" type="submit" name="submit" value="扫描">
 	</form>
 </div>
 
@@ -612,7 +610,7 @@
 <hr />
 														<div class="profile-user-info profile-user-info-striped">
 												<div class="profile-info-row">
-													<div class="profile-info-name"> 书名 </div>
+													<div class="profile-info-name"> 图书名 </div>
 
 													<div class="profile-info-value">
 														<span class="editable" id="username">操作系统</span>
@@ -620,7 +618,7 @@
 												</div>
 
 												<div class="profile-info-row">
-													<div class="profile-info-name"> 索书号 </div>
+													<div class="profile-info-name"> 图书编号 </div>
 
 													<div class="profile-info-value">
 														<i class="fa fa-map-marker light-orange bigger-110"></i>
@@ -648,24 +646,29 @@
 													<div class="profile-info-name">状态</div>
 
 													<div class="profile-info-value">
-														<span class="editable" id="login">可借</span>
+														<span class="editable" id="login">借出</span>
 													</div>
 												</div>
 
 												<div class="profile-info-row">
-													<div class="profile-info-name"> 版本 </div>
+													<div class="profile-info-name"> 借阅者ID </div>
 
 													<div class="profile-info-value">
-														<span class="editable" id="about">最新版</span>
+														<span class="editable" id="about">123</span>
+													</div>
+												</div>
+												<div class="profile-info-row">
+													<div class="profile-info-name"> 借阅者姓名 </div>
+
+													<div class="profile-info-value">
+														<span class="editable" id="about">小丽丽</span>
 													</div>
 												</div>
 											</div>	
-											<hr />
-                                            
-<a href="borrowbooksinfo.html">
-												<button class="btn btn-info" type="button" value="借书"> 借书<i class="ace-icon fa fa-check bigger-110"></i> </button>
-												</a>
-												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                          <hr />  
+												<button class="btn btn-info" type="button" value="借书"> 还书<i class="ace-icon fa fa-check bigger-110"></i> </button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 								<script type="text/javascript">
 									var $path_base = ".";//in Ace demo this will be used for editurl parameter
