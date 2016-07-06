@@ -314,7 +314,7 @@ public class Utils {
 		}
 	}
 
-	public void test_addTextToPic() {
+	public static void test_addTextToPic() {
 		// 原图
 		String srcImgPath = "pic/jieyue.png";
 		// 加了字的图

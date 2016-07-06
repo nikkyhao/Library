@@ -26,13 +26,18 @@ HttpSession session = null;
 		String username =  request.getParameter("username");
 		String password = request.getParameter("password");
 		String identity = request.getParameter("identity");
-		String string = LogInCheck.isLogin(identity,username, password);
-		session.setAttribute("loginresult", string);
-		System.out.println(string);
-		
-		
-		request.getRequestDispatcher("LogResult.jsp").forward(request, response);
-	
+		String loginresult = LogInCheck.isLogin(identity,username, password);
+		session.setAttribute("loginresult", loginresult);
+		System.out.println(loginresult);
+		if(loginresult.equals("VALIDUSER")&&identity.equals("admin")){
+			request.getRequestDispatcher("/admin/index.html").forward(request, response);
+			System.out.println("跳转到Admin界面");
+		}else if (loginresult.equals("VALIDUSER")&&identity.equals("user")) {
+			request.getRequestDispatcher("/vip/index.html").forward(request, response);
+			System.out.println("跳转到User界面");
+		}else {
+			request.getRequestDispatcher("LogResult.jsp").forward(request, response);
+		}
 	}
 
 	

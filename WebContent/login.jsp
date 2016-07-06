@@ -80,8 +80,8 @@
 													<div class="space"></div>
 
 													<div class="clearfix">
-　　														<INPUT  type="radio" name="identity" value="会员">会员
-　　														<INPUT type="radio" name="identity" value="管理员">管理员
+　　														<INPUT  type="radio" name="identity" value="user">会员
+　　														<INPUT type="radio" name="identity" value="admin">管理员
 
 															<input type="submit" class="width-35 pull-right btn btn-sm btn-primary">
 															</input>
