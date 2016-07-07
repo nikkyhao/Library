@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cmn-Hans">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
@@ -748,7 +750,8 @@
 						{name:'name',index:'name', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}},
 						{name:'stock',index:'stock', width:70, editable: true,editoptions:{size:"20",maxlength:"30"}},
 						{name:'ship',index:'ship', width:90,editable: true,editoptions:{size:"20",maxlength:"30"}},
-						{name:'note',index:'note', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}} 
+						{name:'note',index:'note', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}},
+	
 					], 
 			
 					viewrecords : true,
