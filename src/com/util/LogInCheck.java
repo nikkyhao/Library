@@ -4,7 +4,15 @@ import java.sql.*;
 import com.test.LibConnection;
 
 public class LogInCheck {
-    static Statement  stat = LibConnection.getStatement();
+    static Statement  stat = null;
+    {
+    	try {
+			stat = LibConnection.getConnection().createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
     
     public static String isLogin(String identity,String cardID,String password){
 	if(identity.equals("user")){

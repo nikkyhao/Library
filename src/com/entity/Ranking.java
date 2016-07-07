@@ -14,7 +14,15 @@ import com.test.LibConnection;
 
 public class Ranking {
 
-	Statement sta=LibConnection.getStatement();
+	Statement sta= null;
+	public Ranking(){
+		try {
+			sta= LibConnection.getConnection().createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	public ResultSet OrderRemark(){
 		//评论打分排行

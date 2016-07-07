@@ -13,16 +13,14 @@ public class LibConnection {
 	public static final String user = "root";
 	public static final String password = "6176846";
 	public static final String driver = "com.mysql.jdbc.Driver";
-	private static Statement statement = Init();
+	private static Connection connection = Init();
 
-	private static Statement Init(){
-		Connection conn =null;
+	private static Connection Init(){
 		try {
 			Class.forName(driver);
-			conn = DriverManager.getConnection(url, user, password);
-			if (!conn.isClosed())
+			connection = DriverManager.getConnection(url, user, password);
+			if (!connection.isClosed())
 				System.out.println("Succeeded connecting to the Database!");
-			statement = conn.createStatement();
 		} catch (ClassNotFoundException e) {
 			System.out.println("Sorry,can`t find the Driver!");
 			e.printStackTrace();
@@ -31,16 +29,20 @@ public class LibConnection {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return statement;
+		return connection;
 	}
 	
-	public static Statement getStatement(){
-       return statement;
-	}
-	
+public static Connection getConnection(){
+	return connection;
+}
 	public static void main(String args[]){
 		Statement statement = null;
-	    statement = LibConnection.getStatement();
+	    try {
+			statement = LibConnection.getConnection().createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		String sql = "select * from user";
 		ResultSet rs = null;
 		try {

@@ -3,6 +3,7 @@ package com.entity;
  * @author Բ��
  */
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,12 +14,22 @@ import java.util.Date;
 import com.test.LibConnection;
 
 public class LibSystem {
-	static Statement statement = LibConnection.getStatement();
-
+	static Connection connection = null;
+static{
+			connection = LibConnection.getConnection();
+}
+	
 	/*
 	 * �õ�ͼ������
 	 */
 	public int getBookNum() {
+		Statement statement = null;
+		try {
+			statement = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		int s = 0;
 		String sql = "select count(bookid) from book";
 		ResultSet rs = null;
@@ -38,6 +49,13 @@ public class LibSystem {
 	 * �õ�����ͼ����ռ����
 	 */
 	public BookRatio getAllBookcateRate() {
+		Statement statement = null;
+		try {
+			statement = connection.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return new BookRatio(statement);
 	}
 
@@ -47,6 +65,13 @@ public class LibSystem {
 	 * 
 	 */
 	public static int seachBorrowNum(int index) {
+		Statement statement = null;
+		try {
+			statement = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		// 一共借出了几本index类的书
 		int num = 0;
 		String sql = "select count(bookid) as num from category,book where `index`=cateindex and `index`=" + index;
@@ -63,7 +88,13 @@ public class LibSystem {
 		return num;
 	}
 public static ResultSet queryByBookName(String strif) {
-		
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 		
 		String sql = "";
 		if (strif != "all" && strif != null && strif != "") {
@@ -87,8 +118,13 @@ public static ResultSet queryByBookName(String strif) {
 	 * �����������ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
 	 */
 public static ResultSet queryByAuthor(String strif) {
-		
-		
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 		String sql = "";
 		if (strif != "all" && strif != null && strif != "") {
 			sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND author LIKE +'%" + strif + "%' GROUP BY `INDEX`";
@@ -112,8 +148,13 @@ public static ResultSet queryByAuthor(String strif) {
  * ��ݳ���������ѯͼ����Ϣ�����������ͬ����ͼ���ж��ٱ�
  */
 public static ResultSet queryByPress(String strif) {
-	
-	
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 	String sql = "";
 	if (strif != "all" && strif != null && strif != "") {
 		sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND press LIKE +'%" + strif + "%' GROUP BY `INDEX`";
@@ -137,6 +178,13 @@ public static ResultSet queryByPress(String strif) {
  * �����������ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
  */
 public static ResultSet queryByLanguage(String strif) {
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 	String sql = "";
 	if (strif != "all" && strif != null && strif != "") {
 		sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND language LIKE +'%" + strif + "%' GROUP BY `INDEX`";
@@ -157,6 +205,13 @@ public static ResultSet queryByLanguage(String strif) {
  * �����������ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
  */
 public static ResultSet queryByIndex(String string) {
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 	
 	String sql = "";
 	
@@ -177,6 +232,13 @@ public static ResultSet queryByIndex(String string) {
  * ���bookid����ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
  */
 public static ResultSet queryByBookId(String strif) {
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 	
 	
 	String sql = "";
@@ -202,6 +264,13 @@ public static ResultSet queryByBookId(String strif) {
  * ���ͼ����������ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
  */
 public static ResultSet queryByBookType(String strif) {
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 	
 	
 	String sql = "";
@@ -226,7 +295,13 @@ public static ResultSet queryByBookType(String strif) {
  * ���ӡˢ��������ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
  */
 public static ResultSet queryByPressDate(String strif) {
-	
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
 	
 	String sql = "";
 	if (strif != "all" && strif != null && strif != "") {
@@ -250,11 +325,11 @@ public static ResultSet queryByPressDate(String strif) {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LibSystem a = new LibSystem();
-		System.out.println(a.getAllBookcateRate().getComicrate());
-		System.out.println(a.getAllBookcateRate().getTestbookrate());
-		System.out.println(a.getAllBookcateRate().getCoachbookrate());
-		System.out.println(a.getAllBookcateRate().getNovelrate());
-		ResultSet bookquery=a.queryByBookType("comic");
+//		System.out.println(a.getAllBookcateRate().getComicrate());
+//		System.out.println(a.getAllBookcateRate().getTestbookrate());
+//		System.out.println(a.getAllBookcateRate().getCoachbookrate());
+//		System.out.println(a.getAllBookcateRate().getNovelrate());
+		ResultSet bookquery=queryByBookName("java");
 		 try{
 			 while(bookquery.next()){
 				 String index=bookquery.getString("index");
@@ -278,7 +353,6 @@ public static ResultSet queryByPressDate(String strif) {
 				e.printStackTrace();
 			}
 		  
-		
 		
 	}
 }

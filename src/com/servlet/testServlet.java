@@ -29,7 +29,12 @@ public class testServlet extends HttpServlet{
 		String content =  request.getParameter("content");
 		System.out.println(content);
 		Statement statement =null;
-	    statement = LibConnection.getStatement();
+	    try {
+			statement = LibConnection.getConnection().createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		String sql = "select * from user";
 		ResultSet rs = null;
 		try {

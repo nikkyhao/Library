@@ -7,14 +7,21 @@ import java.sql.*;
 import java.util.Calendar;
 
 import com.test.LibConnection;
+
 import java.sql.*;
 
 public class User {
 	protected static int cardID;
-	Statement statement = LibConnection.getStatement();
+	Statement statement = null;
 	
 	public User(int cardID){
 		this.cardID = cardID;
+		try {
+			statement = LibConnection.getConnection().createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public ResultSet showMyBook_now() throws SQLException{		//��ѯ��ǰ���ģ�����������ţ��������ڣ�
 		String sql = "SELECT bookid,bookname,bo_date,deadline FROM borrow,category JOIN book ON category.`index`=book.cateindex WHERE (bo_bookid,bookname) IN (select bookid,bookname from category JOIN book ON category.`index`=book.cateindex WHERE bookid in(select bo_bookid from borrow WHERE bo_cardID=123)) and return_date is null AND bo_cardID="+cardID;

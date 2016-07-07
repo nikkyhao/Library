@@ -81,9 +81,10 @@ ResultSet rs = null;//用于存放搜索结果
 			
 			break;
 		}
-		request.setAttribute("SearchResult", rs);
+		session.setAttribute("SearchResult", rs);
 		request.getRequestDispatcher("searchbook.jsp").forward(request, response);
 	
+		
 	}
 
 	

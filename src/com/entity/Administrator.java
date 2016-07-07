@@ -12,8 +12,16 @@ import com.test.LibConnection;
  *
  */
 public class Administrator {
+	Statement  sta = null;
 	
-	Statement sta = LibConnection.getStatement();	
+	public Administrator(String userId){
+		try {
+			Statement sta = LibConnection.getConnection().createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
 	public void insertUser(String name, int ID, String sex, int stuID, String type, String tel, int pwd) {
 		// 插入单个用户
 		Date start = new Date(System.currentTimeMillis());// 借阅证日期，系统当前日期
@@ -307,7 +315,7 @@ public class Administrator {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Administrator admin = new Administrator();
+		Administrator admin = new Administrator("sdf");
 		String name = "bob";
 		int ID = 19951016;
 		String sex = "man";

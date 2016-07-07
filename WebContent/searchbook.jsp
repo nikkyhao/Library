@@ -10,7 +10,8 @@
 %>
 
 <% 
-	result =(ResultSet)request.getAttribute("SearchResult");
+	result =(ResultSet)session.getAttribute("SearchResult");
+	result.beforeFirst();
 %>
 	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -814,14 +815,16 @@
 
 														<div class="message-list-container">
 															<div class="message-list" id="message-list">
+															<%while(result.next())
+																{
+																%>
 																<div class="message-item message-unread">
 																	<label class="inline">
 																		<input type="checkbox" class="ace" />
-																		
 																	</label>
-																	
 																	<a href="book.jsp"><span class="sender" title="Alex John Red Smith">
-																	<%= result.getString("bookname")  
+																	<%= 
+																		result.getString("bookname")  
 																	%>
 																	</span></a>
 																	
@@ -830,11 +833,15 @@
 
 																	<span class="summary">
 																		<span class="text">
-																			索书号：123 ……作者：薛之谦 出版社：山东大学出版社
+																			索书号：<%=result.getString("index") %>  
+																			作者：<%=result.getString("author") %> 
+																			出版社：<%=result.getString("press") %>
 																		</span>
 																	</span>
 																</div>
-
+															<%
+															}
+															%>
 																<div class="message-item message-unread">
 																	<label class="inline">
 																		<input type="checkbox" class="ace" />
