@@ -1,9 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>图书馆管理系统</title>
+		<title>å¾ä¹¦é¦ç®¡çç³»ç»</title>
 
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -23,7 +25,7 @@
 
 .search input.inp_srh,.search input.btn_srh{border:none;background:none;height:35px;line-height:35px;float:left}
 .search input.inp_srh{outline:none;width:365px;}
-.search input.btn_srh{background:#f58400;color:#FFF;font-family:"微软雅黑";font-size:15px;width:60px;}
+.search input.btn_srh{background:#f58400;color:#FFF;font-family:"å¾®è½¯éé»";font-size:15px;width:60px;}
 </style>
 		<!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
@@ -79,7 +81,7 @@
 					<a href="index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							图书馆管理系统
+							å¾ä¹¦é¦ç®¡çç³»ç»
 						</small>
 					</a>
 				</div>
@@ -344,7 +346,7 @@
 						<li class="light-blue">
                         
 							<a href="login.jsp">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
+								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />ç»å½<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
 					</ul>
@@ -395,14 +397,14 @@
 				<ul class="nav nav-list">
 					<li class="active">
 						<a href="index.jsp">
-							<i class="menu-icon fa fa-tachometer"></i>主页</a>
+							<i class="menu-icon fa fa-tachometer"></i>ä¸»é¡µ</a>
 
 						<b class="arrow"></b>
 					</li>
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>借阅记录<b class="arrow fa fa-angle-down"></b>
+							<i class="menu-icon fa fa-list"></i>åéè®°å½<b class="arrow fa fa-angle-down"></b>
 						</a>
 
 						<b class="arrow"></b>
@@ -411,7 +413,7 @@
 							<li class="">
 								<a href="tables.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									当前借阅
+									å½ååé
 								</a>
 
 								<b class="arrow"></b>
@@ -420,7 +422,7 @@
 							<li class="">
 								<a href="tablesH.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									历史借阅
+									åå²åé
 								</a>
 
 								<b class="arrow"></b>
@@ -428,7 +430,7 @@
                             <li class="">
 								<a href="tablesY.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									预约信息
+									é¢çº¦ä¿¡æ¯
 								</a>
 
 								<b class="arrow"></b>
@@ -438,7 +440,7 @@
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>违章记录<b class="arrow fa fa-angle-down"></b>
+							<i class="menu-icon fa fa-file-o"></i>è¿ç« è®°å½<b class="arrow fa fa-angle-down"></b>
 						</a>
 
 						<b class="arrow"></b>
@@ -447,7 +449,7 @@
 							<li class="">
 								<a href="hurryup.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									催还单
+									å¬è¿å
 								</a>
 
 								<b class="arrow"></b>
@@ -456,7 +458,7 @@
 							<li class="">
 								<a href="fine.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
-									违章罚款
+									è¿ç« ç½æ¬¾
 								</a>
 
 								<b class="arrow"></b>
@@ -467,7 +469,7 @@
 
 					<li class="">
 						<a href="hot.jsp">
-							<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
+							<i class="menu-icon fa fa-list-alt"></i>é£äºæ¦</a>
 
 						<b class="arrow"></b>
 					</li>
@@ -475,7 +477,7 @@
 						<a href="comment.jsp">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 
-							<span class="menu-text">我的评论<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+							<span class="menu-text">æçè¯è®º<span class="badge badge-transparent tooltip-error" title="2 Important Events">
 									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
 								</span>
 							</span>
@@ -488,7 +490,7 @@
 						<a href="information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
-							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+							<span class="menu-text">æçä¿¡æ¯<span class="badge badge-transparent tooltip-error" title="2 Important Events">
 									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
 								</span>
 							</span>
@@ -519,8 +521,8 @@
 
 						<ul class="breadcrumb">
 							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>图书馆管理系统</li>
-							<li class="active">主页</li>
+								<i class="ace-icon fa fa-home home-icon"></i>å¾ä¹¦é¦ç®¡çç³»ç»</li>
+							<li class="active">ä¸»é¡µ</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -602,8 +604,8 @@
 						</div><!-- /.ace-settings-container -->
 
 						<div class="page-header">
-							<h1>图书馆管理系统<small>
-									<i class="ace-icon fa fa-angle-double-right"></i>首页</small>
+							<h1>å¾ä¹¦é¦ç®¡çç³»ç»<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>é¦é¡µ</small>
 							</h1>
 						</div><!-- /.page-header -->
 
@@ -611,8 +613,8 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 								<div class="alert alert-block alert-success">
-									<p>书籍是人类进步的阶梯</p>
-									<p>欢迎小朋友们来到图书馆管理系统！</p>
+									<p>ä¹¦ç±æ¯äººç±»è¿æ­¥çé¶æ¢¯</p>
+									<p>æ¬¢è¿å°æåä»¬æ¥å°å¾ä¹¦é¦ç®¡çç³»ç»ï¼</p>
 								</div>
 
 							  <div class="row">
@@ -623,13 +625,13 @@
 		<input name='ecmsfrom' type='hidden' value='9'>
 		<input type="hidden" name="show" value="title,newstext">
 		<select name="classid" id="choose">
-			<option value="0">按名称</option>
-			<option value="1">按索书号</option>
-			<option value="4">按作者</option>
-			<option value="22">按类别</option>
-		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
+			<option value="0">æåç§°</option>
+			<option value="1">æç´¢ä¹¦å·</option>
+			<option value="4">æä½è</option>
+			<option value="22">æç±»å«</option>
+		</select>		<input class="inp_srh" name="keyboard"  placeholder="è¯·è¾å¥æ¨è¦æç´¢çä¹¦ç±" >
 >
-		<a href="searchbook.jsp"><div class="btn_srh" >搜索</div></a>
+		<a href="searchbook.jsp"><div class="btn_srh" >æç´¢</div></a>
 	</form>
 </div>
 
@@ -643,7 +645,7 @@
 											<div class="widget-header widget-header-flat widget-header-small">
 												<h5 class="widget-title">
 													<i class="ace-icon fa fa-signal"></i>
-							馆藏图书
+							é¦èå¾ä¹¦
 												</h5>
 
 												<div class="widget-toolbar no-border">
@@ -726,7 +728,7 @@
 											<div class="widget-header widget-header-flat">
 												<h4 class="widget-title lighter">
 													<i class="ace-icon fa fa-star orange"></i>
-								热搜榜
+								ç­ææ¦
 												</h4>
 
 												<div class="widget-toolbar">
@@ -742,15 +744,15 @@
 														<thead class="thin-border-bottom">
 															<tr>
 																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>书名
+																	<i class="ace-icon fa fa-caret-right blue"></i>ä¹¦å
 																</th>
 
 																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>价格
+																	<i class="ace-icon fa fa-caret-right blue"></i>ä»·æ ¼
 																</th>
 
 																<th class="hidden-480">
-																	<i class="ace-icon fa fa-caret-right blue"></i>状态
+																	<i class="ace-icon fa fa-caret-right blue"></i>ç¶æ
 																</th>
 															</tr>
 														</thead>
@@ -840,7 +842,7 @@
 										<div class="widget-box">
 											<div class="widget-header">
 												<h4 class="widget-title lighter smaller">
-													<i class="ace-icon fa fa-comment blue"></i>热门评论</h4>
+													<i class="ace-icon fa fa-comment blue"></i>ç­é¨è¯è®º</h4>
 											</div>
 
 											<div class="widget-body">
