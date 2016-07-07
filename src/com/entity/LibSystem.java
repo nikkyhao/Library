@@ -60,11 +60,7 @@ static{
 	}
 
 	
-	/*
-	 * ����������ͼ�飬����������ͬ����ͼ���ж��ٱ�
-	 * 
-	 */
-	public static int seachBorrowNum(int index) {
+	public static int searchBorrowNum(int index) {
 		Statement statement = null;
 		try {
 			statement = connection.createStatement();
@@ -72,7 +68,34 @@ static{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		// 一共借出了几本index类的书
+		// 一共有几本index类的书
+		int num = 0;
+		String sql = "SELECT COUNT(bookid) as num FROM book,category,borrow WHERE bookid=bo_bookid AND cateindex=`index` AND return_date IS NULL AND `index`=" + index;
+		ResultSet rs = null;
+		try {
+			rs = statement.executeQuery(sql);
+			while (rs.next()) {
+				num = rs.getInt("num");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return num;
+	}
+	/*
+	 * ����������ͼ�飬����������ͬ����ͼ���ж��ٱ�
+	 * 
+	 */
+	public static int searchNum(int index) {
+		Statement statement = null;
+		try {
+			statement = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		// 一共you几本index类的书
 		int num = 0;
 		String sql = "select count(bookid) as num from category,book where `index`=cateindex and `index`=" + index;
 		ResultSet rs = null;

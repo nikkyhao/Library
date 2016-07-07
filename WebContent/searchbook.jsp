@@ -829,7 +829,7 @@
 																	</span></a>
 																	
 																	<span class="time">本馆藏书：<%=result.getString("COUNT(bookid)") %> 
-																	可借数目：<%=LibSystem.seachBorrowNum(Integer.parseInt(result.getString("index"))) %></span>
+																	可借数目：<%=LibSystem.searchBorrowNum(Integer.parseInt(result.getString("index"))) %></span>
 
 																	<span class="summary">
 																		<span class="text">

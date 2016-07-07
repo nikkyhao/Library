@@ -13,7 +13,9 @@ import com.test.LibConnection;
  */
 public class Administrator {
 	Statement  sta = null;
-	
+	public Administrator(){
+		
+	}
 	public Administrator(String userId){
 		try {
 			Statement sta = LibConnection.getConnection().createStatement();
@@ -151,7 +153,7 @@ public class Administrator {
 //		}
 //		return canborrow;
 //	}
-	public int seachNum(int index) {
+	public int searchBorrowNum(int index) {
 		// 一共有几本index类的书
 		int num = 0;
 		String sql = "SELECT COUNT(bookid) as num FROM book,category,borrow WHERE bookid=bo_bookid AND cateindex=`index` AND return_date IS NULL AND `index`=" + index;
@@ -167,7 +169,7 @@ public class Administrator {
 		}
 		return num;
 	}
-	public int seachBorrowNum(int index) {
+	public int searchNum(int index) {
 		// 一共借出了几本index类的书
 		int num = 0;
 		String sql = "select count(bookid) as num from category,book where `index`=cateindex and `index`=" + index;
@@ -213,6 +215,18 @@ public class Administrator {
 	public ResultSet searchCurBor() {
 		// 查询所有当前借阅
 		String sql = "SELECT bookid,bookname,cardID,`name`,bo_date,deadline,return_date FROM borrow,book,`user`,category WHERE bo_bookid=bookid AND `index`=cateindex AND bo_cardID=cardID AND return_date IS NULL";
+		ResultSet rs = null;
+		try {
+			rs = sta.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
+	public ResultSet searchCurBor(String bookid) {
+		// 查询所有当前借阅
+		String sql = "SELECT bookid,bookname,cardID,`name`,bo_date,deadline,return_date FROM borrow,book,`user`,category WHERE bo_bookid=bookid AND `index`=cateindex AND bo_cardID=cardID AND return_date IS NULL and bookid='"+bookid+"'";             
 		ResultSet rs = null;
 		try {
 			rs = sta.executeQuery(sql);
@@ -376,8 +390,8 @@ public class Administrator {
 		// boolean b=admin.canborrow("12333");
 		// System.out.println(b);
 
-		int num=admin.seachNum(121322);
-		System.out.println(num);
+//		int num=admin.seachNum(121322);
+//		System.out.println(num);
 		// 测试还书功能
 		// admin.back("001", 668);
 
