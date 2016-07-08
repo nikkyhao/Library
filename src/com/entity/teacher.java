@@ -3,6 +3,7 @@ package com.entity;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class teacher extends User {
 	static int cardID;
@@ -12,12 +13,14 @@ public class teacher extends User {
 		// TODO �Զ����ɵĹ��캯�����
 	}
 	
-	public void Alter_score(int comment_index,int comment_stu,String a) throws SQLException{		//�����۴��
+	public void Alter_score(int comment_index,int comment_stu,String a) throws SQLException{		
+		Statement statement = connection.createStatement();
 		String sql = "update comment set comment_teacher = "+cardID+",score = "+a+" where com_index = "+comment_index+" and comment_stu = "+comment_stu;
 		statement.executeUpdate(sql);
 	}
 	
-	public ResultSet showscore() throws SQLException{							//�鿴�Լ��Ĵ��
+	public ResultSet showscore() throws SQLException{
+		Statement statement = connection.createStatement();
 		String sql = "select score from comment where comment_teacher = "+cardID;
 		ResultSet rs = statement.executeQuery(sql);
 		return rs;

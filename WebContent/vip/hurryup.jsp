@@ -2,9 +2,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<head>
+	
+	<%@page import="java.sql.*" import="com.entity.*" import="java.util.Calendar" import="com.test.LibConnection" %>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
+		<%! ResultSet rs=null;
+			User user=new User(123);
+		%>
 
 		<meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -612,123 +617,48 @@
 										<table id="simple-table" class="table table-striped table-bordered table-hover">
 											<thead>
 												<tr>
-												  <th>序号</th>
-													<th>书名</th>
-													<th>索书号</th>
+												  <th>会员卡号</th>
+													<th>会员</th>
+													<th>借阅图书序号</th>
 													<th class="hidden-480">借阅日期</th>
 
 													<th>
 														<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
 														应还日期
 													</th>
-													<th class="hidden-480">状态</th>
+												
 
 													
 												</tr>
 											</thead>
 
 											<tbody>
+											<% rs=user.Cui(123);
+													while(rs.next()){
+														
+												%>
+											
 												<tr>
 													<td class="center">
-														<label class="pos-rel">1<span class="lbl"></span>
+														<label class="pos-rel"><%=rs.getString("bo_cardID")%><span class="lbl"></span>
 														</label>
 													</td>
 
 													<td>
-														<a href="#">今天天气好晴朗</a>
+														<a href="#"><%=rs.getString("name")%></a>
 													</td>
-													<td>111</td>
-													<td class="hidden-480">5/15</td>
-													<td>7/15</td>
+													<td><%=rs.getString("bo_bookid")%></td>
+													<td class="hidden-480"><%=rs.getString("bo_date")%></td>
+													<td><%=rs.getString("deadline")%></td>
 
-													<td class="hidden-480">
-														<span class="label label-sm label-warning">未还</span>
-													</td>
+													
 													
                                                     
 													
-												<tr>
-													<td class="center">
-														<label class="pos-rel">2<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">所以……跟黑粉结婚了</a>
-													</td>
-													<td>112</td>
-													<td class="hidden-480">5/30</td>
-													<td>7/30</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-success">未还</span>
-													</td>
-
-													
 												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">3<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">哈哈哈哈哈</a>
-													</td>
-													<td>113</td>
-													<td class="hidden-480">5/30</td>
-													<td>7/30</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-warning">未还</span>
-													</td>
-
+												<%}%>
+												
 													
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">4<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">小丽丽的欢乐人生</a>
-													</td>
-													<td>114</td>
-													<td class="hidden-480">5/13</td>
-													<td>7/13</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-inverse arrowed-in">未还</span>
-													</td>
-													
-
-													
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">
-															5
-															<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">小丽丽的普通话教程</a>
-													</td>
-													<td>115</td>
-													<td class="hidden-480">5/10</td>
-													<td>7/10</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-success">未还</span>
-													</td>
-
-													
-												</tr>
 											</tbody>
 										</table>
 									</div><!-- /.span -->

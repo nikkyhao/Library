@@ -29,12 +29,15 @@ public class LibConnection {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		return connection;
 	}
 	
 public static Connection getConnection(){
 	return connection;
 }
+
+
 	public static void main(String args[]){
 		Statement statement = null;
 	    try {

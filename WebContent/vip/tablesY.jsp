@@ -2,9 +2,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<head>
+		<%@page import="java.sql.*" import="com.entity.*" import="java.util.Calendar" import="com.test.LibConnection" %>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
+		<%! ResultSet rs=null;
+			User user=new User(123);
+		%>
 
 		<meta name="description" content="Static &amp; Dynamic Tables" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -767,13 +771,17 @@ class="arrow"></b>
 
 													<th>
 														<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-														应还日期
+														预约截止日期
 													</th>
-													<th class="hidden-480">状态</th>
+													
 												</tr>
 											</thead>
 
 											<tbody>
+											<%
+											rs = user.showMyorder(123);
+												while(rs.next()){
+											%>
 												<tr>
 													<td class="center">
 														<label class="pos-rel">1<span class="lbl"></span>
@@ -781,90 +789,18 @@ class="arrow"></b>
 													</td>
 
 													<td>
-														<a href="#">ace.com</a>
+														<a href="#"><%=rs.getString("bookname")%></a>
 													</td>
-													<td>$45</td>
-													<td class="hidden-480">Feb 12</td>
-													<td>Feb 12</td>
+													<td><%=rs.getString("index")%></td>
+													
+													<td class="hidden-480"><%=rs.getString("bookingdate")%></td>
+													<td><%=rs.getString("deadline")%></td>
 
-													<td class="hidden-480">
-														<span class="label label-sm label-warning">未还</span>
-													</td>
+													
+	
 												</tr>
 
-												<tr>
-													<td class="center">
-														<label class="pos-rel">2<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">base.com</a>
-													</td>
-													<td>$35</td>
-													<td class="hidden-480">Feb 12</td>
-													<td>Feb 18</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-success">已还</span>
-													</td>
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">3<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">max.com</a>
-													</td>
-													<td>$60</td>
-													<td class="hidden-480">Feb 12</td>
-													<td>Mar 11</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-warning">未还</span>
-													</td>
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">4<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">best.com</a>
-													</td>
-													<td>$75</td>
-													<td class="hidden-480">Feb 12</td>
-													<td>Apr 03</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-inverse arrowed-in">过期</span>
-													</td>
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">
-															5
-															<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">pro.com</a>
-													</td>
-													<td>$55</td>
-													<td class="hidden-480">Feb 12</td>
-													<td>Jan 21</td>
-
-													<td class="hidden-480">
-														<span class="label label-sm label-success">已还</span>
-													</td>
-												</tr>
+												<%}%>
 											</tbody>
 										</table>
 									</div><!-- /.span -->

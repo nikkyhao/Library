@@ -32,6 +32,7 @@ HttpSession session = null;
 		if (loginresult.equals("VALIDUSER") && identity.equals("admin")) {
 			request.getRequestDispatcher("/admin/index.jsp").forward(request,
 					response);
+			
 			session.setAttribute("adminusername", username);
 			System.out.println("跳转到Admin界面");
 		} else if (loginresult.equals("VALIDUSER") && identity.equals("user")) {

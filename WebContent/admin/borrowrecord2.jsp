@@ -664,16 +664,34 @@
 													returndate="未归还";
 												}
 												%><%=returndate %>
+												
 												</td>
 												
-												<td class="hidden-480"><a
-													href="/Library/admin/back.jsp">
+												<td class="hidden-480">
 														<button class="btn btn-info" type="button" value="还书"
 															onclick="ReturnBook()">
 															还书<i class="ace-icon fa fa-check bigger-110"></i>
 														</button>
-												</a></td>
+												</td>
+												<script>
+								function ReturnBook() {
+									$.ajax({
+										type : 'post',
+										data : {
+											bookid :
+							<%=bookid%>
+								
+											cardid :
+							<%=cardid%>
+								},
+										url : './return_book',
+										success : function(data) {
+											alert("归还成功")
+										}
+									});
 
+								};
+							</script>
 											</tr>
 											<%
 												}
@@ -685,26 +703,7 @@
 							</div>
 							<!-- /.row -->
 
-							<script>
-								function ReturnBook() {
-									$.ajax({
-										type : 'post',
-										data : {
-											bookid :
-							<%=bookid%>
-								,
-											cardid :
-							<%=cardid%>
-								},
-										url : '../return_book',
-										success : function(data) {
-											alert("添加成功")
-										}
-									});
-
-								};
-							</script>
-
+							
 
 						</div>
 						<!-- /.col -->

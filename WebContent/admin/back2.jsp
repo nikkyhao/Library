@@ -6,7 +6,18 @@
 <%@page import="java.sql.ResultSet" import="com.entity.*"
 	import="java.sql.SQLException" import="java.sql.Statement"
 	import="com.test.LibConnection" import="java.sql.Date"%>
-
+<%!
+	
+	ResultSet book = null;
+	String return_date;
+	String state;
+	String bookid;
+	String cardid;
+	%>
+<%
+	book = (ResultSet) session.getAttribute("SearchBack");
+	book.beforeFirst();
+%>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="utf-8" />
 <title>图书馆管理系统</title>
@@ -15,7 +26,7 @@
 	content="Dynamic tables and grids using jqGrid plugin" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
+<link href="assets//css/base.css" type="text/css" rel="stylesheet" />
 
 <style type="text/css">
 /* search */
@@ -98,40 +109,40 @@
 }
 </style>
 <!-- bootstrap & fontawesome -->
-<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets//css/bootstrap.min.css" />
 <link rel="stylesheet"
-	href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+	href="assets//font-awesome/4.2.0/css/font-awesome.min.css" />
 
 <!-- page specific plugin styles -->
-<link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
-<link rel="stylesheet" href="../assets/css/datepicker.min.css" />
-<link rel="stylesheet" href="../assets/css/ui.jqgrid.min.css" />
+<link rel="stylesheet" href="assets//css/jquery-ui.min.css" />
+<link rel="stylesheet" href="assets//css/datepicker.min.css" />
+<link rel="stylesheet" href="assets//css/ui.jqgrid.min.css" />
 
 <!-- text fonts -->
-<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
+<link rel="stylesheet" href="assets//fonts/fonts.googleapis.com.css" />
 
 <!-- ace styles -->
-<link rel="stylesheet" href="../assets/css/ace.min.css"
+<link rel="stylesheet" href="assets//css/ace.min.css"
 	class="ace-main-stylesheet" id="main-ace-style" />
 
 <!--[if lte IE 9]>
-			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="assets//css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 <!--[if lte IE 9]>
-		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="assets//css/ace-ie.min.css" />
 		<![endif]-->
 
 <!-- inline styles related to this page -->
 
 <!-- ace settings handler -->
-<script src="../assets/js/ace-extra.min.js"></script>
+<script src="assets//js/ace-extra.min.js"></script>
 
 <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 <!--[if lte IE 8]>
-		<script src="../assets/js/html5shiv.min.js"></script>
-		<script src="../assets/js/respond.min.js"></script>
+		<script src="assets//js/html5shiv.min.js"></script>
+		<script src="assets//js/respond.min.js"></script>
 		<![endif]-->
 </head>
 
@@ -295,7 +306,7 @@
 							<li class="dropdown-content">
 								<ul class="dropdown-menu dropdown-navbar">
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar.png" class="msg-photo"
+											src="assets//avatars/avatar.png" class="msg-photo"
 											alt="Alex's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Alex:</span>
 													Ciao sociis natoque penatibus et auctor ...
@@ -307,7 +318,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar3.png" class="msg-photo"
+											src="assets//avatars/avatar3.png" class="msg-photo"
 											alt="Susan's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Susan:</span>
 													Vestibulum id ligula porta felis euismod ...
@@ -319,7 +330,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar4.png" class="msg-photo"
+											src="assets//avatars/avatar4.png" class="msg-photo"
 											alt="Bob's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Bob:</span>
 													Nullam quis risus eget urna mollis ornare ...
@@ -330,7 +341,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar2.png" class="msg-photo"
+											src="assets//avatars/avatar2.png" class="msg-photo"
 											alt="Kate's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Kate:</span>
 													Ciao sociis natoque eget urna mollis ornare ...
@@ -341,7 +352,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar5.png" class="msg-photo"
+											src="assets//avatars/avatar5.png" class="msg-photo"
 											alt="Fred's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Fred:</span>
 													Vestibulum id penatibus et auctor ...
@@ -359,7 +370,7 @@
 						</ul></li>
 
 					<li class="light-blue"><a href="login.jsp"> <img
-							class="nav-user-photo" src="../assets/avatars/user.jpg"
+							class="nav-user-photo" src="assets//avatars/user.jpg"
 							alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 					</a></li>
 				</ul>
@@ -412,7 +423,7 @@
 			<!-- /.sidebar-shortcuts -->
 
 			<ul class="nav nav-list">
-				<li class="active"><a href="index.jsp"> <i
+				<li class="active"><a href="/Library/admin/index.jsp"> <i
 						class="menu-icon fa fa-tachometer"></i>主页
 				</a> <b class="arrow"></b></li>
 
@@ -422,30 +433,30 @@
 				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class=""><a href="borrowrecord.jsp"> <i
+						<li class=""><a href="/Library/admin/borrowrecord.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 借阅记录
 						</a> <b class="arrow"></b></li>
 
-						<li class=""><a href="brokerules.jsp"> <i
+						<li class=""><a href="/Library/admin/brokerules.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 违章记录
 						</a> <b class="arrow"></b></li>
-						<li class=""><a href="borrow.jsp"> <i
+						<li class=""><a href="/Library/admin/borrow.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 借阅书籍
 						</a> <b class="arrow"></b></li>
-						<li class=""><a href="back.jsp"> <i
+						<li class=""><a href="/Library/admin/back.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 归还书籍
 						</a> <b class="arrow"></b></li>
 					</ul></li>
 
-				<li class=""><a href="bookmanage.jsp"> <i
+				<li class=""><a href="/Library/admin/bookmanage.jsp"> <i
 						class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 				</a> <b class="arrow"></b></li>
 
-				<li class=""><a href="member.jsp"> <i
+				<li class=""><a href="/Library/admin/member.jsp"> <i
 						class="menu-icon fa fa-list-alt"></i>会员管理
 				</a> <b class="arrow"></b></li>
 
-				<li class=""><a href="information.jsp"> <i
+				<li class=""><a href="/Library/admin/information.jsp"> <i
 						class="menu-icon fa fa-calendar"></i> <span class="menu-text">我的信息<span
 							class="badge badge-transparent tooltip-error"
 							title="2 Important Events"> <i
@@ -594,7 +605,7 @@
 							<!-- PAGE CONTENT BEGINS -->
 
 							<div class="search radius6">
-	<form name="searchform" method="post" action="../SearchBorrow">
+	<form name="searchform" method="post" action="SearchBorrow">
 		
         <input class="inp_srh" name="bookid"  placeholder="请输入您要搜索的书籍" >
 
@@ -607,11 +618,105 @@
 
 
 							<script type="text/javascript"
-								src="../assets/js/jquery-1.8.3.min.js"></script>
+								src="assets//js/jquery-1.8.3.min.js"></script>
 							<script type="text/javascript"
-								src="../assets/js/jquery.select.js"></script>
+								src="assets//js/jquery.select.js"></script>
 							<hr />
+							<%
+								//$index=$_Get('keyboard');
+								
+
+								while (book.next()) {
+							%>
+
+
+							<div class="profile-info-row">
+								<div class="profile-info-name">图书名:</div>
+
+								<div class="profile-info-value">
+									<span class="editable" id="username"><%=book.getString("bookname")%></span>
+								</div>
+							</div>
+
+							<div class="profile-info-row">
+								<div class="profile-info-name">索书号 :</div>
+
+								<div class="profile-info-value">
+									<i class="fa fa-map-marker light-orange bigger-110"></i> <span
+										class="editable" id="country"><%=book.getString("index")%></span><span
+										class="editable" id="city"></span>
+								</div>
+							</div>
+							<div class="profile-info-row">
+								<div class="profile-info-name">图书编号:</div>
+								<% 
+								bookid=book.getString("bookID"); 
+								%>
+
+								<div class="profile-info-value">
+									<span class="editable" id="signup"><%=bookid%></span>
+								</div>
+							</div>
+
+							<div class="profile-info-row">
+								<div class="profile-info-name">借书者 :</div>
+
+								<div class="profile-info-value">
+									<span class="editable" id="age"><%=book.getString("name")%></span>
+								</div>
+							</div>
+
+							<div class="profile-info-row">
+								<div class="profile-info-name">借阅证号:</div>
+								<% 
+								cardid=book.getString("cardID"); 
+								%>
+
+								<div class="profile-info-value">
+									<span class="editable" id="signup"><%=cardid%></span>
+								</div>
+							</div>
+
+							<div class="profile-info-row">
+								<div class="profile-info-name">借书日期:</div>
+
+								<div class="profile-info-value">
+									<span class="editable" id="about"><%=book.getString("bo_date")%></span>
+								</div>
+							</div>
+							<div class="profile-info-row">
+								<div class="profile-info-name">截止日期:</div>
+
+								<div class="profile-info-value">
+									<span class="editable" id="about"><%=book.getString("deadline")%></span>
+								</div>
+							</div>
+							<hr />
+							<%
+								}
+							%>
+
+
+						</div>
+						<hr />
+						<button class="btn btn-info" type="button" value="还书"
+							onclick="BookBack()">
+							还书<i class="ace-icon fa fa-check bigger-110"></i>
+						</button>
 						
+						<script>
+							function BookBack() {
+								$.ajax({
+									type:'post',
+									data:{bookid:<%= bookid %>,cardid:<%= cardid%>},
+									url:'./return_book',
+									success:function(data){
+										alert("还书成功")
+									}
+								});
+	
+							};
+						</script>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
@@ -641,18 +746,18 @@
 	<!-- basic scripts -->
 
 	<!--[if !IE]> -->
-	<script src="../assets/js/jquery.2.1.1.min.js"></script>
+	<script src="assets//js/jquery.2.1.1.min.js"></script>
 
 	<!-- <![endif]-->
 
 	<!--[if IE]>
-<script src="../assets/js/jquery.1.11.1.min.js"></script>
+<script src="assets//js/jquery.1.11.1.min.js"></script>
 <![endif]-->
 
 	<!--[if !IE]> -->
 	<script type="text/javascript">
 		window.jQuery
-				|| document.write("<script src='../assets/js/jquery.min.js'>"
+				|| document.write("<script src='assets//js/jquery.min.js'>"
 						+ "<"+"/script>");
 	</script>
 
@@ -660,25 +765,25 @@
 
 	<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='assets//js/jquery1x.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 	<script type="text/javascript">
 		if ('ontouchstart' in document.documentElement)
 			document
-					.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"
+					.write("<script src='assets//js/jquery.mobile.custom.min.js'>"
 							+ "<"+"/script>");
 	</script>
-	<script src="../assets/js/bootstrap.min.js"></script>
+	<script src="assets//js/bootstrap.min.js"></script>
 
 	<!-- page specific plugin scripts -->
-	<script src="../assets/js/bootstrap-datepicker.min.js"></script>
-	<script src="../assets/js/jquery.jqGrid.min.js"></script>
-	<script src="../assets/js/grid.locale-en.js"></script>
+	<script src="assets//js/bootstrap-datepicker.min.js"></script>
+	<script src="assets//js/jquery.jqGrid.min.js"></script>
+	<script src="assets//js/grid.locale-en.js"></script>
 
 	<!-- ace scripts -->
-	<script src="../assets/js/ace-elements.min.js"></script>
-	<script src="../assets/js/ace.min.js"></script>
+	<script src="assets//js/ace-elements.min.js"></script>
+	<script src="assets//js/ace.min.js"></script>
 
 	<!-- inline scripts related to this page -->
 	

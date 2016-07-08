@@ -357,7 +357,7 @@
 						<li class="light-blue">
                         
 							<a href="login.jsp">
-								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />更换用户<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
 					</ul>
