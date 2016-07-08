@@ -59,6 +59,25 @@ public class User {
 		
 		return betweenDays;
 	}
+	public static ResultSet getUserComment(int id) {
+		// 通过id查询评论
+		Statement sta = null;
+		try {
+			sta = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		String sql = "SELECT name,bookname,remark,score FROM user,comment,category WHERE cardID=comment_stu and com_index=`INDEX` and cardID=" + id;
+		ResultSet rs = null;
+		try {
+			rs = sta.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
 	public static ResultSet Cui(int cardID){
 		//催还单
 		Statement sta = null;
