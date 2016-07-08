@@ -97,7 +97,7 @@
 											
 
 											<div>
-											  <a href="book.jsp">
+											  <a href="/Library/admin/bool.jsp">
 													返回
 											  <i class="ace-icon fa fa-arrow-right"></i>
 												</a>

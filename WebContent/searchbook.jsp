@@ -72,7 +72,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.jsp" class="navbar-brand">
+					<a href="/Library/index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -339,7 +339,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.jsp">
+							<a href="/Library/login.jsp">
 								<img class="nav-user-photo" src="/Library/assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -390,7 +390,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.jsp">
+						<a href="/Library/index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -398,7 +398,7 @@
 
 
 					<li class="">
-						<a href="hot.jsp">
+						<a href="/Library//hot.jsp">
 							<i class="menu-icon fa fa-file-o"></i>热搜榜<b class="arrow"></b>
 						</a>
 
@@ -822,7 +822,7 @@
 																	<label class="inline">
 																		<input type="checkbox" class="ace" />
 																	</label>
-																	<a href="book.jsp"><span class="sender" title="Alex John Red Smith">
+																	<a href="/Library//book.jsp"><span class="sender" title="Alex John Red Smith">
 																	<%= 
 																		result.getString("bookname")  
 																	%>
@@ -850,7 +850,7 @@
 
 																	
 
-																	<a href="book.jsp"><span class="sender" title="John Doe">
+																	<a href="/Library//book.jsp"><span class="sender" title="John Doe">
 																		哈哈哈哈哈哈哈
 																		<span class="light-grey">(4)</span>
 																	</span></a>
@@ -875,7 +875,7 @@
 																	</label>
 
 																	
-																	<a href="book.jsp"><span class="sender" title="Philip Markov">又是一本书</span></a>
+																	<a href="/Library//book.jsp"><span class="sender" title="Philip Markov">又是一本书</span></a>
 																	<span class="time">本馆藏书：4 可借数目：0</span>
 
 																	<span class="attachment">

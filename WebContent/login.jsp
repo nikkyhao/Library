@@ -102,7 +102,7 @@
 											</div>
 
 											<div>
-											  <a href="index.jsp">
+											  <a href="/Library/index.jsp">
 													返回
 											  <i class="ace-icon fa fa-arrow-right"></i>
 												</a>

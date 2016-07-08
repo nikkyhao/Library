@@ -153,7 +153,7 @@
 			</button>
 
 			<div class="navbar-header pull-left">
-				<a href="index.jsp" class="navbar-brand"> <small> <i
+				<a href="/Library/admin/index.jsp" class="navbar-brand"> <small> <i
 						class="fa fa-leaf"></i> 图书馆管理系统
 				</small>
 				</a>
@@ -358,7 +358,7 @@
 							</a></li>
 						</ul></li>
 
-					<li class="light-blue"><a href="login.jsp"> <img
+					<li class="light-blue"><a href="/Library/admin/login.jsp"> <img
 							class="nav-user-photo" src="/Library/assets/avatars/user.jpg"
 							alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 					</a></li>
@@ -412,7 +412,7 @@
 			<!-- /.sidebar-shortcuts -->
 
 			<ul class="nav nav-list">
-				<li class="active"><a href="index.jsp"> <i
+				<li class="active"><a href="/Library/admin/index.jsp"> <i
 						class="menu-icon fa fa-tachometer"></i>主页
 				</a> <b class="arrow"></b></li>
 
@@ -422,22 +422,22 @@
 				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class=""><a href="borrowrecord.jsp"> <i
+						<li class=""><a href="/Library/admin/borrowrecord.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 借阅记录
 						</a> <b class="arrow"></b></li>
 
-						<li class=""><a href="brokerules.jsp"> <i
+						<li class=""><a href="/Library/admin/brokerules.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 违章记录
 						</a> <b class="arrow"></b></li>
-						<li class=""><a href="borrow.jsp"> <i
+						<li class=""><a href="/Library/admin/borrow.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 借阅书籍
 						</a> <b class="arrow"></b></li>
-						<li class=""><a href="back.jsp"> <i
+						<li class=""><a href="/Library/admin/back.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 归还书籍
 						</a> <b class="arrow"></b></li>
 					</ul></li>
 
-				<li class=""><a href="bookmanage.jsp"> <i
+				<li class=""><a href="/Library/admin/bookmanage.jsp"> <i
 						class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 				</a> <b class="arrow"></b></li>
 
@@ -445,7 +445,7 @@
 						class="menu-icon fa fa-list-alt"></i>会员管理
 				</a> <b class="arrow"></b></li>
 
-				<li class=""><a href="information.jsp"> <i
+				<li class=""><a href="/Library/admin/information.jsp"> <i
 						class="menu-icon fa fa-calendar"></i> <span class="menu-text">我的信息<span
 							class="badge badge-transparent tooltip-error"
 							title="2 Important Events"> <i
@@ -453,7 +453,7 @@
 						</span>
 					</span>
 				</a> <b class="arrow"></b></li>
-				<li class=""><a href="system.jsp"> <i
+				<li class=""><a href="/Library/admin/system.jsp"> <i
 						class="menu-icon fa fa-list-alt"></i>系统设置
 				</a> <b class="arrow"></b></li>
 			</ul>
@@ -487,7 +487,7 @@
 
 					<ul class="breadcrumb">
 						<li><i class="ace-icon fa fa-home home-icon"></i> <a
-							href="index.jsp">图书馆管理系统</a></li>
+							href="/Library/admin/index.jsp">图书馆管理系统</a></li>
 
 						<li>归还书籍</li>
 					</ul>

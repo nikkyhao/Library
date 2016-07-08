@@ -89,7 +89,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.jsp" class="navbar-brand">
+					<a href="/Library/vip/index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -356,7 +356,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.jsp">
+							<a href="/Library/vip/login.jsp">
 								<img class="nav-user-photo" src="/Library/assets/avatars/user.jpg" alt="Jason's Photo" />更换用户<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -411,7 +411,7 @@
 class="active">
 <a
 
-href="index.jsp">
+href="/Library/vip/index.jsp">
 
 
 <i class="menu-icon fa fa-tachometer"></i>主页</a>
@@ -444,7 +444,7 @@ class="submenu">
 <li class="">
 
 
-<a href="tables.jsp">
+<a href="/Library/vip/tables.jsp">
 
 
 <i class="menu-icon fa fa-caret-
@@ -491,7 +491,7 @@ right"></i>
 <li class="">
 
 
-<a href="tables.jsp">
+<a href="/Library/vip/tables.jsp">
 
 
 <i class="menu-icon fa fa-caret-
@@ -536,7 +536,7 @@ class="submenu">
 <li class="">
 
 
-<a href="hurryup.jsp">
+<a href="/Library/vip/hurryup.jsp">
 
 
 <i class="menu-icon fa fa-caret-
@@ -561,7 +561,7 @@ right"></i>
 <li class="">
 
 
-<a href="fine.jsp">
+<a href="/Library/vip/fine.jsp">
 
 
 <i class="menu-icon fa fa-caret-
@@ -587,7 +587,7 @@ right"></i>
 <li class="">
 <a
 
-href="hot.jsp">
+href="/Library/vip/hot.jsp">
 
 
 <i class="menu-icon fa fa-list-alt"></i>风云榜</a>
@@ -599,7 +599,7 @@ class="arrow"></b>
 <li class="">
 <a
 
-href="comment.jsp">
+href="/Library/vip/comment.jsp">
 
 
 <i class="menu-icon fa fa-pencil-square-o"></i>

@@ -67,7 +67,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.jsp" class="navbar-brand">
+					<a href="/Library/admin/index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -334,7 +334,7 @@
 
 					<li class="light-blue">
                         
-							<a href="login.jsp">
+							<a href="/Library/admin/login.jsp">
 								<img class="nav-user-photo" src="/Library/assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -384,7 +384,7 @@
 				</div><!-- /.sidebar-shortcuts -->
 	<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.jsp">
+						<a href="/Library/admin/index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -399,7 +399,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="borrowrecord.jsp">
+								<a href="/Library/admin/borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅记录
 								</a>
@@ -408,7 +408,7 @@
 							</li>
 
 							<li class="">
-								<a href="brokerules.jsp">
+								<a href="/Library/admin/brokerules.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									违章记录
 								</a>
@@ -416,7 +416,7 @@
 								<b class="arrow"></b>
 							</li>
                         <li class="">
-								<a href="borrow.jsp">
+								<a href="/Library/admin/borrow.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									借阅书籍
 								</a>
@@ -424,7 +424,7 @@
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="borrowrecord.jsp">
+								<a href="/Library/admin/borrowrecord.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									归还书籍
 								</a>
@@ -436,7 +436,7 @@
 					</li>
 
 					<li class="">
-						<a href="bookmanage.jsp">
+						<a href="/Library/admin/bookmanage.jsp">
 							<i class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 						</a>
 
@@ -451,7 +451,7 @@
 					</li>
 									
 					<li class="">
-						<a href="information.jsp">
+						<a href="/Library/admin/information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -463,7 +463,7 @@
 						<b class="arrow"></b>
 					</li>				
 					<li class="">
-						<a href="system.jsp">
+						<a href="/Library/admin/system.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>系统设置</a>
 
 						<b class="arrow"></b>

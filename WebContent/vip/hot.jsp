@@ -60,7 +60,7 @@
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="index.jsp" class="navbar-brand">
+					<a href="/Library/vip/index.jsp" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							图书馆管理系统
@@ -327,7 +327,7 @@
 
 						<li class="light-blue">
                         
-							<a href="login.jsp">
+							<a href="/Library/vip/login.jsp">
 								<img class="nav-user-photo" src="/Library/assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
@@ -378,7 +378,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.jsp">
+						<a href="/Library/vip/index.jsp">
 							<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
 						<b class="arrow"></b>
@@ -393,7 +393,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="tables.jsp">
+								<a href="/Library/vip/tables.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									当前借阅
 								</a>
@@ -402,7 +402,7 @@
 							</li>
 
 							<li class="">
-								<a href="tablesH.jsp">
+								<a href="/Library/vip/tablesH.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									历史借阅
 								</a>
@@ -410,7 +410,7 @@
 								<b class="arrow"></b>
 							</li>
                             <li class="">
-								<a href="tablesY.jsp">
+								<a href="/Library/vip/tablesY.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									预约信息
 								</a>
@@ -429,7 +429,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="hurryup.jsp">
+								<a href="/Library/vip/hurryup.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									催还单
 								</a>
@@ -438,7 +438,7 @@
 							</li>
 
 							<li class="">
-								<a href="fine.jsp">
+								<a href="/Library/vip/fine.jsp">
 									<i class="menu-icon fa fa-caret-right"></i>
 									违章罚款
 								</a>
@@ -450,13 +450,13 @@
 					</li>
 
 					<li class="">
-						<a href="hot.jsp">
+						<a href="/Library/vip/hot.jsp">
 							<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
 
 						<b class="arrow"></b>
 					</li>
                   <li class="">
-						<a href="comment.jsp">
+						<a href="/Library/vip/comment.jsp">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 
 							<span class="menu-text">我的评论<span class="badge badge-transparent tooltip-error" title="2 Important Events">
@@ -469,7 +469,7 @@
 					</li>					
 
 					<li class="">
-						<a href="information.jsp">
+						<a href="/Library/vip/information.jsp">
 							<i class="menu-icon fa fa-calendar"></i>
 
 							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">

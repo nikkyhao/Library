@@ -161,7 +161,7 @@
 			</button>
 
 			<div class="navbar-header pull-left">
-				<a href="index.jsp" class="navbar-brand"> <small> <i
+				<a href="/Library/admin/index.jsp" class="navbar-brand"> <small> <i
 						class="fa fa-leaf"></i> 图书馆管理系统
 				</small>
 				</a>
@@ -366,7 +366,7 @@
 							</a></li>
 						</ul></li>
 
-					<li class="light-blue"><a href="login.jsp"> <img
+					<li class="light-blue"><a href="/Library/admin/login.jsp"> <img
 							class="nav-user-photo" src="/Library/assets/avatars/user.jpg"
 							alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 					</a></li>

@@ -176,7 +176,7 @@
 			</button>
 
 			<div class="navbar-header pull-left">
-				<a href="index.jsp" class="navbar-brand"> <small> <i
+				<a href="/Library/admin/index.jsp" class="navbar-brand"> <small> <i
 						class="fa fa-leaf"></i> 图书馆管理系统
 				</small>
 				</a>
@@ -381,7 +381,7 @@
 							</a></li>
 						</ul></li>
 
-					<li class="light-blue"><a href="login.jsp"> <img
+					<li class="light-blue"><a href="/Library/admin/login.jsp"> <img
 							class="nav-user-photo" src="/Library/assets/avatars/user.jpg"
 							alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 					</a></li>
@@ -476,7 +476,7 @@
 						</span>
 					</span>
 				</a> <b class="arrow"></b></li>
-				<li class=""><a href="system.jsp"> <i
+				<li class=""><a href="/Library/admin/system.jsp"> <i
 						class="menu-icon fa fa-list-alt"></i>系统设置
 				</a> <b class="arrow"></b></li>
 			</ul>
@@ -510,7 +510,7 @@
 
 					<ul class="breadcrumb">
 						<li><i class="ace-icon fa fa-home home-icon"></i> <a
-							href="index.jsp">图书馆管理系统</a></li>
+							href="/Library/admin/index.jsp">图书馆管理系统</a></li>
 
 						<li>借阅书籍</li>
 					</ul>
