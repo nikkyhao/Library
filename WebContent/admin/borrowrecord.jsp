@@ -1,13 +1,18 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <html lang="en">
 	<head>
+	<%@page import="java.sql.Date" import="com.entity.*" import="java.sql.ResultSet" import="java.sql.Statement" import="java.sql.SQLException" import="com.test.LibConnection"%>
+	
+	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
 
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
+<link href="assets/css/base.css" type="text/css" rel="stylesheet" />
 
 <style type="text/css">
 /* search */
@@ -26,38 +31,38 @@
 .search input.btn_srh{background:#f58400;color:#FFF;font-family:"微软雅黑";font-size:15px;width:60px;}
 </style>
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="../assets/css/bootstrap-duallistbox.min.css" />
-		<link rel="stylesheet" href="../assets/css/bootstrap-multiselect.min.css" />
-		<link rel="stylesheet" href="../assets/css/select2.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-duallistbox.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-multiselect.min.css" />
+		<link rel="stylesheet" href="assets/css/select2.min.css" />
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="../assets/js/ace-extra.min.js"></script>
+		<script src="assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="../assets/js/html5shiv.min.js"></script>
-		<script src="../assets/js/respond.min.js"></script>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -250,7 +255,7 @@
 									<ul class="dropdown-menu dropdown-navbar">
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Alex:</span>
@@ -267,7 +272,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+												<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Susan:</span>
@@ -284,7 +289,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+												<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Bob:</span>
@@ -301,7 +306,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+												<img src="assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Kate:</span>
@@ -318,7 +323,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+												<img src="assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Fred:</span>
@@ -347,7 +352,7 @@
 							<li class="light-blue">
                         
 							<a href="login.jsp">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
 					</ul>
@@ -599,210 +604,28 @@
 									<div class="space-6"></div>	
 
 						<div class="search radius6">
-	<form name="searchform" method="post" action="/e/search/index.php">
+	<form name="searchform" method="post" action="../SearchBorrowRecord">
 		<input name='ecmsfrom' type='hidden' value='9'>
 		<input type="hidden" name="show" value="title,newstext">
-		<select name="readerid？" id="choose">
-			<option value="0">按序号</option>
-			<option value="1">按索书号</option>
-			<option value="4">按作者</option>
-			<option value="22">按会员</option>
-		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索借阅记录条件" >
->
-		<a href="brokerules.jsp"><div class="btn_srh" >搜索</div></a>
+		<select name="searchtype" id="choose">
+			<option value="0">按索书号</option>
+			<option value="1">按会员卡卡号</option>
+			
+		</select>		
+		
+		<input class="inp_srh" name="searchContent"  placeholder="请输入您要搜索的书籍" >
+
+		<div class = "btn_srh" ><input  type = "submit" name = "search" value = "搜索" ></div></a>
 	</form>
 </div>
 
-<script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.select.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.select.js"></script>
                                        </h1>
 							
 							
 						</div><!-- /.page-header -->
-                          
-						  
-						
-							
-						
-						 
-						 
-						 
-						 
-						 
-						 
-						 
-						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div class="row">
-									<div class="col-xs-12">
-										<table id="simple-table" class="table table-striped table-bordered table-hover">
-											<thead>
-												<tr>
-												  <th>序号</th>
-													<th>书名</th>
-													<th>借阅时间</th>
-													<th class="hidden-480">借阅人</th>
-
-													<th>
-														<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-														状态
-													</th>
-													<th class="hidden-480">操作</th>
-													<th>不知道还有什么属性</th>
-
-													
-												</tr>
-											</thead>
-
-											<tbody>
-												<tr>
-													<td class="center">
-														<label class="pos-rel">1<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">今天天气好晴朗</a>
-													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">kyle</td>
-													<td>未还</td>
-
-													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-warning">归还</span>
-													</a>	
-														
-													<a href="#">	
-														<span class="label label-sm label-warning">续借</span>
-													</a>	
-													</td>
-                                                    <td>
-														<a href="#">啦啦啦</a>
-													</td>
-													
-												<tr>
-													<td class="center">
-														<label class="pos-rel">2<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">所以……和黑粉结婚了</a>
-													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Eric</td>
-													<td>未还</td>
-
-													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-success">归还</span>
-													</a>
-													<a href="#">
-														<span class="label label-sm label-success">续借</span>
-													</a>	
-													</td>
-													<td>
-														<a href="#">啦啦啦</a>
-													</td>
-
-													
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">3<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">哈哈哈哈哈哈</a>
-													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Stan</td>
-													<td>未还</td>
-
-													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-warning">归还</span>
-														</a>
-														<a href="#">
-														<span class="label label-sm label-warning">续借</span>
-														</a>
-													</td>
-													<td>
-														<a href="#">啦啦啦</a>
-													</td>
-
-													
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">4<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">小丽丽的幸福生活</a>
-													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Kenny</td>
-													<td>未还</td>
-
-													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-inverse arrowed-in">归还</span>
-														</a>
-														<a href="#">
-														<span class="label label-sm label-inverse arrowed-in">续借</span>
-														</a>
-													</td>
-
-													<td>
-														<a href="#">郭敬明</a>
-													</td>
-														
-
-												</tr>
-
-												<tr>
-													<td class="center">
-														<label class="pos-rel">
-															5
-															<span class="lbl"></span>
-														</label>
-													</td>
-
-													<td>
-														<a href="#">小丽丽的普通话教程</a>
-													</td>
-													<td>2015/5/18</td>
-													<td class="hidden-480">Butters</td>
-													<td>未还</td>
-
-													<td class="hidden-480">
-													<a href="#">
-														<span class="label label-sm label-success">归还</span>
-														</a>
-														<a href="#">
-														<span class="label label-sm label-success">续借</span>
-														</a>
-													</td>
-                                                    <td>
-														<a href="#">啦啦啦</a>
-													</td>
-													
-												</tr>
-											</tbody>
-										</table>
-									</div><!-- /.span -->
-								</div><!-- /.row -->
-
-								
-
-								
+				
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
@@ -822,41 +645,41 @@
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="../assets/js/jquery.2.1.1.min.js"></script>
+		<script src="assets/js/jquery.2.1.1.min.js"></script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-<script src="../assets/js/jquery.1.11.1.min.js"></script>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
 <![endif]-->
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='../assets/js/jquery.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
-		<script src="../assets/js/jquery.bootstrap-duallistbox.min.js"></script>
-		<script src="../assets/js/jquery.raty.min.js"></script>
-		<script src="../assets/js/bootstrap-multiselect.min.js"></script>
-		<script src="../assets/js/select2.min.js"></script>
-		<script src="../assets/js/typeahead.jquery.min.js"></script>
+		<script src="assets/js/jquery.bootstrap-duallistbox.min.js"></script>
+		<script src="assets/js/jquery.raty.min.js"></script>
+		<script src="assets/js/bootstrap-multiselect.min.js"></script>
+		<script src="assets/js/select2.min.js"></script>
+		<script src="assets/js/typeahead.jquery.min.js"></script>
 
 		<!-- ace scripts -->
-		<script src="../assets/js/ace-elements.min.js"></script>
-		<script src="../assets/js/ace.min.js"></script>
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">

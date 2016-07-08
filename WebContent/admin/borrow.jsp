@@ -4,11 +4,7 @@
 <html lang="en">
 	<head>
 	<%@page import="java.sql.ResultSet" import="com.entity.*" import="java.sql.SQLException" import="java.sql.Statement" import="com.test.LibConnection" import="java.sql.Date"%>
-	<%! 
-		ResultSet book=null;
-		int total=0;
-		int borrow=0;
-	%>	
+	
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
@@ -604,11 +600,11 @@
 								<!-- PAGE CONTENT BEGINS -->
 								
 						<div class="search radius6">
-	<form name="searchform" method="post" action="/e/search/index.php">
+	<form name="searchform" method="post" action="../SearchBorrow">
 		
         <input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
 
-		<input class="btn_srh" type="submit" name="submit0" value="搜索">
+		<input class="btn_srh" type = "submit" name = "searchBorrow" value = "搜索" >
 		&nbsp;&nbsp;
 		
 		<input class="btn_srh" type="submit" name="submit1" value="扫描">
@@ -618,84 +614,7 @@
 <script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.select.js"></script>
 <hr />
-	<div class="profile-user-info profile-user-info-striped">
-	
-												<% 
-													//$index=$_Get('keyboard');
-													book=LibSystem.queryByIndex("121322");
-												
-													while(book.next()){
-														%>
-										
-													
-												<div class="profile-info-row">
-													<div class="profile-info-name">图书名:</div>
 
-													<div class="profile-info-value">
-														<span class="editable" id="username"><%=book.getString("bookname")%></span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 索书号 :</div>
-
-													<div class="profile-info-value">
-														<i class="fa fa-map-marker light-orange bigger-110"></i>
-														<span class="editable" id="country"><%=book.getString("index")%></span><span class="editable" id="city"></span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 作者 :</div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="age"><%=book.getString("author")%></span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 出版社:</div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="signup"><%=book.getString("press")%></span>
-													</div>
-												</div>
-												<div class="profile-info-row">
-													<div class="profile-info-name"> 类型: </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="about"><%=book.getString("booktype")%></span>
-													</div>
-												</div>
-											
-											<% 
-													}
-													total=LibSystem.searchNum(121322);
-													borrow=LibSystem.searchBorrowNum(121322);
-												%>
-											<div class="profile-info-row">
-													<div class="profile-info-name">总数量:</div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="login"><%=total %>本</span>
-													</div>
-												</div>
-											<div class="profile-info-row">
-													<div class="profile-info-name">可借数量:</div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="login"><%=borrow %>本</span>
-													</div>
-												</div>
-
-									
-											</div>
-											<hr />
-                                            
-											<a href="borrowbooksinfo.jsp">
-												<button class="btn btn-info" type="button" value="借书"> 借书<i class="ace-icon fa fa-check bigger-110"></i> </button>
-												</a>
-												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 								<script type="text/javascript">
 									var $path_base = ".";//in Ace demo this will be used for editurl parameter

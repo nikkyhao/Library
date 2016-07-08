@@ -1,3 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<%@page import="java.sql.ResultSet" import="com.entity.*" import="java.sql.SQLException" import="java.sql.Statement" import="com.test.LibConnection"%>
+	<%! Ranking rank=new Ranking();
+		ResultSet remark=null;
+		ResultSet user=null;
+		ResultSet book=null;
+	%>	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -7,7 +20,7 @@
 
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
+        <link href="assets/css/base.css" type="text/css" rel="stylesheet" />
 
 <style type="text/css">
 /* search */
@@ -26,35 +39,35 @@
 .search input.btn_srh{background:#f58400;color:#FFF;font-family:"微软雅黑";font-size:15px;width:60px;}
 </style>
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="../assets/js/ace-extra.min.js"></script>
+		<script src="assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="../assets/js/html5shiv.min.js"></script>
-		<script src="../assets/js/respond.min.js"></script>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -247,7 +260,7 @@
 									<ul class="dropdown-menu dropdown-navbar">
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Alex:</span>
@@ -264,7 +277,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+												<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Susan:</span>
@@ -281,7 +294,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+												<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Bob:</span>
@@ -298,7 +311,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+												<img src="assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Kate:</span>
@@ -315,7 +328,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+												<img src="assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Fred:</span>
@@ -344,7 +357,7 @@
 						<li class="light-blue">
                         
 							<a href="login.jsp">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
 					</ul>
@@ -392,111 +405,276 @@
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
 
-				<ul class="nav nav-list">
-					<li class="active">
-						<a href="index.jsp">
-							<i class="menu-icon fa fa-tachometer"></i>主页</a>
+<ul class="nav nav-list">
+<li
 
-						<b class="arrow"></b>
-					</li>
+class="active">
+<a
 
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>借阅记录<b class="arrow fa fa-angle-down"></b>
-						</a>
+href="index.jsp">
 
-						<b class="arrow"></b>
 
-						<ul class="submenu">
-							<li class="">
-								<a href="tables.jsp">
-									<i class="menu-icon fa fa-caret-right"></i>
-									当前借阅
-								</a>
+<i class="menu-icon fa fa-tachometer"></i>主页</a>
 
-								<b class="arrow"></b>
-							</li>
+<b
 
-							<li class="">
-								<a href="tablesH.jsp">
-									<i class="menu-icon fa fa-caret-right"></i>
-									历史借阅
-								</a>
+class="arrow"></b>
+</li>
 
-								<b class="arrow"></b>
-							</li>
-                            <li class="">
-								<a href="tablesY.jsp">
-									<i class="menu-icon fa fa-caret-right"></i>
-									预约信息
-								</a>
+<li class="">
+<a
 
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
+href="#" class="dropdown-toggle">
 
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>违章记录<b class="arrow fa fa-angle-down"></b>
-						</a>
 
-						<b class="arrow"></b>
+<i class="menu-icon fa fa-list"></i>借阅记录<b
 
-						<ul class="submenu">
-							<li class="">
-								<a href="hurryup.jsp">
-									<i class="menu-icon fa fa-caret-right"></i>
-									催还单
-								</a>
+class="arrow fa fa-angle-down"></b>
+</a>
 
-								<b class="arrow"></b>
-							</li>
+<b
 
-							<li class="">
-								<a href="fine.jsp">
-									<i class="menu-icon fa fa-caret-right"></i>
-									违章罚款
-								</a>
+class="arrow"></b>
 
-								<b class="arrow"></b>
-							</li>
+<ul
 
-						</ul>
-					</li>
+class="submenu">
 
-					<li class="">
-						<a href="hot.jsp">
-							<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
 
-						<b class="arrow"></b>
-					</li>
-                  <li class="">
-						<a href="comment.jsp">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
+<li class="">
 
-							<span class="menu-text">我的评论<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
-						</a>
 
-						<b class="arrow"></b>
-					</li>					
+<a href="tables.jsp">
 
-					<li class="">
-						<a href="information.jsp">
-							<i class="menu-icon fa fa-calendar"></i>
 
-							<span class="menu-text">我的信息<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
-						</a>
+<i class="menu-icon fa fa-caret-
 
-						<b class="arrow"></b>
-					</li>				
-						
+right"></i>
+
+
+当前借阅
+
+
+</a>
+
+
+
+<b class="arrow"></b>
+
+
+</li>
+
+
+
+<li class="">
+
+
+<a href="table.jsp">
+
+
+<i class="menu-icon fa fa-caret-
+
+right"></i>
+
+
+历史借阅
+
+
+</a>
+
+
+
+<b class="arrow"></b>
+
+
+</li>
+<li class="">
+
+
+<a href="tables.jsp">
+
+
+<i class="menu-icon fa fa-caret-
+
+right"></i>
+
+
+预约信息
+
+
+</a>
+
+
+
+<b class="arrow"></b>
+
+
+</li>
+</ul>
+</li>
+
+<li class="">
+<a
+
+href="#" class="dropdown-toggle">
+
+
+<i class="menu-icon fa fa-file-o"></i>违章记录<b
+
+class="arrow fa fa-angle-down"></b>
+</a>
+
+<b
+
+class="arrow"></b>
+
+<ul
+
+class="submenu">
+
+
+<li class="">
+
+
+<a href="hurryup.jsp">
+
+
+<i class="menu-icon fa fa-caret-
+
+right"></i>
+
+
+催还单
+
+
+</a>
+
+
+
+<b class="arrow"></b>
+
+
+</li>
+
+
+
+<li class="">
+
+
+<a href="fine.jsp">
+
+
+<i class="menu-icon fa fa-caret-
+
+right"></i>
+
+
+违章罚款
+
+
+</a>
+
+
+
+<b class="arrow"></b>
+
+
+</li>
+
+</ul>
+</li>
+
+<li class="">
+<a
+
+href="hot.jsp">
+
+
+<i class="menu-icon fa fa-list-alt"></i>风云榜</a>
+
+<b
+
+class="arrow"></b>
+</li>
+<li class="">
+<a
+
+href="comment.jsp">
+
+
+<i class="menu-icon fa fa-pencil-square-o"></i>
+
+
+
+<span class="menu-text">我的评论<span class="badge
+
+badge-transparent tooltip-error" title="2 Important
+
+Events">
+
+
+<i class="ace-icon fa fa-exclamation-
+
+triangle red bigger-130"></i>
+
+
+</span>
+
+
+</span>
+</a>
+
+<b
+
+class="arrow"></b>
+</li>
+
+
+
+<li class="">
+<a
+
+href="form-elements.jsp">
+
+
+<i class="menu-icon fa fa-calendar"></i>
+
+
+
+<span class="menu-text">我的信息<span class="badge
+
+badge-transparent tooltip-error" title="2 Important
+
+Events">
+
+
+<i class="ace-icon fa fa-exclamation-
+
+triangle red bigger-130"></i>
+
+
+</span>
+
+
+</span>
+</a>
+
+<b
+
+class="arrow"></b>
+</li>
+
+
+
+</ul>
+</li>
+</ul><!-- /.nav-list
+
+-->
+
+
+
+
 						</ul>
 					</li>
 				</ul><!-- /.nav-list -->
@@ -619,22 +797,23 @@
 									<div class="space-6"></div>	
 
 						<div class="search radius6">
-	<form name="searchform" method="post" action="/e/search/index.php">
+	<form name="searchform" method="post" action="SearchBook">
 		<input name='ecmsfrom' type='hidden' value='9'>
 		<input type="hidden" name="show" value="title,newstext">
-		<select name="classid" id="choose">
+		<select name="searchtype" id="choose">
 			<option value="0">按名称</option>
 			<option value="1">按索书号</option>
-			<option value="4">按作者</option>
-			<option value="22">按类别</option>
-		</select>		<input class="inp_srh" name="keyboard"  placeholder="请输入您要搜索的书籍" >
->
-		<a href="searchbook.jsp"><div class="btn_srh" >搜索</div></a>
+			<option value="2">按作者</option>
+			<option value="3">按类别</option>
+		</select>		
+		<input class="inp_srh" name="searchContent"  placeholder="请输入您要搜索的书籍" >
+		<div class = "btn_srh" ><input  type = "submit" name = "search" value = "搜索" ></div>
+		
 	</form>
 </div>
 
-<script type="text/javascript" src="../assets/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.select.js"></script>
+<script type="text/javascript" src="assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.select.js"></script>
 
 									<div class="vspace-12-sm"></div>
 
@@ -721,7 +900,7 @@
 											</div><!-- /.widget-body -->
 										</div><!-- /.widget-box -->
 									</div><!-- /.col -->
-									<div class="col-sm-5">
+																		<div class="col-sm-5">
 										<div class="widget-box transparent">
 											<div class="widget-header widget-header-flat">
 												<h4 class="widget-title lighter">
@@ -746,95 +925,41 @@
 																</th>
 
 																<th>
-																	<i class="ace-icon fa fa-caret-right blue"></i>价格
+																	<i class="ace-icon fa fa-caret-right blue"></i>索书号
 																</th>
 
 																<th class="hidden-480">
-																	<i class="ace-icon fa fa-caret-right blue"></i>状态
+																	<i class="ace-icon fa fa-caret-right blue"></i>作者
 																</th>
 															</tr>
 														</thead>
 
 														<tbody>
 															<tr>
-																<td>internet.com</td>
-
+															<%book = rank.OrderBook(); %>
+															<% while(book.next()) {%>
+																<td><%=book.getString("bookname") %></td>
 																<td>
-																	<small>
-																		<s class="red">$29.99</s>
-																	</small>
-																	<b class="green">$19.99</b>
+																		<s class="blue"><%="TP"+book.getString("index") %></s>
 																</td>
 
 																<td class="hidden-480">
-																	<span class="label label-info arrowed-right arrowed-in">on sale</span>
+																	<span class="label label-info arrowed-right arrowed-in"><%=book.getString("author") %></span>
 																</td>
 															</tr>
+																<%} %>
 
-															<tr>
-																<td>online.com</td>
-
-																<td>
-																	<b class="blue">$16.45</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-success arrowed-in arrowed-in-right">approved</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>newnet.com</td>
-
-																<td>
-																	<b class="blue">$15.00</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-danger arrowed">pending</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>web.com</td>
-
-																<td>
-																	<small>
-																		<s class="red">$24.99</s>
-																	</small>
-																	<b class="green">$19.95</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label arrowed">
-																		<s>out of stock</s>
-																	</span>
-																</td>
-															</tr>
-
-															<tr>
-																<td>domain.com</td>
-
-																<td>
-																	<b class="blue">$12.00</b>
-																</td>
-
-																<td class="hidden-480">
-																	<span class="label label-warning arrowed arrowed-right">SOLD</span>
-																</td>
-															</tr>
 														</tbody>
 													</table>
 												</div><!-- /.widget-main -->
 											</div><!-- /.widget-body -->
 										</div><!-- /.widget-box -->
-									</div><!-- /.col -->	
+									</div><!-- /.col -->						
 						  </div><!-- /.row -->
 
-								<div class="hr hr32 hr-dotted"></div>
 
 								<div class="row">
-														
+
 
 									<div class="col-sm-6">
 										<div class="widget-box">
@@ -846,21 +971,26 @@
 											<div class="widget-body">
 												<div class="widget-main no-padding">
 													<div class="dialogs">
+													<%
+													remark = rank.OrderRemark();
+													while(remark.next())
+													{
+													%>
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
+																<img alt="Alexa's Avatar" src="assets/avatars/avatar1.png" />
 															</div>
 
 															<div class="body">
 																<div class="time">
 																	<i class="ace-icon fa fa-clock-o"></i>
-																	<span class="green">4 sec</span>
+																	<span class="green"><%=remark.getString("bookname") %></span>
 																</div>
 
 																<div class="name">
-																	<a href="#">Alexa</a>
+																	<a href="#"><%=remark.getString("name") %></a>
 																</div>
-																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+																<div class="text"><%=remark.getString("remark") %></div>
 
 																<div class="tools">
 																	<a href="#" class="btn btn-minier btn-info">
@@ -869,10 +999,12 @@
 																</div>
 															</div>
 														</div>
-
+														<%
+													}
+														%>
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="John's Avatar" src="../assets/avatars/avatar.png" />
+																<img alt="John's Avatar" src="assets/avatars/avatar.png" />
 															</div>
 
 															<div class="body">
@@ -896,7 +1028,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Bob's Avatar" src="../assets/avatars/user.jpg" />
+																<img alt="Bob's Avatar" src="assets/avatars/user.jpg" />
 															</div>
 
 															<div class="body">
@@ -921,7 +1053,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Jim's Avatar" src="../assets/avatars/avatar4.png" />
+																<img alt="Jim's Avatar" src="assets/avatars/avatar4.png" />
 															</div>
 
 															<div class="body">
@@ -945,7 +1077,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Alexa's Avatar" src="../assets/avatars/avatar1.png" />
+																<img alt="Alexa's Avatar" src="assets/avatars/avatar1.png" />
 															</div>
 
 															<div class="body">
@@ -1006,47 +1138,47 @@
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="../assets/js/jquery.2.1.1.min.js"></script>
+		<script src="assets/js/jquery.2.1.1.min.js"></script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-<script src="../assets/js/jquery.1.11.1.min.js"></script>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
 <![endif]-->
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='../assets/js/jquery.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
 		<!--[if lte IE 8]>
-		  <script src="../assets/js/excanvas.min.js"></script>
+		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
-		<script src="../assets/js/jquery-ui.custom.min.js"></script>
-		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../assets/js/jquery.easypiechart.min.js"></script>
-		<script src="../assets/js/jquery.sparkline.min.js"></script>
-		<script src="../assets/js/jquery.flot.min.js"></script>
-		<script src="../assets/js/jquery.flot.pie.min.js"></script>
-		<script src="../assets/js/jquery.flot.resize.min.js"></script>
+		<script src="assets/js/jquery-ui.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.easypiechart.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script>
+		<script src="assets/js/jquery.flot.min.js"></script>
+		<script src="assets/js/jquery.flot.pie.min.js"></script>
+		<script src="assets/js/jquery.flot.resize.min.js"></script>
 
 		<!-- ace scripts -->
-		<script src="../assets/js/ace-elements.min.js"></script>
-		<script src="../assets/js/ace.min.js"></script>
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
@@ -1086,11 +1218,11 @@
 			
 			  var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
 			  var data = [
-				{ label: "social networks",  data: 38.7, color: "#68BC31"},
-				{ label: "search engines",  data: 24.5, color: "#2091CF"},
-				{ label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
-				{ label: "direct traffic",  data: 18.6, color: "#DA5430"},
-				{ label: "other",  data: 10, color: "#FEE074"}
+				{ label: "科学",  data: 38.7, color: "#68BC31"},
+				{ label: "人文",  data: 24.5, color: "#2091CF"},
+				{ label: "图册",  data: 8.2, color: "#AF4E96"},
+				{ label: "语言",  data: 18.6, color: "#DA5430"},
+				{ label: "其他",  data: 10, color: "#FEE074"}
 			  ]
 			  function drawPieChart(placeholder, data, position) {
 			 	  $.plot(placeholder, data, {

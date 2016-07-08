@@ -3,26 +3,27 @@
 	pageEncoding="UTF-8"%>
 <html lang="en">
 <head>
-<%@page import="java.sql.ResultSet" import="com.entity.*"
-	import="java.sql.SQLException" import="java.sql.Statement"
-	import="com.test.LibConnection" import="java.sql.Date"%>
-<%!Administrator admin = new Administrator();
-	//LibSystem lib=new LibSystem();
-	ResultSet book = null;
-	String return_date;
-	String state;
+<%@page import="java.sql.Date" import="com.entity.*"
+	import="java.sql.ResultSet" import="java.sql.Statement"
+	import="java.sql.SQLException" import="com.test.LibConnection"%>
+<%!ResultSet borrow = null;
+	String returndate;
 	String bookid;
-	String cardid;
-	%>
+	int cardid;%>
+<%
+	borrow = (ResultSet) session.getAttribute("SearchResult");
+	if (borrow != null) {
+		borrow.beforeFirst();
+	}
+%>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="utf-8" />
 <title>图书馆管理系统</title>
 
-<meta name="description"
-	content="Dynamic tables and grids using jqGrid plugin" />
+<meta name="description" content="" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<link href="../assets/css/base.css" type="text/css" rel="stylesheet" />
+<link href="assets/css/base.css" type="text/css" rel="stylesheet" />
 
 <style type="text/css">
 /* search */
@@ -105,40 +106,40 @@
 }
 </style>
 <!-- bootstrap & fontawesome -->
-<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 <link rel="stylesheet"
-	href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+	href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 <!-- page specific plugin styles -->
-<link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
-<link rel="stylesheet" href="../assets/css/datepicker.min.css" />
-<link rel="stylesheet" href="../assets/css/ui.jqgrid.min.css" />
+<link rel="stylesheet" href="assets/css/bootstrap-duallistbox.min.css" />
+<link rel="stylesheet" href="assets/css/bootstrap-multiselect.min.css" />
+<link rel="stylesheet" href="assets/css/select2.min.css" />
 
 <!-- text fonts -->
-<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
+<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
 
 <!-- ace styles -->
-<link rel="stylesheet" href="../assets/css/ace.min.css"
+<link rel="stylesheet" href="assets/css/ace.min.css"
 	class="ace-main-stylesheet" id="main-ace-style" />
 
 <!--[if lte IE 9]>
-			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 <!--[if lte IE 9]>
-		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 <!-- inline styles related to this page -->
 
 <!-- ace settings handler -->
-<script src="../assets/js/ace-extra.min.js"></script>
+<script src="assets/js/ace-extra.min.js"></script>
 
 <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 <!--[if lte IE 8]>
-		<script src="../assets/js/html5shiv.min.js"></script>
-		<script src="../assets/js/respond.min.js"></script>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
 </head>
 
@@ -302,7 +303,7 @@
 							<li class="dropdown-content">
 								<ul class="dropdown-menu dropdown-navbar">
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar.png" class="msg-photo"
+											src="assets/avatars/avatar.png" class="msg-photo"
 											alt="Alex's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Alex:</span>
 													Ciao sociis natoque penatibus et auctor ...
@@ -314,7 +315,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar3.png" class="msg-photo"
+											src="assets/avatars/avatar3.png" class="msg-photo"
 											alt="Susan's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Susan:</span>
 													Vestibulum id ligula porta felis euismod ...
@@ -326,7 +327,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar4.png" class="msg-photo"
+											src="assets/avatars/avatar4.png" class="msg-photo"
 											alt="Bob's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Bob:</span>
 													Nullam quis risus eget urna mollis ornare ...
@@ -337,7 +338,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar2.png" class="msg-photo"
+											src="assets/avatars/avatar2.png" class="msg-photo"
 											alt="Kate's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Kate:</span>
 													Ciao sociis natoque eget urna mollis ornare ...
@@ -348,7 +349,7 @@
 									</a></li>
 
 									<li><a href="#" class="clearfix"> <img
-											src="../assets/avatars/avatar5.png" class="msg-photo"
+											src="assets/avatars/avatar5.png" class="msg-photo"
 											alt="Fred's Avatar" /> <span class="msg-body"> <span
 												class="msg-title"> <span class="blue">Fred:</span>
 													Vestibulum id penatibus et auctor ...
@@ -366,7 +367,7 @@
 						</ul></li>
 
 					<li class="light-blue"><a href="login.jsp"> <img
-							class="nav-user-photo" src="../assets/avatars/user.jpg"
+							class="nav-user-photo" src="assets/avatars/user.jpg"
 							alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 					</a></li>
 				</ul>
@@ -382,7 +383,6 @@
 			} catch (e) {
 			}
 		</script>
-
 		<div id="sidebar" class="sidebar                  responsive">
 			<script type="text/javascript">
 				try {
@@ -419,7 +419,7 @@
 			<!-- /.sidebar-shortcuts -->
 
 			<ul class="nav nav-list">
-				<li class="active"><a href="index.jsp"> <i
+				<li class="active"><a href="/Library/admin/index.jsp"> <i
 						class="menu-icon fa fa-tachometer"></i>主页
 				</a> <b class="arrow"></b></li>
 
@@ -429,30 +429,30 @@
 				</a> <b class="arrow"></b>
 
 					<ul class="submenu">
-						<li class=""><a href="borrowrecord.jsp"> <i
+						<li class=""><a href="/Library/admin/borrowrecord.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 借阅记录
 						</a> <b class="arrow"></b></li>
 
-						<li class=""><a href="brokerules.jsp"> <i
+						<li class=""><a href="/Library/admin/brokerules.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 违章记录
 						</a> <b class="arrow"></b></li>
-						<li class=""><a href="borrow.jsp"> <i
+						<li class=""><a href="/Library/admin/borrow.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 借阅书籍
 						</a> <b class="arrow"></b></li>
-						<li class=""><a href="back.jsp"> <i
+						<li class=""><a href="/Library/admin/borrowrecord.jsp"> <i
 								class="menu-icon fa fa-caret-right"></i> 归还书籍
 						</a> <b class="arrow"></b></li>
 					</ul></li>
 
-				<li class=""><a href="bookmanage.jsp"> <i
+				<li class=""><a href="/Library/admin/bookmanage.jsp"> <i
 						class="menu-icon fa fa-file-o"></i>图书管理<b class="arrow"></b>
 				</a> <b class="arrow"></b></li>
 
-				<li class=""><a href="member.jsp"> <i
+				<li class=""><a href="/Library/admin/member.jsp"> <i
 						class="menu-icon fa fa-list-alt"></i>会员管理
 				</a> <b class="arrow"></b></li>
 
-				<li class=""><a href="information.jsp"> <i
+				<li class=""><a href="/Library/admin/information.jsp"> <i
 						class="menu-icon fa fa-calendar"></i> <span class="menu-text">我的信息<span
 							class="badge badge-transparent tooltip-error"
 							title="2 Important Events"> <i
@@ -460,7 +460,7 @@
 						</span>
 					</span>
 				</a> <b class="arrow"></b></li>
-				<li class=""><a href="system.jsp"> <i
+				<li class=""><a href="/Library/admin/system.jsp"> <i
 						class="menu-icon fa fa-list-alt"></i>系统设置
 				</a> <b class="arrow"></b></li>
 			</ul>
@@ -493,10 +493,11 @@
 					</script>
 
 					<ul class="breadcrumb">
-						<li><i class="ace-icon fa fa-home home-icon"></i> <a
-							href="index.jsp">图书馆管理系统</a></li>
+						<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">图书馆管理系统</a>
+						</li>
 
-						<li>归还书籍</li>
+						<li><a href="#">借阅信息</a></li>
+
 					</ul>
 					<!-- /.breadcrumb -->
 
@@ -511,6 +512,7 @@
 					</div>
 					<!-- /.nav-search -->
 				</div>
+
 
 				<div class="page-content">
 					<div class="ace-settings-container" id="ace-settings-container">
@@ -592,194 +594,299 @@
 					<!-- /.ace-settings-container -->
 
 					<div class="page-header">
-						<h1>归还书籍</h1>
+						<h1>
+							借阅信息<small> </small>
+						</h1>
+						<h1>
+							<div class="row">
+								<div class="space-6"></div>
+
+								<script type="text/javascript"
+									src="assets/js/jquery-1.8.3.min.js"></script>
+								<script type="text/javascript" src="assets/js/jquery.select.js"></script>
+						</h1>
+
+
 					</div>
 					<!-- /.page-header -->
 
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- PAGE CONTENT BEGINS -->
+							<div class="row">
+								<div class="col-xs-12">
+									<table id="simple-table"
+										class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<th>序号</th>
+												<th>图书编号</th>
+												<th>书名</th>
+												<th class="hidden-480">借阅人</th>
 
-							<div class="search radius6">
-								<form name="searchform" method="post"
-									action="/e/search/index.php">
-
-									<input class="inp_srh" name="keyboard" placeholder="请输入您要搜索的书籍">
-
-									<input class="btn_srh" type="submit" name="submit" value="搜索">
-									<input class="btn_srh" type="submit" name="submit" value="扫描">
-								</form>
-							</div>
-
-							<script type="text/javascript"
-								src="../assets/js/jquery-1.8.3.min.js"></script>
-							<script type="text/javascript"
-								src="../assets/js/jquery.select.js"></script>
-							<hr />
-							<%
-								//$index=$_Get('keyboard');
-								book = admin.searchCurBor("45666");
-
-								while (book.next()) {
-							%>
+												<th><i
+													class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+													借阅人卡号</th>
+												<th class="hidden-480">借阅时间</th>
+												<th>归还日期</th>
+												<th>操作</th>
 
 
-							<div class="profile-info-row">
-								<div class="profile-info-name">图书名:</div>
+											</tr>
+										</thead>
 
-								<div class="profile-info-value">
-									<span class="editable" id="username"><%=book.getString("bookname")%></span>
+										<tbody>
+											<%
+												while (borrow.next()) {
+											%>
+
+											<tr>
+												<td class="center"><label class="pos-rel"><%=borrow.getString("index")%><span
+														class="lbl"></span> </label></td>
+
+												<td>
+													<%
+														bookid = borrow.getString("bookID");
+													%> <a href="#"><%=bookid%></a>
+												</td>
+												<td><%=borrow.getString("bookname")%></td>
+												<td class="hidden-480"><%=borrow.getString("name")%></td>
+												<td>
+													<%
+														cardid = borrow.getInt("cardID");
+													%> <%=cardid%></td>
+
+												<td><a href="#"><%=borrow.getString("bo_date")%></a></td>
+												
+												<td>
+												<%returndate=borrow.getString("return_date");
+												if(returndate==null){
+													returndate="未归还";
+												}
+												%><%=returndate %>
+												</td>
+												
+												<td class="hidden-480"><a
+													href="/Library/admin/back.jsp">
+														<button class="btn btn-info" type="button" value="还书"
+															onclick="ReturnBook()">
+															还书<i class="ace-icon fa fa-check bigger-110"></i>
+														</button>
+												</a></td>
+
+											</tr>
+											<%
+												}
+											%>
+										</tbody>
+									</table>
 								</div>
+								<!-- /.span -->
 							</div>
+							<!-- /.row -->
 
-							<div class="profile-info-row">
-								<div class="profile-info-name">索书号 :</div>
+							<script>
+								function ReturnBook() {
+									$.ajax({
+										type : 'post',
+										data : {
+											bookid :
+							<%=bookid%>
+								,
+											cardid :
+							<%=cardid%>
+								},
+										url : '../return_book',
+										success : function(data) {
+											alert("添加成功")
+										}
+									});
 
-								<div class="profile-info-value">
-									<i class="fa fa-map-marker light-orange bigger-110"></i> <span
-										class="editable" id="country"><%=book.getString("index")%></span><span
-										class="editable" id="city"></span>
-								</div>
-							</div>
-							<div class="profile-info-row">
-								<div class="profile-info-name">图书编号:</div>
-								<% 
-								bookid=book.getString("bookID"); 
-								%>
-
-								<div class="profile-info-value">
-									<span class="editable" id="signup"><%=bookid%></span>
-								</div>
-							</div>
-
-							<div class="profile-info-row">
-								<div class="profile-info-name">借书者 :</div>
-
-								<div class="profile-info-value">
-									<span class="editable" id="age"><%=book.getString("name")%></span>
-								</div>
-							</div>
-
-							<div class="profile-info-row">
-								<div class="profile-info-name">借阅证号:</div>
-								<% 
-								cardid=book.getString("cardID"); 
-								%>
-
-								<div class="profile-info-value">
-									<span class="editable" id="signup"><%=cardid%></span>
-								</div>
-							</div>
-
-							<div class="profile-info-row">
-								<div class="profile-info-name">借书日期:</div>
-
-								<div class="profile-info-value">
-									<span class="editable" id="about"><%=book.getString("bo_date")%></span>
-								</div>
-							</div>
-							<div class="profile-info-row">
-								<div class="profile-info-name">截止日期:</div>
-
-								<div class="profile-info-value">
-									<span class="editable" id="about"><%=book.getString("deadline")%></span>
-								</div>
-							</div>
-							<hr />
-							<%
-								}
-							%>
+								};
+							</script>
 
 
 						</div>
-						<hr />
-						<button class="btn btn-info" type="button" value="还书"
-							onclick="BookBack()">
-							还书<i class="ace-icon fa fa-check bigger-110"></i>
-						</button>
-						
-						<script>
-							function BookBack() {
-								$.ajax({
-									type:'post',
-									data:{bookid:<%= bookid %>,cardid:<%= cardid%>},
-									url:'../return_book',
-									success:function(data){
-										alert("添加成功")
-									}
-								});
-	
-							};
-						</script>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-						<script type="text/javascript">
-							var $path_base = ".";//in Ace demo this will be used for editurl parameter
-						</script>
-
-						<!-- PAGE CONTENT ENDS -->
+						<!-- /.col -->
 					</div>
-					<!-- /.col -->
+					<!-- /.row -->
 				</div>
-				<!-- /.row -->
+				<!-- /.page-content -->
 			</div>
-			<!-- /.page-content -->
+			<!-- /.main-content -->
+
+			<div class="footer">
+				<div class="footer-inner"></div>
+			</div>
+
+			<a href="#" id="btn-scroll-up"
+				class="btn-scroll-up btn btn-sm btn-inverse"> <i
+				class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
 		</div>
-	</div>
-	<!-- /.main-content -->
+		<!-- /.main-container -->
 
+		<!-- basic scripts -->
 
-	<a href="#" id="btn-scroll-up"
-		class="btn-scroll-up btn btn-sm btn-inverse"> <i
-		class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-	</a>
-	</div>
-	<!-- /.main-container -->
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery.2.1.1.min.js"></script>
 
-	<!-- basic scripts -->
+		<!-- <![endif]-->
 
-	<!--[if !IE]> -->
-	<script src="../assets/js/jquery.2.1.1.min.js"></script>
-
-	<!-- <![endif]-->
-
-	<!--[if IE]>
-<script src="../assets/js/jquery.1.11.1.min.js"></script>
+		<!--[if IE]>
+<script src="assets/js/jquery.1.11.1.min.js"></script>
 <![endif]-->
 
-	<!--[if !IE]> -->
-	<script type="text/javascript">
-		window.jQuery
-				|| document.write("<script src='../assets/js/jquery.min.js'>"
-						+ "<"+"/script>");
-	</script>
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery
+					|| document.write("<script src='assets/js/jquery.min.js'>"
+							+ "<"+"/script>");
+		</script>
 
-	<!-- <![endif]-->
+		<!-- <![endif]-->
 
-	<!--[if IE]>
+		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
-	<script type="text/javascript">
-		if ('ontouchstart' in document.documentElement)
-			document
-					.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"
-							+ "<"+"/script>");
-	</script>
-	<script src="../assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			if ('ontouchstart' in document.documentElement)
+				document
+						.write("<script src='assets/js/jquery.mobile.custom.min.js'>"
+								+ "<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
 
-	<!-- page specific plugin scripts -->
-	<script src="../assets/js/bootstrap-datepicker.min.js"></script>
-	<script src="../assets/js/jquery.jqGrid.min.js"></script>
-	<script src="../assets/js/grid.locale-en.js"></script>
+		<!-- page specific plugin scripts -->
+		<script src="assets/js/jquery.bootstrap-duallistbox.min.js"></script>
+		<script src="assets/js/jquery.raty.min.js"></script>
+		<script src="assets/js/bootstrap-multiselect.min.js"></script>
+		<script src="assets/js/select2.min.js"></script>
+		<script src="assets/js/typeahead.jquery.min.js"></script>
 
-	<!-- ace scripts -->
-	<script src="../assets/js/ace-elements.min.js"></script>
-	<script src="../assets/js/ace.min.js"></script>
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
 
-	<!-- inline scripts related to this page -->
-	
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+				var demo1 = $('select[name="duallistbox_demo1[]"]')
+						.bootstrapDualListbox(
+								{
+									infoTextFiltered : '<span class="label label-purple label-lg">Filtered</span>'
+								});
+				var container1 = demo1.bootstrapDualListbox('getContainer');
+				container1.find('.btn').addClass('btn-white btn-info btn-bold');
+
+				/**var setRatingColors = function() {
+					$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
+					$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
+				}*/
+				$('.rating').raty({
+					'cancel' : true,
+					'half' : true,
+					'starType' : 'i'
+				/**,
+				
+				'click': function() {
+					setRatingColors.call(this);
+				},
+				'mouseover': function() {
+					setRatingColors.call(this);
+				},
+				'mouseout': function() {
+					setRatingColors.call(this);
+				}*/
+				})//.find('i:not(.star-raty)').addClass('grey');
+
+				//////////////////
+				//select2
+				$('.select2').css('width', '200px').select2({
+					allowClear : true
+				})
+				$('#select2-multiple-style .btn').on('click', function(e) {
+					var target = $(this).find('input[type=radio]');
+					var which = parseInt(target.val());
+					if (which == 2)
+						$('.select2').addClass('tag-input-style');
+					else
+						$('.select2').removeClass('tag-input-style');
+				});
+
+				//////////////////
+				$('.multiselect')
+						.multiselect(
+								{
+									enableFiltering : true,
+									buttonClass : 'btn btn-white btn-primary',
+									templates : {
+										button : '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
+										ul : '<ul class="multiselect-container dropdown-menu"></ul>',
+										filter : '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+										filterClearBtn : '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+										li : '<li><a href="javascript:void(0);"><label></label></a></li>',
+										divider : '<li class="multiselect-item divider"></li>',
+										liGroup : '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
+									}
+								});
+
+				///////////////////
+
+				//typeahead.js
+				//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
+				var substringMatcher = function(strs) {
+					return function findMatches(q, cb) {
+						var matches, substringRegex;
+
+						// an array that will be populated with substring matches
+						matches = [];
+
+						// regex used to determine if a string contains the substring `q`
+						substrRegex = new RegExp(q, 'i');
+
+						// iterate through the pool of strings and for any string that
+						// contains the substring `q`, add it to the `matches` array
+						$.each(strs, function(i, str) {
+							if (substrRegex.test(str)) {
+								// the typeahead jQuery plugin expects suggestions to a
+								// JavaScript object, refer to typeahead docs for more info
+								matches.push({
+									value : str
+								});
+							}
+						});
+
+						cb(matches);
+					}
+				}
+
+				$('input.typeahead').typeahead({
+					hint : true,
+					highlight : true,
+					minLength : 1
+				}, {
+					name : 'states',
+					displayKey : 'value',
+					source : substringMatcher(ace.vars['US_STATES'])
+				});
+
+				///////////////
+
+				//in ajax mode, remove remaining elements before leaving page
+				$(document).one(
+						'ajaxloadstart.page',
+						function(e) {
+							$('[class*=select2]').remove();
+							$('select[name="duallistbox_demo1[]"]')
+									.bootstrapDualListbox('destroy');
+							$('.rating').raty('destroy');
+							$('.multiselect').multiselect('destroy');
+						});
+
+			});
+		</script>
 </body>
 </html>

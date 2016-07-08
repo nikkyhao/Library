@@ -13,19 +13,61 @@
 		<servlet-name>SearchBook</servlet-name>
 		<servlet-class>com.servlet.SearchBookServlet</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>SearchBorrow</servlet-name>
+		<servlet-class>com.servlet.SearchBorrowServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>SearchBorrowRecord</servlet-name>
+		<servlet-class>com.servlet.SearchBorrowRecordServlet</servlet-class>
+	</servlet>
+	
 	<servlet>
 		<servlet-name>LogIn</servlet-name>
 		<servlet-class>com.servlet.LogInServlet</servlet-class>
 	</servlet>
+	
+	<servlet>
+		<servlet-name>Back</servlet-name>
+		<servlet-class>com.servlet.BackServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>BorrowBook</servlet-name>
+		<servlet-class>com.servlet.BorrowServlet</servlet-class>
+	</servlet>
+
+
 
 
 	<servlet-mapping>
 		<servlet-name>SearchBook</servlet-name>
 		<url-pattern>/SearchBook</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SearchBorrow</servlet-name>
+		<url-pattern>/SearchBorrow</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>SearchBorrowRecord</servlet-name>
+		<url-pattern>/SearchBorrowRecord</url-pattern>
+	</servlet-mapping>
+	
 	<servlet-mapping>
 		<servlet-name>LogIn</servlet-name>
 		<url-pattern>/LogIn</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Back</servlet-name>
+		<url-pattern>/return_book</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BorrowBook</servlet-name>
+		<url-pattern>/BorrowBook</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

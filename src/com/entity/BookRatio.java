@@ -12,6 +12,8 @@ public class BookRatio {
 	double coachbookrate;
 	double novelrate;
 	Statement statement = null;
+	//科学 人文 图册 语言
+	//science humanity picture language
 	BookRatio(Statement s){
 		this.statement = s;
 		try {

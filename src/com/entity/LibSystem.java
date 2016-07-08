@@ -251,6 +251,30 @@ public static ResultSet queryByIndex(String string) {
 		
 	return rs;
 }
+public static ResultSet queryByIndex2(int index) {
+	Statement statement = null;
+	try {
+		statement = connection.createStatement();
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+	
+	String sql = "";
+	
+		sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND `INDEX` =" + index + " GROUP BY `INDEX`";
+	
+	ResultSet rs = null;
+	try {
+		rs = statement.executeQuery(sql);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+		
+	return rs;
+}
 /*
  * ���bookid����ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
  */
