@@ -2,9 +2,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<head>
+	<%@page import="java.sql.*" import="com.entity.*" import="java.util.Calendar" import="com.test.LibConnection" %>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
+		<%! ResultSet rs=null;
+		Administrator admin=new Administrator();
+		%>
+		
 
 		<meta name="description" content="Common form elements and layouts" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -579,43 +584,66 @@
 								
 							</h1>
 						</div><!-- /.page-header -->
-
+                      
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 								<form class="form-horizontal" role="form">
+								  <% rs=admin.searchAdmin(111);
+											
+													while(rs.next()){
+														
+												%>
+										
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 管理员ID </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="ID" class="col-xs-10 col-sm-5" />
+											<input type="text" id="form-field-1" placeholder=<%=rs.getString("id")%> class="col-xs-10 col-sm-5"value=<%=rs.getString("id")%> />
 										</div>
 									</div>
+										<%}%>
+										  <% rs=admin.searchAdmin(111);
+											
+													while(rs.next()){
+														
+												%>
 
-	<div class="form-group">
-	  <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 姓名 </label>
+	                              <div class="form-group">
+	                              <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 姓名 </label>
 										<span class="col-sm-9">
-										<input type="text" id="form-field-1-1" placeholder="姓名" class="col-xs-10 col-sm-5" />
+										<input type="text" id="form-field-1-1" placeholder=<%=rs.getString("username")%> class="col-xs-10 col-sm-5"value=<%=rs.getString("username")%> />
 										</span>
 
 										<div class="col-sm-9"></div>
 									</div>
+									<%}%>
+									 <% rs=admin.searchAdmin(111);
+											
+													while(rs.next()){
+														
+												%>
                                     <div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 性别 </label>
+										<label class="col-sm-3 control-label no-padding-right" > 性别 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="性别" class="col-xs-10 col-sm-5" />
+											<input type="text" placeholder=<%=rs.getString("sex")%> class="col-xs-10 col-sm-5" value=<%=rs.getString("sex")%>/>
 										</div>
 									</div>
-                                   
+									<%}%>
+                                    <% rs=admin.searchAdmin(111);
+											
+													while(rs.next()){
+														
+												%>
 									<div class="form-group">
 									  <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码</label>
 
 									  <div class="col-sm-9">
-											<input type="password" id="form-field-2" placeholder="Password" class="col-xs-10 col-sm-5" />
+											<input type="password" id="form-field-2" placeholder=<%=rs.getString("password")%> class="col-xs-10 col-sm-5" value=<%=rs.getString("password")%>/>
 										</div>
 	</div>
-
+<%}%>
 									
 	<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">

@@ -10,40 +10,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="/Library/assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/Library/assets/font-awesome/4.2.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="../assets/css/jquery-ui.custom.min.css" />
-		<link rel="stylesheet" href="../assets/css/jquery.gritter.min.css" />
-		<link rel="stylesheet" href="../assets/css/select2.min.css" />
-		<link rel="stylesheet" href="../assets/css/datepicker.min.css" />
-		<link rel="stylesheet" href="../assets/css/bootstrap-editable.min.css" />
+		<link rel="stylesheet" href="/Library/assets/css/jquery-ui.custom.min.css" />
+		<link rel="stylesheet" href="/Library/assets/css/jquery.gritter.min.css" />
+		<link rel="stylesheet" href="/Library/assets/css/select2.min.css" />
+		<link rel="stylesheet" href="/Library/assets/css/datepicker.min.css" />
+		<link rel="stylesheet" href="/Library/assets/css/bootstrap-editable.min.css" />
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="../assets/fonts/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="/Library/assets/fonts/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="../assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="/Library/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="../assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="/Library/assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="../assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="/Library/assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="../assets/js/ace-extra.min.js"></script>
+		<script src="/Library/assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="../assets/js/html5shiv.min.js"></script>
-		<script src="../assets/js/respond.min.js"></script>
+		<script src="/Library/assets/js/html5shiv.min.js"></script>
+		<script src="/Library/assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -236,7 +236,7 @@
 									<ul class="dropdown-menu dropdown-navbar">
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<img src="/Library/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Alex:</span>
@@ -253,7 +253,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+												<img src="/Library/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Susan:</span>
@@ -270,7 +270,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+												<img src="/Library/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Bob:</span>
@@ -287,7 +287,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+												<img src="/Library/assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Kate:</span>
@@ -304,7 +304,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="../assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+												<img src="/Library/assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Fred:</span>
@@ -333,7 +333,7 @@
 					<li class="light-blue">
                         
 							<a href="login.jsp">
-								<img class="nav-user-photo" src="../assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
+								<img class="nav-user-photo" src="/Library/assets/avatars/user.jpg" alt="Jason's Photo" />登录<i class="ace-icon fa fa-caret-down"></i>
 						</a>	
 					  </li>
 					</ul>
@@ -767,7 +767,7 @@ class="arrow"></b>
 										<div class="col-xs-12 col-sm-3 center">
 										  <div>
 												<span class="profile-picture">
-													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="../assets/avatars/profile-pic.jpg" />
+													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="/Library/assets/avatars/profile-pic.jpg" />
 												</span>
 
 												<div class="space-4"></div>
@@ -927,7 +927,7 @@ class="arrow"></b>
 
 															<div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																																		<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
 																	<div class="time">
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
@@ -953,7 +953,7 @@ class="arrow"></b>
 
 <div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																																		<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
 																	<div class="time">
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
@@ -978,7 +978,7 @@ class="arrow"></b>
 															</div>
                                                             <div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																																		<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
 																	<div class="time">
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
@@ -1003,7 +1003,7 @@ class="arrow"></b>
 															</div>
                                                             <div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																																		<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
 																	<div class="time">
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
@@ -1028,7 +1028,7 @@ class="arrow"></b>
 															</div>
                                                             <div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																																		<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
 																	<div class="time">
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
@@ -1052,7 +1052,7 @@ class="arrow"></b>
 															</div>
                                                             <div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																																		<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
 																	<input type="text" name="score2" id="score2">
 <div class="time">
@@ -1078,7 +1078,7 @@ class="arrow"></b>
 															</div>
                                                             <div class="profile-activity clearfix">
 																<div>
-																																		<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																																		<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>小明
 																	<div class="time">
 																	<i class="ace-icon fa fa-clock-o bigger-110"></i>好看</div>
@@ -1177,7 +1177,7 @@ class="arrow"></b>
 													<div class="row">
 														<div class="col-xs-12 col-sm-3 center">
 															<span class="profile-picture">
-																<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="../assets/avatars/profile-pic.jpg" />
+																<img class="editable img-responsive" alt="Alex's Avatar" id="avatar2" src="/Library/assets/avatars/profile-pic.jpg" />
 															</span>
 
 															<div class="space space-4"></div>
@@ -1406,7 +1406,7 @@ class="arrow"></b>
 														<div class="col-sm-6">
 															<div class="profile-activity clearfix">
 																<div>
-																	<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																	<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<a class="user" href="#"> Alex Doe </a>
 																	changed his profile photo.
 																	<a href="#">Take a look</a>
@@ -1430,7 +1430,7 @@ class="arrow"></b>
 
 															<div class="profile-activity clearfix">
 																<div>
-																	<img class="pull-left" alt="Susan Smith's avatar" src="../assets/avatars/avatar1.png" />
+																	<img class="pull-left" alt="Susan Smith's avatar" src="/Library/assets/avatars/avatar1.png" />
 																	<a class="user" href="#"> Susan Smith </a>
 
 																	is now friends with Alex Doe.
@@ -1502,7 +1502,7 @@ class="arrow"></b>
 
 															<div class="profile-activity clearfix">
 																<div>
-																	<img class="pull-left" alt="David Palms's avatar" src="../assets/avatars/avatar4.png" />
+																	<img class="pull-left" alt="David Palms's avatar" src="/Library/assets/avatars/avatar4.png" />
 																	<a class="user" href="#"> David Palms </a>
 
 																	left a comment on Alex's wall.
@@ -1551,7 +1551,7 @@ class="arrow"></b>
 
 															<div class="profile-activity clearfix">
 																<div>
-																	<img class="pull-left" alt="Alex Doe's avatar" src="../assets/avatars/avatar5.png" />
+																	<img class="pull-left" alt="Alex Doe's avatar" src="/Library/assets/avatars/avatar5.png" />
 																	<a class="user" href="#"> Alex Doe </a>
 
 																	upgraded his skills.
@@ -1661,7 +1661,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar4.png" alt="Bob Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar4.png" alt="Bob Doe's avatar" />
 																	</a>
 																</div>
 
@@ -1709,7 +1709,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar1.png" alt="Rose Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar1.png" alt="Rose Doe's avatar" />
 																	</a>
 																</div>
 
@@ -1757,7 +1757,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar.png" alt="Jim Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar.png" alt="Jim Doe's avatar" />
 																	</a>
 																</div>
 
@@ -1805,7 +1805,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar5.png" alt="Alex Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar5.png" alt="Alex Doe's avatar" />
 																	</a>
 																</div>
 
@@ -1853,7 +1853,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar2.png" alt="Phil Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar2.png" alt="Phil Doe's avatar" />
 																	</a>
 																</div>
 
@@ -1901,7 +1901,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar3.png" alt="Susan Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar3.png" alt="Susan Doe's avatar" />
 																	</a>
 																</div>
 
@@ -1949,7 +1949,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar1.png" alt="Jennifer Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar1.png" alt="Jennifer Doe's avatar" />
 																	</a>
 																</div>
 
@@ -1997,7 +1997,7 @@ class="arrow"></b>
 															<div class="inline pos-rel">
 																<div class="user">
 																	<a href="#">
-																		<img src="../assets/avatars/avatar3.png" alt="Alexa Doe's avatar" />
+																		<img src="/Library/assets/avatars/avatar3.png" alt="Alexa Doe's avatar" />
 																	</a>
 																</div>
 
@@ -2059,7 +2059,7 @@ class="arrow"></b>
 													<ul class="ace-thumbnails">
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-1.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-1.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2086,7 +2086,7 @@ class="arrow"></b>
 
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-2.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-2.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2113,7 +2113,7 @@ class="arrow"></b>
 
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-3.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-3.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2140,7 +2140,7 @@ class="arrow"></b>
 
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-4.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-4.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2167,7 +2167,7 @@ class="arrow"></b>
 
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-5.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-5.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2194,7 +2194,7 @@ class="arrow"></b>
 
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-6.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-6.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2221,7 +2221,7 @@ class="arrow"></b>
 
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-1.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-1.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2248,7 +2248,7 @@ class="arrow"></b>
 
 														<li>
 															<a href="#" data-rel="colorbox">
-																<img alt="150x150" src="../assets/images/gallery/thumb-2.jpg" />
+																<img alt="150x150" src="/Library/assets/images/gallery/thumb-2.jpg" />
 																<div class="text">
 																	<div class="inner">Sample Caption on Hover</div>
 																</div>
@@ -2579,53 +2579,53 @@ class="arrow"></b>
 		<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="../assets/js/jquery.2.1.1.min.js"></script>
+		<script src="/Library/assets/js/jquery.2.1.1.min.js"></script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
-<script src="../assets/js/jquery.1.11.1.min.js"></script>
+<script src="/Library/assets/js/jquery.1.11.1.min.js"></script>
 <![endif]-->
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='../assets/js/jquery.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='/Library/assets/js/jquery.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='/Library/assets/js/jquery1x.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/Library/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="/Library/assets/js/bootstrap.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
 		<!--[if lte IE 8]>
-		  <script src="../assets/js/excanvas.min.js"></script>
+		  <script src="/Library/assets/js/excanvas.min.js"></script>
 		<![endif]-->
-		<script src="../assets/js/jquery-ui.custom.min.js"></script>
-		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../assets/js/jquery.gritter.min.js"></script>
-		<script src="../assets/js/bootbox.min.js"></script>
-		<script src="../assets/js/jquery.easypiechart.min.js"></script>
-		<script src="../assets/js/bootstrap-datepicker.min.js"></script>
-		<script src="../assets/js/jquery.hotkeys.min.js"></script>
-		<script src="../assets/js/bootstrap-wysiwyg.min.js"></script>
-		<script src="../assets/js/select2.min.js"></script>
-		<script src="../assets/js/fuelux.spinner.min.js"></script>
-		<script src="../assets/js/bootstrap-editable.min.js"></script>
-		<script src="../assets/js/ace-editable.min.js"></script>
-		<script src="../assets/js/jquery.maskedinput.min.js"></script>
+		<script src="/Library/assets/js/jquery-ui.custom.min.js"></script>
+		<script src="/Library/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="/Library/assets/js/jquery.gritter.min.js"></script>
+		<script src="/Library/assets/js/bootbox.min.js"></script>
+		<script src="/Library/assets/js/jquery.easypiechart.min.js"></script>
+		<script src="/Library/assets/js/bootstrap-datepicker.min.js"></script>
+		<script src="/Library/assets/js/jquery.hotkeys.min.js"></script>
+		<script src="/Library/assets/js/bootstrap-wysiwyg.min.js"></script>
+		<script src="/Library/assets/js/select2.min.js"></script>
+		<script src="/Library/assets/js/fuelux.spinner.min.js"></script>
+		<script src="/Library/assets/js/bootstrap-editable.min.js"></script>
+		<script src="/Library/assets/js/ace-editable.min.js"></script>
+		<script src="/Library/assets/js/jquery.maskedinput.min.js"></script>
 
 		<!-- ace scripts -->
-		<script src="../assets/js/ace-elements.min.js"></script>
-		<script src="../assets/js/ace.min.js"></script>
+		<script src="/Library/assets/js/ace-elements.min.js"></script>
+		<script src="/Library/assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">

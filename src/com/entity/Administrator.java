@@ -56,7 +56,25 @@ public class Administrator {
 		}
 
 	}
-
+	public ResultSet searchAdmin(int id) {
+		// 通过id查询管理员
+		Statement sta = null;
+		try {
+			sta = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		String sql = "SELECT id,username,password,sex FROM administor WHERE id=" + id;
+		ResultSet rs = null;
+		try {
+			rs = sta.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
 	public void updateUser(String name, int ID, String sex, int stuID, String type, String tel, double money,
 			int cardID) {
 		Statement sta = null;
