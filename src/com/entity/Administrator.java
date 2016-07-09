@@ -146,7 +146,7 @@ public class Administrator {
 		return rs;
 	}
 
-	public ResultSet searchUser(int cardID) {
+	public static ResultSet searchUser(int cardID) {
 		// 通过借阅证卡号查询用户
 		Statement sta = null;
 		try {
@@ -155,7 +155,7 @@ public class Administrator {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		String sql = "SELECT cardID,`name`,sex,TypeOfCard,money_Reserved,per_of_val FROM `user` WHERE cardID=" + cardID;
+		String sql = "SELECT * FROM `user` WHERE cardID=" + cardID;
 		ResultSet rs = null;
 		try {
 			rs = sta.executeQuery(sql);

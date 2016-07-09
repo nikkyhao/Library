@@ -37,6 +37,10 @@
 		<servlet-name>BorrowBook</servlet-name>
 		<servlet-class>com.servlet.BorrowServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>ModifyUser</servlet-name>
+		<servlet-class>com.servlet.ModifyUserServlet</servlet-class>
+	</servlet>
 
 
 
@@ -68,6 +72,10 @@
 	<servlet-mapping>
 		<servlet-name>BorrowBook</servlet-name>
 		<url-pattern>/BorrowBook</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ModifyUser</servlet-name>
+		<url-pattern>/ModifyUser</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

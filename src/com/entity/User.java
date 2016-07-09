@@ -11,7 +11,7 @@ import com.test.LibConnection;
 import java.sql.*;
 
 public class User {
-	protected static int cardID;
+	public int cardID;
 	static Connection connection = null;
 	public User(int cardID){
 		this.cardID = cardID;
@@ -59,7 +59,24 @@ public class User {
 		
 		return betweenDays;
 	}
-	public static ResultSet getUserComment() {
+	public void updateUser(String name, String sex, int stuID,String tel) {
+		Statement sta = null;
+		try {
+			sta = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		String sql = "update user set NAME='" + name + "',sex='" + sex + "',studentID=" + stuID + ",telephone=" + tel + " where cardID=" + cardID;
+		try {
+			sta.execute(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	public ResultSet getUserComment() {
 		// 通过id查询评论
 		Statement sta = null;
 		try {
@@ -78,7 +95,25 @@ public class User {
 		}
 		return rs;
 	}
-	public static ResultSet Cui(){
+	public void updateUserPwd(String pwd) {
+		Statement sta = null;
+		try {
+			sta = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		String sql = "update user set password=" + pwd +  "s where cardID=" + cardID;
+		try {
+			System.out.println(pwd);
+			sta.execute(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	public ResultSet Cui(){
 		//催还单
 		Statement sta = null;
 		

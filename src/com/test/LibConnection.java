@@ -9,7 +9,7 @@ import java.sql.Statement;
 import javax.naming.InitialContext;
 
 public class LibConnection {
-	public static final String url = "jdbc:mysql://127.0.0.1:3306/library";
+	public static final String url = "jdbc:mysql://127.0.0.1:3306/library?useUnicode=true&characterEncoding=UTF-8";
 	public static final String user = "root";
 	public static final String password = "6176846";
 	public static final String driver = "com.mysql.jdbc.Driver";
