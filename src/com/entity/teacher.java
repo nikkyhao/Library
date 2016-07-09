@@ -29,7 +29,7 @@ public class teacher extends User {
 	
 	
 	
-	public static void main(String args[]) throws SQLException{
+	public static void main(String args[]) {
 //		try {
 //			Class.forName("com.mysql.jdbc.Driver");// ����Mysql��������
 //			

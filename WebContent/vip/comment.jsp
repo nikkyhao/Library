@@ -6,8 +6,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
-<%! ResultSet rs=null;
-			User user=new User(123);
+	<%! ResultSet rs=null;
+		User user = null;
+		%>
+		<%
+		user = (User)session.getAttribute("user");
 		%>
 
 		<meta name="description" content="3 styles with inline editable feature" />
@@ -890,7 +893,7 @@ class="arrow"></b>
 												<div class="widget-body">
 													<div class="widget-main padding-8">
 														<div id="profile-feed-1" class="profile-feed">
-																<% rs=user.getUserComment(123);
+																<% rs=user.getUserComment();
 											
 													while(rs.next()){
 														

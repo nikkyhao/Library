@@ -6,9 +6,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
-		<%! ResultSet rs=null;
-			User user=new User(123);
+	<%! ResultSet rs=null;
+		User user = null;
 		%>
+		<%
+		user = (User)session.getAttribute("user");
+		%>		%>
 
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -628,8 +631,7 @@
 											</thead>
 
 											<tbody>
-											<% rs=user.searchOverdateByUser(123);
-											
+											<% rs=user.searchOverdateByUser();
 													while(rs.next()){
 														
 												%>
@@ -650,7 +652,7 @@
 														<span class="label label-sm label-warning">超期</span>
 													</td>
                                                     <td>
-														<a href="#"><%=user.fine(123)*0.2%></a>
+														<a href="#"><%=user.fine()*0.2%></a>
 													</td>
 													
 												<tr>

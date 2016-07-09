@@ -7,7 +7,11 @@
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
 		<%! ResultSet rs=null;
-		Administrator admin=new Administrator();
+		Administrator admin = null;
+		%>
+		
+		<%
+		admin = (Administrator)session.getAttribute("admin");
 		%>
 		
 
@@ -589,40 +593,26 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 								<form class="form-horizontal" role="form">
-								  <% rs=admin.searchAdmin(111);
-											
-													while(rs.next()){
-														
+								  <% rs=admin.searchAdmin();
+												rs.first();
 												%>
 										
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 管理员ID </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder=<%=rs.getString("id")%> class="col-xs-10 col-sm-5"value=<%=rs.getString("id")%> />
+											<input type="text" id="form-field-1" placeholder="管理员id" class="col-xs-10 col-sm-5"value=<%=rs.getString("username")%> />
 										</div>
 									</div>
-										<%}%>
-										  <% rs=admin.searchAdmin(111);
-											
-													while(rs.next()){
-														
-												%>
 
 	                              <div class="form-group">
 	                              <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> 姓名 </label>
 										<span class="col-sm-9">
-										<input type="text" id="form-field-1-1" placeholder=<%=rs.getString("username")%> class="col-xs-10 col-sm-5"value=<%=rs.getString("username")%> />
+										<input type="text" id="form-field-1-1" placeholder="姓名" class="col-xs-10 col-sm-5"value=<%=rs.getString("name")%> />
 										</span>
 
 										<div class="col-sm-9"></div>
 									</div>
-									<%}%>
-									 <% rs=admin.searchAdmin(111);
-											
-													while(rs.next()){
-														
-												%>
                                     <div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" > 性别 </label>
 
@@ -630,12 +620,6 @@
 											<input type="text" placeholder=<%=rs.getString("sex")%> class="col-xs-10 col-sm-5" value=<%=rs.getString("sex")%>/>
 										</div>
 									</div>
-									<%}%>
-                                    <% rs=admin.searchAdmin(111);
-											
-													while(rs.next()){
-														
-												%>
 									<div class="form-group">
 									  <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码</label>
 
@@ -643,7 +627,6 @@
 											<input type="password" id="form-field-2" placeholder=<%=rs.getString("password")%> class="col-xs-10 col-sm-5" value=<%=rs.getString("password")%>/>
 										</div>
 	</div>
-<%}%>
 									
 	<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">

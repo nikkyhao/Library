@@ -14,17 +14,23 @@ import com.test.LibConnection;
  *
  */
 public class Administrator {
+	String userId = null;
 	static Connection connection = null;
 	static {
 		connection = LibConnection.getConnection();
 	}
 
 	public Administrator() {
-
+		try {
+			Statement sta = LibConnection.getConnection().createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public Administrator(String userId) {
-
+		this.userId = userId;
 		try {
 			Statement sta = LibConnection.getConnection().createStatement();
 		} catch (SQLException e) {
@@ -56,7 +62,7 @@ public class Administrator {
 		}
 
 	}
-	public ResultSet searchAdmin(int id) {
+	public ResultSet searchAdmin() {
 		// 通过id查询管理员
 		Statement sta = null;
 		try {
@@ -65,7 +71,7 @@ public class Administrator {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		String sql = "SELECT id,username,password,sex FROM administor WHERE id=" + id;
+		String sql = "SELECT username,password,name,sex FROM administrator WHERE username=" + userId;
 		ResultSet rs = null;
 		try {
 			rs = sta.executeQuery(sql);
@@ -137,7 +143,6 @@ public class Administrator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return rs;
 	}
 

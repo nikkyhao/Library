@@ -19,9 +19,6 @@ static{
 			connection = LibConnection.getConnection();
 }
 	
-	/*
-	 * �õ�ͼ������
-	 */
 	public int getBookNum() {
 		Statement statement = null;
 		try {
@@ -260,10 +257,7 @@ public static ResultSet queryByIndex2(int index) {
 		e1.printStackTrace();
 	}
 	
-	String sql = "";
-	
-		sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND `INDEX` =" + index + " GROUP BY `INDEX`";
-	
+	String sql = "SELECT `index`,booktype,bookname,author,press,language,pressdate,COUNT(bookid) FROM category,book WHERE cateindex=`index` AND `INDEX` =" + index + " GROUP BY `INDEX`";
 	ResultSet rs = null;
 	try {
 		rs = statement.executeQuery(sql);
@@ -271,13 +265,9 @@ public static ResultSet queryByIndex2(int index) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	
-		
 	return rs;
 }
-/*
- * ���bookid����ѯͼ����Ϣ����������ͬ����ͼ���ж��ٱ�
- */
+
 public static ResultSet queryByBookId(String strif) {
 	Statement statement = null;
 	try {

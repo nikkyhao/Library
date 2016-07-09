@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.entity.Administrator;
+import com.entity.User;
 import com.test.LibConnection;
 import com.util.LogInCheck;
 
@@ -32,13 +34,12 @@ HttpSession session = null;
 		if (loginresult.equals("VALIDUSER") && identity.equals("admin")) {
 			request.getRequestDispatcher("/admin/index.jsp").forward(request,
 					response);
-			
-			session.setAttribute("adminusername", username);
+			session.setAttribute("admin", new Administrator(username));
 			System.out.println("跳转到Admin界面");
 		} else if (loginresult.equals("VALIDUSER") && identity.equals("user")) {
 			request.getRequestDispatcher("/vip/index.jsp").forward(request,
 					response);
-			session.setAttribute("cardID", username);
+			session.setAttribute("user", new User(Integer.parseInt(username)));
 			System.out.println("跳转到User界面");
 		} else {
 			request.getRequestDispatcher("LogResult.jsp").forward(request,

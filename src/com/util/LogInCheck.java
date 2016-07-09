@@ -30,7 +30,8 @@ public class LogInCheck {
 	    ResultSet result = null;
 	    try {
 		result = statement.executeQuery("select password from administrator where username ='"+cardID+"' and password ='"+password+"'");
-	    if(result.next()==false)  return "用户名或密码错误"; 
+		System.out.println("cardID:"+cardID+"password"+password);
+		if(result.next()==false)  return "用户名或密码错误"; 
 	    	else return "VALIDUSER";
 	    } catch (SQLException e) {
 	    	return e.getMessage();

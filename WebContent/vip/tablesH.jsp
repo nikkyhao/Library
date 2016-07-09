@@ -7,7 +7,10 @@
 		<meta charset="utf-8" />
 		<title>图书馆管理系统</title>
 		<%! ResultSet rs=null;
-			User user=new User(123);
+		User user = null;
+		%>
+		<%
+		user = (User)session.getAttribute("user");
 		%>
 
 		<meta name="description" content="Static &amp; Dynamic Tables" />
@@ -779,7 +782,7 @@ class="arrow"></b>
 
 											<tbody>
 											<%
-											rs = user.showMyBook_history(123);
+											rs = user.showMyBook_history();
 												while(rs.next()){
 											%>
 												<tr>
