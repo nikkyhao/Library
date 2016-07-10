@@ -13,8 +13,8 @@
 	int cardid = 0;
 	int index = 0;%>
 <%
-	//user = new User(223);//测试用
 	user = (User) session.getAttribute("user");
+	user = new User(666);//测试用，使用登录之后再把它注释掉
 	cardid = user.cardID;
 	index = (Integer)session.getAttribute("bookindex");
 %>
@@ -674,7 +674,7 @@
 															</div>
 														</div>
 														<%
-															rs = LibSystem.getBookComment(1);
+															rs = LibSystem.getBookComment(index);
 															while (rs.next()) {
 														%>
 														<div class="profile-activity clearfix">

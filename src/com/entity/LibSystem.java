@@ -50,7 +50,7 @@ static{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		String sql = "SELECT name,remark,score FROM user,comment,category WHERE cardID=comment_stu and com_index=`INDEX` and com_index=" + index;
+		String sql = "SELECT name,remark,score,cardID FROM user,comment,category WHERE cardID=comment_stu and com_index=`INDEX` and com_index=" + index;
 		ResultSet rs = null;
 		try {
 			rs = sta.executeQuery(sql);
