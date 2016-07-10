@@ -28,8 +28,8 @@ static{
 			e1.printStackTrace();
 		}
 		int s = 0;
-		String sql = "select count(bookid) from book";
 		ResultSet rs = null;
+		String sql = "select count(bookid) from book";
 		try {
 			rs = statement.executeQuery(sql);
 			while (rs.next()) {
@@ -40,6 +40,25 @@ static{
 			e.printStackTrace();
 		}
 		return s;
+	}
+	public static ResultSet getBookComment(int index) {
+		// 通过图书index查询评论
+		Statement sta = null;
+		try {
+			sta = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		String sql = "SELECT name,remark,score FROM user,comment,category WHERE cardID=comment_stu and com_index=`INDEX` and com_index=" + index;
+		ResultSet rs = null;
+		try {
+			rs = sta.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
 	}
 
 	/*

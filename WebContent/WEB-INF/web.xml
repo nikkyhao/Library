@@ -41,7 +41,18 @@
 		<servlet-name>ModifyUser</servlet-name>
 		<servlet-class>com.servlet.ModifyUserServlet</servlet-class>
 	</servlet>
-
+	<servlet>
+		<servlet-name>remark</servlet-name>
+		<servlet-class>com.servlet.SubmitCommentServlet</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>OrderBook</servlet-name>
+		<servlet-class>com.servlet.OrderServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>BookServlet</servlet-name>
+		<servlet-class>com.servlet.BookServlet</servlet-class>
+	</servlet>
 
 
 
@@ -76,6 +87,18 @@
 	<servlet-mapping>
 		<servlet-name>ModifyUser</servlet-name>
 		<url-pattern>/ModifyUser</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>remark</servlet-name>
+		<url-pattern>/remark</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OrderBook</servlet-name>
+		<url-pattern>/OrderBook</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>BookServlet</servlet-name>
+		<url-pattern>/BookServlet</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

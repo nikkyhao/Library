@@ -59,6 +59,44 @@ public class User {
 		
 		return betweenDays;
 	}
+	public void submitComment (int index,String remark) {
+		// 提交评论
+		Statement sta = null;
+		try {
+			sta = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		Date date = new Date(System.currentTimeMillis());
+		String sql = " INSERT INTO comment(com_index,comment_stu,remark,com_date) VALUES( " +  index + "," + cardID + ",'" + remark + "','" + date + "' )";
+		try {
+			sta.execute(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public ResultSet getUserCommentAverage() {
+		// 通过id查询评论总数以及平均分
+		Statement sta = null;
+		try {
+			sta = connection.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		String sql = "SELECT avg(score) as avg_score,count(comment_stu) as num FROM comment WHERE comment_stu=" + cardID;
+		ResultSet rs = null;
+		try {
+			rs = sta.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
 	public void updateUser(String name, String sex, int stuID,String tel) {
 		Statement sta = null;
 		try {

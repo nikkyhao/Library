@@ -822,7 +822,7 @@
 																	<label class="inline">
 																		<input type="checkbox" class="ace" />
 																	</label>
-																	<a href="/Library//book.jsp"><span class="sender" title="Alex John Red Smith">
+																	<a href="/Library/BookServlet?index=<%=result.getString("index") %>"><span class="sender" title="Alex John Red Smith">
 																	<%= 
 																		result.getString("bookname")  
 																	%>
